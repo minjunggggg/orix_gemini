@@ -342,7 +342,7 @@
 .agreement-start-block__button-text {
     font-family: var(--font-pretendard-bold); /* Pretendard Bold */
     font-weight: 700; /* Bold */
-    font-size: 1.375rem; /* 22px */
+    font-size: 2.2rem; /* 22px */
     color: var(--color-primary-blue); /* text-[#3182ee] */
     transition: color 0.2s;
 }
@@ -355,7 +355,7 @@
 .agreement-start-block__description {
     font-family: 'Pretendard', sans-serif; /* Pretendard Regular */
     font-weight: 400; /* Regular */
-    font-size: 1.375rem; /* 22px */
+    font-size: 2.2rem; /* 22px */
     color: var(--color-white); /* text-white */
     white-space: nowrap;
     line-height: normal;

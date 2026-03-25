@@ -1,8 +1,13 @@
 /* === Page Specific Styles - Main Page === */
 
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 /* --- Header --- */
 .header {
-    height: 100%;
     padding: 25px 0 14px;
 }
 
@@ -49,43 +54,28 @@
 
 /* --- Main Visual Section --- */
 .main-visual-section {
-    position: absolute;
-    /* Changed from fixed to absolute to prevent content overlap issues with header */
-    top: 98px;
-    /* top-[98px] */
-    left: 83px;
-    /* left-[83px] */
-    width: 1838px;
-    /* w-[1838px] */
-    height: 858px;
-    /* h-[858px] */
-    border-top-left-radius: 100px;
-    /* rounded-tl-[100px] */
-    overflow: hidden;
-    /* overflow-clip */
-    background-image: url('../assets/images/orix_mockup.png');
-    /* User provided image */
-    background-size: cover;
-    background-position: center;
+    flex-grow: 1;
+    width: 100%;
     display: flex;
-    /* For centering text container */
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .background-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(12, 34, 71, 0.5);
-    /* bg-[rgba(12,34,71,0.5)] */
+    top: 16px;
+    left: 84px;
+    bottom: 64px;
+    right: 0;
+    background-position: center;
+    background: linear-gradient(0deg, rgba(12, 34, 71, 0.50) 0%, rgba(12, 34, 71, 0.50) 100%), url('../../images/orix_mockup_dark.png') lightgray -341.655px -182.841px / 128.807% 159.499% no-repeat;
+    /* width: 100%;
+    height: 100%; */
+    border-top-left-radius: 100px;
 }
 
 .text-container {
-    position: relative;
-    /* To be above overlay */
     z-index: 1;
     /* To be above overlay */
     display: flex;
@@ -186,4 +176,5 @@
     /* Positioned at the bottom of the visible area */
     right: 0;
     /* Positioned at the right of the visible area */
+    margin-bottom: 64px;
 }
