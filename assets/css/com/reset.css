@@ -1,0 +1,109 @@
+/*
+    Reset CSS
+    A minimal set of CSS resets for consistent styling across browsers.
+*/
+
+/* Box sizing defaults to border-box */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Remove default margin and padding from common elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+caption,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font styles */
+body {
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    /* Default font, can be overridden by project specifics */
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Make images responsive by default */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove default link underlines */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Inherit color from parent, can be overridden */
+}
+
+/* Reset form element styles */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Remove button default styles */
+button {
+    cursor: pointer;
+}
+
+/* Inherit font styles for form elements */
+input,
+textarea,
+select {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Normalize table defaults */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Ensure consistent heading sizing (will be overridden by design system) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
