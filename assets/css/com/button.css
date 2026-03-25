@@ -372,8 +372,8 @@
     width: 40px; /* size-[40px] */
     height: 40px; /* size-[40px] */
     background-color: var(--color-white); /* White icon */
-    mask-image: url('../images/right-arrow.svg');
-    -webkit-mask-image: url('../images/right-arrow.svg');
+    mask-image: url('../../images/right-arrow.svg');
+    -webkit-mask-image: url('../../images/right-arrow.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -382,7 +382,7 @@
     -webkit-mask-size: contain;
     /* Transformations from Figma: -scale-y-100 rotate-180 */
     /* rotate(180deg) + scaleY(-1) = rotate(180deg) and flip vertical */
-    transform: rotate(180deg) scaleY(-1);
+    transform: rotate(0deg) scaleY(-1);
 }
 
 .btn-edit-action-icon {
