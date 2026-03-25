@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,43 +13,75 @@
             background-color: #f4f4f4;
             color: #333;
         }
+
         h1 {
             color: #333;
             text-align: center;
             margin-bottom: 30px;
         }
+
         table {
-            width: 90%; /* Increased width to accommodate new column */
+            width: 90%;
+            /* Increased width to accommodate new column */
             margin: 0 auto;
             border-collapse: collapse;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 12px 15px;
             text-align: left;
         }
+
         th {
             background-color: #4CAF50;
             color: white;
             font-weight: bold;
         }
+
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
         tr:hover {
             background-color: #e9e9e9;
         }
+
         a {
             color: #3182ee;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
+        .status-pending {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .status-in-progress {
+            color: #3182ee;
+            /* Blue, similar to link color */
+            font-weight: bold;
+        }
+
+        .status-complete {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-start {
+            color: purple;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
     <h1>ORIX Capital Pages</h1>
     <table>
@@ -58,94 +91,117 @@
                 <th>File Path</th>
                 <th>Description</th>
                 <th>Figma ID</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Processing Page</td>
-                <td><a href="views/processing.html">views/processing.html</a></td>
-                <td>신원 확인 및 권한 검증 (Identity verification and authorization)</td>
-                <td>ORIX-CRTF-LODG-001_MODAL</td>
-            </tr>
-            <tr>
-                <td>Complete Page</td>
-                <td><a href="views/complete.html">views/complete.html</a></td>
-                <td>법인 전자약정 및 전자서명 완료 화면 (Corporate e-agreement and e-signature completion screen)</td>
-                <td>ORIX-CRTF-DTAG-003_법인 전자약정 및 전자서명 완료 화면</td>
-            </tr>
-            <tr>
-                <td>Loading Page</td>
-                <td><a href="views/loading.html">views/loading.html</a></td>
-                <td>상세약정서 확인 및 전자서명 & 로딩 모달 (Detailed agreement confirmation and e-signature & loading modal)</td>
-                <td>ORIX-CRTF-LODG-001_로딩</td>
-            </tr>
-            <tr>
-                <td>Auto Transfer Input</td>
-                <td><a href="views/auto_transfer_input.html">views/auto_transfer_input.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Button</td>
-                <td><a href="views/button.html">views/button.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Document Upload</td>
-                <td><a href="views/document_upload.html">views/document_upload.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Error</td>
-                <td><a href="views/error.html">views/error.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Form</td>
-                <td><a href="views/form.html">views/form.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Identity Confirm</td>
-                <td><a href="views/identity_confirm.html">views/identity_confirm.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
                 <td>Input</td>
-                <td><a href="views/input.html">views/input.html</a></td>
-                <td>Existing page</td>
+                <td><a href="guide/input.html">guide/input.html</a></td>
+                <td>guide page</td>
                 <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Main</td>
-                <td><a href="views/main.html">views/main.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Quote Confirm</td>
-                <td><a href="views/quote_confirm.html">views/quote_confirm.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td>Summary Detail</td>
-                <td><a href="views/summary_detail.html">views/summary_detail.html</a></td>
-                <td>Existing page</td>
-                <td>N/A</td>
+                <td class="status-in-progress">In Progress</td>
             </tr>
             <tr>
                 <td>Toggle</td>
-                <td><a href="views/toggle.html">views/toggle.html</a></td>
-                <td>Existing page</td>
+                <td><a href="guide/toggle.html">guide/toggle.html</a></td>
+                <td>guide page</td>
                 <td>N/A</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Button</td>
+                <td><a href="guide/button.html">guide/button.html</a></td>
+                <td>guide page</td>
+                <td>N/A</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Header</td>
+                <td><a href="guide/header.html">guide/header.html</a></td>
+                <td>guide page</td>
+                <td>N/A</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Main</td>
+                <td><a href="pages/main.html">pages/main.html</a></td>
+                <td>진입화면</td>
+                <td>ORIX-CRTF-MAIN-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Error</td>
+                <td><a href="pages/error.html">pages/error.html</a></td>
+                <td>진입오류화면</td>
+                <td>ORIX-CRTF-MAIN-002</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Upcoming</td>
+                <td><a href="pages/upcoming.html">pages/upcoming.html</a></td>
+                <td>서비스 예정 화면</td>
+                <td>ORIX-CRTF-MAIN-003</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Form</td>
+                <td><a href="pages/form.html">pages/form.html</a></td>
+                <td>본인인증 화면</td>
+                <td>ORIX-CRTF-IDNT-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Quote Confirm</td>
+                <td><a href="pages/quote_confirm.html">pages/quote_confirm.html</a></td>
+                <td>견적확인</td>
+                <td>ORIX-CRTF-CHEC-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Auto Transfer Input</td>
+                <td><a href="pages/auto_transfer_input.html">pages/auto_transfer_input.html</a></td>
+                <td>자동이체 계좌 및 납부정보 입력</td>
+                <td>ORIX-CRTF-ACIN-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Summary</td>
+                <td><a href="pages/summary.html">pages/summary.html</a></td>
+                <td>약정서 요약본</td>
+                <td>ORIX-CRTF-SMAG-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Summary Detail</td>
+                <td><a href="pages/summary_detail.html">pages/summary_detail.html</a></td>
+                <td>상세약정서 확인</td>
+                <td>ORIX-CRTF-DTAG-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Sign</td>
+                <td><a href="pages/sign.html">pages/sign.html</a></td>
+                <td>전자서명 팝업(서명하기)</td>
+                <td>ORIX-CRTF-DTAG-002</td>
+                <td class="status-pending">Pending</td>
+            </tr>
+            <tr>
+                <td>Loading</td>
+                <td><a href="pages/loading.html">pages/loading.html</a></td>
+                <td>로딩</td>
+                <td>ORIX-CRTF-LODG-001</td>
+                <td class="status-in-progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>Complete</td>
+                <td><a href="pages/complete.html">pages/complete.html</a></td>
+                <td>법인 전자약정 및 전자서명 완료 화면</td>
+                <td>ORIX-CRTF-DTAG-003</td>
+                <td class="status-in-progress">In Progress</td>
             </tr>
         </tbody>
     </table>
 </body>
+
 </html>
