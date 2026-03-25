@@ -1,0 +1,107 @@
+/* === Common CSS Variables === */
+:root {
+    /* Colors */
+    --color-gray-75: #757575;
+    --color-gray-45: #454545;
+    --color-gray-ddd: #ddd;
+    --color-primary-dark: #062d4d;
+    --color-gray-f8: #f8f8f8;
+    --color-gray-22: #222;
+    --color-gray-99: #999;
+    --color-gray-66: #666; /* For Email Input '@' symbol */
+    --color-gray-ccc: #ccc; /* For CheckBox border */
+    --color-gray-bbb: #bbb; /* For secondary button hover border */
+    --color-white: #fff; /* Added white as it's a common base background */
+    --color-primary-blue: #3182ee; /* Primary blue for active buttons */
+    --color-primary-dark-blue: #156cdf; /* Darker blue for primary button hover */
+    --color-text-light-gray: #f2f3f8; /* Light gray text for primary icon buttons */
+    --color-postcode-bg-default: #062d4d; /* Default background for postcode search button */
+    --color-postcode-bg-hover: #08131d; /* Hover background for postcode search button */
+    --color-file-select-bg: #f5f5f5; /* Background for file select button */
+    --color-agreement-bg-hover: #0f5fcb; /* Hover background for agreement block */
+    --color-option-bg-default: #f3f3f3; /* Default background for option buttons */
+    --color-pagination-bg-default: #dfe4eb; /* Default background for pagination number buttons */
+    --color-subtitle-eng: #c5c5c5; /* Subtitle English text color */
+    --color-overlay-dark: rgba(12, 34, 71, 0.5); /* Dark overlay color */
+    --color-error-red: red; /* Red color for error messages */
+    --color-black: #000; /* Black color */
+    --color-page-bg: #f2f3f8; /* Background color for form page */
+    --color-footer-shadow: 0px -5px 20px 0px rgba(221,221,221,0.25); /* Footer shadow */
+    --color-form-card-shadow: 0px 5px 20px 0px rgba(221,221,221,0.25); /* Form card shadow */
+    --color-scrollable-bg: #fafafa; /* Background for scrollable content */
+    --color-scroll-bar: #eee; /* Background for scrollbar track */
+    --color-summary-highlight-bg: #f0f6ff; /* Background for summary highlight */
+    --color-car-price-highlight-bg: #f3f5f7; /* Background for car price highlight */
+    --color-car-price-text-dark-blue: #0f3862; /* Dark blue text for car price */
+    --color-radio-border: #ccc; /* Border color for radio buttons */
+    --color-agreement-status-bg: #eee; /* Background for agreement status tag */
+    --color-info-box-bg: rgba(255,255,255,0.8); /* Background for info box */
+    --color-modal-backdrop: rgba(0,0,0,0.4); /* Background for modal backdrop */
+    --color-modal-tab-active-color: #0871f3; /* Color for active modal tab text */
+    --color-modal-tab-active-border: #0871f3; /* Color for active modal tab border */
+    --color-signature-box-bg: #f8f8f8; /* Background for signature box */
+    --color-signature-box-border: #eee; /* Border for signature box */
+    --color-signature-placeholder-text: rgba(34,34,34,0.1); /* Placeholder text color for signature box */
+
+    /* Font Sizes */
+    --font-size-18: 1.125rem; /* 18px */
+
+    /* Font Families */
+    --font-pretendard-bold: 'Pretendard', sans-serif; /* Pretendard Bold font */
+    --font-pretendard-regular: 'Pretendard', sans-serif; /* Pretendard Regular font */
+    --font-pretendard-light: 'Pretendard', sans-serif; /* Pretendard Light font */
+
+    /* Line Heights */
+    --line-height-1-5: 1.5; /* Line height 1.5 */
+
+    /* Font Families */
+    --font-pretendard-bold: 'Pretendard', sans-serif; /* Pretendard Bold font */
+    --font-pretendard-regular: 'Pretendard', sans-serif; /* Pretendard Regular font */
+    --font-pretendard-light: 'Pretendard', sans-serif; /* Pretendard Light font */
+
+    /* Font Families */
+    --font-pretendard-bold: 'Pretendard', sans-serif; /* Pretendard Bold font */
+    --font-pretendard-regular: 'Pretendard', sans-serif; /* Pretendard Regular font */
+
+    /* Font Sizes */
+    --font-size-18: 1.125rem; /* 18px */
+
+    /* Font Families */
+    --font-pretendard-bold: 'Pretendard', sans-serif; /* Pretendard Bold font */
+
+    /* Font Sizes */
+    --font-size-18: 1.125rem; /* 18px */
+
+    /* Border Radius */
+    --border-radius-8: 8px;
+    --border-radius-checkbox: 3px; /* Rounded from 2.857px */
+
+    /* Spacing */
+    --spacing-14: 14px;
+    --spacing-18: 18px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-email-input-gap-holder: 4px; /* Gap for Email Input holder */
+    --spacing-email-input-gap-group: 6px; /* Gap for Email Input group */
+    --size-checkbox: 20px;
+    --spacing-number-input-gap-group: 10px;
+    --width-number-input-select: 136px;
+    --width-number-input-select-2: 180px;
+    --size-number-input-icon: 24px;
+    --font-size-16: 1rem; /* 16px */
+    --border-radius-button: 6px;
+}
+
+/* === Accessibility === */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+

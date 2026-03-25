@@ -1,0 +1,420 @@
+/* === Page Specific Styles - Identity Confirm Page === */
+
+/* --- Page Layout --- */
+body {
+    background-color: var(--color-page-bg); /* bg-[#f2f3f8] */
+}
+
+.container-wrap {
+    width: 1200px; /* Figma main content width */
+    margin: 122px auto 136px; /* Spacing below header, above footer */
+    position: relative;
+    padding-bottom: 20px; /* Space for the fixed footer */
+}
+
+.page-title {
+    font-family: var(--font-pretendard-bold);
+    font-weight: 700;
+    font-size: 2.375rem; /* 38px */
+    color: var(--color-gray-22);
+    text-align: center;
+    margin-bottom: 42px; /* From Figma positioning */
+}
+
+.main-form-card {
+    background-color: var(--color-form-card-bg); /* bg-white */
+    border-radius: 20px; /* rounded-[20px] */
+    padding: 50px; /* p-[50px] */
+    display: flex;
+    flex-direction: column;
+    gap: 42px; /* gap-[42px] between sections */
+    box-shadow: 0px 5px 20px 0px rgba(221,221,221,0.25); /* Figma box-shadow */
+}
+
+/* --- Terms Agreement Section --- */
+.terms-agreement-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* gap-[24px] between items */
+    align-items: flex-start;
+    width: 100%;
+}
+
+.check-line {
+    display: flex;
+    gap: 18px; /* gap-[18px] */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.terms-all-agree {
+    gap: 18px; /* gap-[18px] */
+    width: 100%;
+}
+
+.checkbox {
+    position: relative;
+    width: 36px; /* size-[36px] for terms-all */
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-check-box-default); /* Border for unchecked state */
+    border-radius: 30px; /* rounded-[30px] for terms-all */
+    cursor: pointer;
+    background-color: var(--color-check-box-default); /* bg-[#ddd] */
+    mask-image: url('../assets/images/check-all.svg'); /* Using check-all.svg for checkmark */
+    -webkit-mask-image: url('../assets/images/check-all.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 0%; /* Start hidden */
+    -webkit-mask-size: 0%; /* Start hidden */
+    transition: background-color 0.2s, mask-size 0.2s;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkbox-label {
+    background-color: var(--color-check-box-checked); /* bg-[#3182ee] */
+    border-color: var(--color-check-box-checked); /* Blue border when checked */
+    mask-size: 70%; /* Make checkmark larger when checked */
+    -webkit-mask-size: 70%; /* Make checkmark larger when checked */
+}
+
+/* Specific styling for individual agreement checkboxes */
+.agreement-item .checkbox {
+    width: 24px; /* size-[24px] */
+    height: 24px;
+}
+
+.agreement-item .checkbox-label {
+    border-radius: 4px; /* rounded-[4px] for individual */
+    background-color: var(--color-check-box-default); /* bg-[#ddd] */
+    mask-image: url('../assets/images/check.svg'); /* Using check.svg for individual checkmark */
+    -webkit-mask-image: url('../assets/images/check.svg');
+    mask-size: 0%; /* Start hidden */
+    -webkit-mask-size: 0%; /* Start hidden */
+    border: 1px solid var(--color-check-box-default); /* Border for unchecked state */
+}
+
+.agreement-item .checkbox input[type="checkbox"]:checked + .checkbox-label {
+    background-color: var(--color-check-box-checked); /* bg-[#3182ee] */
+    border-color: var(--color-check-box-checked); /* Blue border when checked */
+    mask-size: 100%; /* Checkmark fills when checked */
+    -webkit-mask-size: 100%;
+}
+
+
+.terms-title {
+    font-family: var(--font-pretendard-bold);
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+    color: var(--color-gray-22);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.divider {
+    border-top: 1px solid var(--color-gray-ddd); /* As per user request */
+    width: 100%; /* w-[1100px] in Figma, but adjust to parent width */
+    margin: 0;
+}
+
+.agreement-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Gap between check-line and detail-area */
+    align-items: flex-start;
+}
+
+.agreement-item .check-line {
+    gap: 12px; /* gap-[12px] */
+    justify-content: flex-start; /* Align to left to match Figma */
+}
+
+.agreement-text {
+    display: flex; /* flex */
+    gap: 8px; /* gap-[8px] */
+    align-items: center; /* items-center */
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    color: var(--color-gray-45);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.agreement-text .required {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    color: var(--color-required-text); /* text-[#3182ee] */
+    line-height: normal;
+}
+
+.btn-arrow-down {
+    width: 20px; /* size-[20px] */
+    height: 20px;
+    background-color: var(--color-gray-66); /* fill color of arrow icon */
+    mask-image: url('../assets/images/ep_arrow-down.svg');
+    -webkit-mask-image: url('../assets/images/ep_arrow-down.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-left: auto; /* Push to the right */
+}
+
+.btn-arrow-down.is-expanded {
+    transform: rotate(180deg); /* Rotate when expanded */
+}
+
+.agreement-detail-area {
+    background-color: var(--color-scrollable-bg); /* bg-[#fafafa] */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.agreement-detail-area.is-expanded {
+    max-height: 230px; /* Max height of the scrollable content */
+    padding: 20px;
+}
+
+.scrollable-content {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    color: var(--color-gray-66);
+    line-height: var(--line-height-1-5); /* leading-[1.5] */
+    white-space: pre-wrap; /* For line breaks */
+    max-height: 191px; /* h-[191px] */
+    overflow-y: auto;
+    padding-right: 18px; /* Space for scrollbar */
+}
+
+/* Custom Scrollbar (WebKit) */
+.scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: var(--color-scroll-bar); /* bg-[#eee] */
+    border-radius: 4px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: var(--color-scroll-handle); /* bg-[#999] */
+    border-radius: 4px;
+}
+
+.scrollable-content p {
+    margin-bottom: 0;
+}
+
+/* --- Identity Verification Section --- */
+.identity-verification-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* gap-[32px] */
+    width: 100%;
+}
+
+.input-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* gap-[14px] */
+    align-items: flex-start;
+    width: 490px; /* w-[490px] */
+}
+
+.input-label {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-gray-45);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.input-text-wrap {
+    height: 60px; /* h-[60px] */
+    border: 1px solid var(--color-gray-ddd);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 18px; /* p-[18px] */
+    box-sizing: border-box;
+    flex: 1 0 0;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-gray-99);
+    background: transparent;
+}
+
+.input-text::placeholder {
+    color: var(--color-gray-99);
+}
+
+.input-text:focus {
+    border-color: var(--color-primary-blue);
+}
+
+.input-resident-id-group,
+.input-phone-group,
+.input-verification-group {
+    display: flex;
+    gap: 10px; /* gap-[10px] */
+    align-items: center;
+    width: 100%;
+}
+
+.dash-symbol {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-gray-22);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.validation-message {
+    display: flex; /* flex */
+    gap: 8px; /* gap-[8px] */
+    align-items: center; /* items-center */
+    margin-top: 4px; /* Spacing below input */
+}
+
+.validation-icon {
+    width: 20px; /* size-[20px] */
+    height: 20px;
+    background-color: var(--color-validation-text); /* Red fill */
+    mask-image: url('../assets/images/validation-info.svg');
+    -webkit-mask-image: url('../assets/images/validation-info.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    flex-shrink: 0;
+}
+
+.validation-text {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    color: var(--color-validation-text); /* Red text */
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.select-box {
+    position: relative;
+    width: 136px; /* w-[136px] */
+    height: 60px; /* h-[60px] */
+    border: 1px solid var(--color-gray-ddd);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    overflow: hidden; /* Hide default select arrow */
+}
+
+.select-phone-prefix {
+    appearance: none; /* Hide default select arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    background: transparent;
+    border: none;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-gray-99);
+    cursor: pointer;
+}
+
+.icon-arrow-down {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px; /* size-[24px] */
+    height: 24px;
+    background-color: var(--color-gray-66);
+    mask-image: url('../assets/images/ep_arrow-down.svg');
+    -webkit-mask-image: url('../assets/images/ep_arrow-down.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    pointer-events: none; /* Allow clicks to pass through to select */
+}
+
+.btn-send-verification {
+    width: 200px; /* Explicit width from Figma */
+    /* Inherits other styles from btn-secondary */
+}
+
+/* --- Footer --- */
+.footer-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 136px; /* max-h-[136px] */
+    background-color: var(--color-white);
+    box-shadow: var(--color-footer-shadow);
+    z-index: 100;
+    overflow: hidden; /* overflow-clip */
+    padding: 42px 360px 40px; /* pb-[40px] pt-[42px] px-[360px] */
+}
+
+.footer-content {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: center; /* Centered for this page's footer */
+    gap: 20px; /* Gap between buttons */
+    width: 100%; /* w-[1200px] implied by outer padding */
+    height: 100%;
+}
+
+.btn-footer-action-cancel {
+    width: 200px; /* Explicit width from Figma */
+    /* Inherits other styles from btn-secondary */
+}
+
+.btn-footer-action-confirm {
+    width: 200px; /* Explicit width from Figma */
+    /* Inherits other styles from btn-primary */
+}

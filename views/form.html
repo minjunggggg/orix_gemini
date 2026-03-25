@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>본인인증</title>
+    <link rel="stylesheet" href="../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../assets/css/com/toggle.css" />
+    <link rel="stylesheet" href="../assets/css/page/form.css" />
+</head>
+<body>
+    <div class="page-content-wrapper">
+        <div class="header-wrap">
+            <div class="header-content">
+                <h1 class="logo">
+                    <a href="#"><img src="../assets/images/orix_logo.png" alt="ORIX Capital" /></a>
+                </h1>
+                <div class="contact-info">
+                    <p class="contact-text">고객센터</p>
+                    <div class="phone-info">
+                        <span class="phone-icon"></span>
+                        <span class="phone-number">02-2050-6700</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-wrap">
+            <div class="page-title">본인인증</div>
+
+            <div class="form-section">
+                <div class="form-card">
+                    <div class="terms-agreement-container">
+                        <div class="check-line terms-all-agree">
+                            <div class="checkbox">
+                                <input type="checkbox" id="terms-all" class="sr-only" />
+                                <label for="terms-all" class="checkbox-label"></label>
+                            </div>
+                            <p class="terms-title">전체 약관동의</p>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="agreement-item">
+                            <div class="check-line">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="terms-personal" class="sr-only" />
+                                    <label for="terms-personal" class="checkbox-label"></label>
+                                </div>
+                                <div class="agreement-text">
+                                    <p><span class="required">(필수)</span> 개인정보 수집・이용 동의</p>
+                                </div>
+                                <button type="button" class="btn-arrow-down"></button>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="agreement-item">
+                            <div class="check-line">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="terms-unique" class="sr-only" />
+                                    <label for="terms-unique" class="checkbox-label"></label>
+                                </div>
+                                <div class="agreement-text">
+                                    <p><span class="required">(필수)</span> 고유식별정보처리동의</p>
+                                </div>
+                                <button type="button" class="btn-arrow-down"></button>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="agreement-item">
+                            <div class="check-line">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="terms-telecom" class="sr-only" />
+                                    <label for="terms-telecom" class="checkbox-label"></label>
+                                </div>
+                                <div class="agreement-text">
+                                    <p><span class="required">(필수)</span> 통신사 이용약관 동의</p>
+                                </div>
+                                <button type="button" class="btn-arrow-down"></button>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="agreement-item">
+                            <div class="check-line">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="terms-service" class="sr-only" />
+                                    <label for="terms-service" class="checkbox-label"></label>
+                                </div>
+                                <div class="agreement-text">
+                                    <p><span class="required">(필수)</span> 서비스 이용약관 동의</p>
+                                </div>
+                                <button type="button" class="btn-arrow-down"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card-group">
+                    <div class="form-card">
+                        <p class="card-title">안내문 수신 정보</p>
+                        <div class="input-group-wrapper">
+                            <p class="input-label">이메일</p>
+                            <div class="input-email-group">
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" placeholder="이메일을 입력해 주세요." />
+                                </div>
+                                <span class="at-symbol">@</span>
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" value="naver.com" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group-wrapper">
+                            <p class="input-label">담당자 연락처</p>
+                            <div class="input-phone-group">
+                                <div class="select-box">
+                                    <select class="select-phone-prefix">
+                                        <option>선택</option>
+                                    </select>
+                                    <span class="icon-arrow-down"></span>
+                                </div>
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" />
+                                </div>
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-card">
+                        <p class="card-title">법인 등록 주소지</p>
+                        <div class="input-group-wrapper">
+                            <p class="input-label">주소</p>
+                            <div class="input-address-group">
+                                <div class="input-with-button">
+                                    <div class="input-text-wrap">
+                                        <input type="text" class="input-text" />
+                                    </div>
+                                    <button type="button" class="btn-postcode-search">우편번호 검색</button>
+                                </div>
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" />
+                                </div>
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" placeholder="상세주소를 입력해 주세요. (ex. A동 1508호)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-wrap">
+            <div class="footer-content">
+                <div class="footer-text-container">
+                    <p class="footer-message">약정완료 시, 계약서류 및 안내가 입력하신 정보로 발송됩니다.</p>
+                    <div class="footer-disclaimer-container">
+                        <p class="footer-disclaimer-prefix">※</p>
+                        <p class="footer-disclaimer-text">정확한 법인 정보를 입력해주시기 바랍니다.</p>
+                    </div>
+                </div>
+                <button type="button" class="btn-primary btn-footer-action">법인공동인증서 인증하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">전자서명</h3>
+                <button type="button" class="btn-modal-close"></button>
+            </div>
+
+            <div class="modal-tabs">
+                <div class="modal-tab-item is-active">서명하기</div>
+                <div class="modal-tab-item">인감도장 업로드</div>
+            </div>
+
+            <div class="modal-content">
+                <div class="signature-box">
+                    <p class="signature-placeholder">반드시 서명 바랍니다.</p>
+                    <button type="button" class="btn-reset-signature">
+                        <span class="ico-refresh"></span>
+                        초기화
+                    </button>
+                </div>
+                <div class="legal-text-container">
+                    <div class="legal-text-item">
+                        <span class="ico-info-light"></span>
+                        <p class="legal-text">
+                            <span class="legal-text-bold">본 서명(인감)은 '자동차임대차(렌탈)계약서, 주민등록번호 수집・이용 동의서(렌터카 법인 계약자용), 자동이체 신청서'에 일괄 적용됩니다.</span>
+                        </p>
+                    </div>
+                    <div class="legal-text-item">
+                        <span class="ico-info-light"></span>
+                        <p class="legal-text">
+                            본 서명(인감)정보는 비대면 전자약정 프로세스에 따라, 이어지는 법인공동인증서 인증과 결합하여 법적 효력 및 계약의 성립을 확정하며, 이는 법적으로 직접 자필 및 날인한 것과 동일한 효력을 가집니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-action-buttons">
+                <button type="button" class="btn-secondary btn-modal-cancel">취소</button>
+                <button type="button" class="btn-primary btn-modal-submit">제출하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/ui/com/ui-util.js"></script>
+    <script src="../assets/js/ui/com/button.js"></script>
+    <script src="../assets/js/ui/com/input.js"></script>
+    <script src="../assets/js/ui/com/toggle.js"></script>
+</body>
+</html>

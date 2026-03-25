@@ -1,0 +1,147 @@
+/* === Page Specific Styles - Processing Page === */
+
+/* --- Header --- */
+.header-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* h-[70px] */
+    background-color: var(--color-white);
+    z-index: 100;
+    overflow: hidden; /* overflow-clip */
+}
+
+.header-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22px; /* top-[22px] */
+    width: 1200px; /* w-[1200px] */
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: space-between; /* justify-between */
+}
+
+.logo img {
+    width: 95px; /* w-[95px] */
+    height: 25px; /* h-[25px] */
+    object-fit: contain;
+}
+
+.contact-info {
+    display: flex; /* flex */
+    gap: 12px; /* gap-[12px] */
+    align-items: center; /* items-center */
+}
+
+.contact-text {
+    font-family: var(--font-pretendard-bold); /* Pretendard Bold */
+    font-weight: 700;
+    font-size: 1.25rem; /* 20px */
+    line-height: normal; /* leading-[normal] */
+    color: var(--color-gray-45); /* text-[#454545] */
+    white-space: nowrap;
+}
+
+.phone-info {
+    display: flex; /* flex */
+    gap: 4px; /* gap-[4px] */
+    align-items: center; /* items-center */
+}
+
+.phone-icon {
+    width: 20px; /* size-[20px] */
+    height: 20px; /* size-[20px] */
+    background-color: var(--color-gray-66); /* Fill color of phone icon */
+    mask-image: url('../images/phone-icon.svg');
+    -webkit-mask-image: url('../images/phone-icon.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    flex-shrink: 0;
+}
+
+.phone-number {
+    font-family: var(--font-pretendard-regular); /* Pretendard Regular */
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: normal; /* leading-[normal] */
+    color: var(--color-gray-66); /* text-[#666] */
+    white-space: nowrap;
+}
+
+/* --- Main Processing Container --- */
+.main-processing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    gap: 20px; /* gap-[20px] */
+    align-items: center; /* items-center */
+    text-align: center;
+}
+
+.image-container {
+    width: 286px; /* w-[286px] */
+    height: 269px; /* h-[269px] */
+    overflow: hidden; /* overflow-clip */
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.content-container {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    gap: 42px; /* gap-[42px] */
+    align-items: center; /* items-center */
+    width: 100%; /* w-full */
+}
+
+.processing-title {
+    font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
+    font-weight: 600;
+    font-size: 3.375rem; /* 54px */
+    line-height: normal; /* leading-[normal] */
+    color: var(--color-gray-22); /* text-[#222] */
+    white-space: nowrap;
+}
+
+.detail-text-container {
+    border-top: 1px solid var(--color-gray-ddd); /* border-[#ddd] border-solid border-t */
+    padding: 32px 24px; /* px-[24px] py-[32px] */
+    width: 730px; /* w-[730px] */
+    display: flex; /* flex */
+    align-items: center; /* items-center (Figma shows items-start, but centering makes more sense for text block) */
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.detail-text {
+    font-family: var(--font-pretendard-regular); /* Pretendard Regular */
+    font-weight: 400;
+    font-size: 1.625rem; /* 26px */
+    line-height: 1.6; /* leading-[1.6] */
+    color: var(--color-gray-66); /* text-[#666] */
+    text-align: center; /* text-center */
+    white-space: nowrap;
+}
+
+.btn-processing-lg {
+    font-size: 1.5rem; /* 24px */
+    /* Other styles inherited from btn-primary should be sufficient */
+}

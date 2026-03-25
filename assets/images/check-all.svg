@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ico">
+<mask id="mask0_0_76" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+<path id="Rectangle Copy 14" d="M30 0H0V30H30V0Z" fill="var(--fill-0, white)"/>
+</mask>
+<g mask="url(#mask0_0_76)">
+<path id="Vector" d="M12.231 21.4349L5.99854 15.2023L7.41605 13.7774L12.231 18.5923L22.5735 8.24982L23.9985 9.67493L12.231 21.4349Z" fill="var(--fill-0, white)"/>
+</g>
+</g>
+</svg>

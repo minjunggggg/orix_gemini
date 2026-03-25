@@ -1,0 +1,377 @@
+/* === Component: input === */
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-14); /* 14px */
+    align-items: flex-start;
+    position: relative;
+    /* width: 490px; - Removed for generality, will be handled by specific input types or layout */
+}
+
+.input-label-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0; /* leading-[0] */
+    font-size: var(--font-size-18); /* text-[18px] */
+    font-weight: 600; /* SemiBold */
+    width: 100%;
+    /* Font family: Pretendard, sans-serif; - Assume Pretendard is imported globally */
+}
+
+.input-label-wrapper p {
+    line-height: normal;
+    /* This will be dynamic content in HTML, so no fixed text here */
+}
+
+.input-field-wrapper {
+    border: 1px solid var(--color-gray-ddd); /* border border-solid border-[#ddd] */
+    display: flex;
+    height: 60px; /* h-[60px] */
+    align-items: center;
+    padding: var(--spacing-18); /* p-[18px] */
+    position: relative;
+    border-radius: var(--border-radius-8); /* rounded-[8px] */
+    width: 100%;
+}
+
+.input-field {
+    flex: 1 0 0; /* flex-[1_0_0] */
+    height: 100%;
+    min-height: 1px; /* min-h-px */
+    min-width: 1px; /* min-w-px */
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: var(--font-size-18); /* text-[18px] */
+    /* Font family: Pretendard, sans-serif; - Assume Pretendard is imported globally */
+    font-weight: 400; /* Regular */
+    line-height: normal; /* leading-[normal] */
+}
+
+/* State-specific styling */
+
+/* Default state colors */
+.input-label-wrapper {
+    color: var(--color-gray-45); /* text-[#454545] */
+}
+.input-field::placeholder {
+    color: var(--color-gray-99); /* text-[#999] */
+}
+.input-field {
+    color: var(--color-gray-22); /* For actual input value */
+}
+
+
+/* Focus state */
+.input-wrapper.is-focus .input-label-wrapper {
+    color: var(--color-gray-45); /* Stays the same as default label color */
+}
+.input-wrapper.is-focus .input-field-wrapper {
+    border-color: var(--color-primary-dark); /* border-[#062d4d] */
+}
+.input-wrapper.is-focus .input-field {
+    color: var(--color-gray-22); /* text-[#222] */
+}
+
+/* Filled state */
+.input-wrapper.is-filled .input-label-wrapper {
+    color: var(--color-gray-45); /* Stays the same as default label color */
+}
+.input-wrapper.is-filled .input-field-wrapper {
+    border-color: var(--color-gray-ddd); /* Stays the same as default border color */
+}
+.input-wrapper.is-filled .input-field {
+    color: var(--color-gray-22); /* text-[#222] */
+}
+
+/* Disabled state */
+.input-wrapper.is-disabled {
+    cursor: not-allowed;
+}
+.input-wrapper.is-disabled .input-label-wrapper {
+    color: var(--color-gray-75); /* text-[#757575] */
+}
+.input-wrapper.is-disabled .input-field-wrapper {
+    background-color: var(--color-gray-f8); /* bg-[#f8f8f8] */
+    border-color: var(--color-gray-ddd); /* border-[#ddd] */
+}
+.input-wrapper.is-disabled .input-field {
+    color: var(--color-gray-75); /* text-[#757575] */
+    cursor: not-allowed;
+}
+
+/* Common input reset for consistency */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    -webkit-appearance: none; /* For iOS Safari */
+    -moz-appearance: none; /* For older Firefox */
+    appearance: none; /* Standard property */
+}
+
+/* Placeholder styling for cross-browser consistency */
+.input-field::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+    color: var(--color-gray-99);
+}
+.input-field::-moz-placeholder { /* Firefox 19+ */
+    color: var(--color-gray-99);
+    opacity: 1; /* Firefox adds opacity to placeholders by default */
+}
+.input-field:-ms-input-placeholder { /* IE 10-11 */
+    color: var(--color-gray-99);
+}
+.input-field::-ms-input-placeholder { /* Edge */
+    color: var(--color-gray-99);
+}
+.input-field::placeholder { /* Standard */
+    color: var(--color-gray-99);
+}
+
+/* === Email Input Specific Styles === */
+.input-type-email-container {
+    width: 490px; /* Overall width for Email Input as per Figma */
+}
+
+.email-input-holder {
+    display: flex;
+    gap: var(--spacing-email-input-gap-holder); /* 4px */
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.email-input-ico {
+    position: relative;
+    width: var(--size-checkbox); /* 20px */
+    height: var(--size-checkbox); /* 20px */
+    /* Placeholder for icon */
+    background-color: var(--color-gray-99); /* Example placeholder color */
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--color-white);
+}
+.email-input-ico::before {
+    content: 'i'; /* Placeholder 'i' for info icon */
+}
+
+
+.email-input-group {
+    display: flex;
+    gap: var(--spacing-email-input-gap-group); /* 6px */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.email-input-group .input-field-wrapper {
+    width: 230px; /* Specific width for each email part */
+    flex-shrink: 0;
+}
+.email-input-group .input-field-wrapper:first-of-type {
+    /* For the local part before @ */
+}
+.email-input-group .input-field-wrapper:last-of-type {
+    flex-grow: 1; /* Allow domain part to grow */
+    width: auto; /* Override fixed width if needed */
+}
+
+
+.email-at-separator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-66); /* text-[#666] */
+    white-space: nowrap;
+}
+
+/* CheckBox styling */
+.email-input-checkbox-wrapper {
+    display: flex;
+    gap: 8px; /* Based on Figma's gap-[8px] */
+    align-items: center;
+    position: relative;
+}
+
+.email-input-checkbox {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-ccc); /* border-[0.714px] */
+    border-radius: var(--border-radius-checkbox); /* 2.857px */
+    flex-shrink: 0;
+    width: var(--size-checkbox); /* 20px */
+    height: var(--size-checkbox); /* 20px */
+    cursor: pointer;
+    /* Optional: for a visual checkmark when checked */
+    /* background-image: url('data:image/svg+xml,...'); */
+}
+
+.email-input-checkbox-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0;
+    font-size: var(--font-size-18); /* Assuming same as input field */
+    color: var(--color-gray-75); /* text-[#757575] */
+    white-space: nowrap;
+}
+.email-input-checkbox-label p {
+    line-height: normal;
+}
+
+/* === Number Input Specific Styles === */
+.input-type-number-container {
+    width: 490px; /* Overall width for Number Input as per Figma */
+}
+
+.number-input-group {
+    display: flex;
+    gap: var(--spacing-number-input-gap-group); /* 10px */
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.number-input-select-wrapper {
+    display: flex;
+    gap: 12px; /* Figma's gap-[12px] */
+    align-items: center;
+    padding: var(--spacing-18); /* p-[18px] */
+    position: relative;
+    border-radius: var(--border-radius-8);
+    border: 1px solid var(--color-gray-ddd);
+    width: var(--width-number-input-select); /* 136px */
+    flex-shrink: 0;
+    height: 60px; /* Matches input-field-wrapper height */
+}
+
+.number-input-select-wrapper p {
+    flex: 1 0 0;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-99); /* Default '선택' text color */
+    white-space: nowrap;
+    line-height: normal;
+}
+.number-input-select-wrapper.is-filled p,
+.number-input-select-wrapper.is-focus p {
+    color: var(--color-gray-22);
+}
+
+
+.number-input-select-icon {
+    position: relative;
+    width: var(--size-number-input-icon); /* 24px */
+    height: var(--size-number-input-icon); /* 24px */
+    /* Placeholder for icon */
+    background-color: var(--color-gray-99); /* Example placeholder color */
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: var(--color-gray-99); /* Default icon color */
+}
+.number-input-select-wrapper.is-focus .number-input-select-icon,
+.number-input-select-wrapper.is-filled .number-input-select-icon {
+    background-color: var(--color-gray-22); /* Icon color when focused/filled */
+}
+
+
+.number-input-group .input-field-wrapper {
+    /* These will stretch equally */
+    flex: 1 0 0;
+    /* Reset specific width if inherited from email-input-group */
+    width: auto;
+}
+
+/* State-specific styling for number input select */
+.input-wrapper.is-focus .number-input-select-wrapper {
+    border-color: var(--color-primary-dark); /* border-[#062d4d] */
+}
+.input-wrapper.is-filled .number-input-select-wrapper {
+    border-color: var(--color-gray-ddd);
+}
+
+/* Disabled state for number input */
+.input-wrapper.is-disabled .number-input-select-wrapper {
+    background-color: var(--color-gray-f8);
+    border-color: var(--color-gray-ddd);
+}
+.input-wrapper.is-disabled .number-input-select-wrapper p,
+.input-wrapper.is-disabled .number-input-select-icon {
+    color: var(--color-gray-75);
+    background-color: var(--color-gray-75); /* For mask-image coloring */
+}
+
+/* Specific styling for the actual number input fields */
+/* The general .input-field styles should apply, but can be overridden here if needed */
+
+/* === Second Number Input Specific Styles === */
+/* This is for the number input with one main field (e.g., phone number) */
+.input-type-number-2-container {
+    width: 490px; /* Overall width for Number Input as per Figma */
+}
+
+.number-input-holder-2 {
+    display: flex;
+    gap: var(--spacing-email-input-gap-holder); /* 4px, reusing from email as it matches */
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.number-input-select-wrapper-2 {
+    display: flex;
+    gap: 12px; /* Figma's gap-[12px] */
+    align-items: center;
+    padding: var(--spacing-18); /* p-[18px] */
+    position: relative;
+    border-radius: var(--border-radius-8);
+    border: 1px solid var(--color-gray-ddd);
+    width: var(--width-number-input-select-2); /* 180px */
+    flex-shrink: 0;
+    height: 60px; /* Matches input-field-wrapper height */
+}
+
+.number-input-select-wrapper-2 p {
+    flex: 1 0 0;
+    font-size: var(--font-size-18);
+    color: var(--color-gray-99); /* Default '선택' text color */
+    white-space: nowrap;
+    line-height: normal;
+}
+.number-input-select-wrapper-2.is-filled p,
+.number-input-select-wrapper-2.is-focus p {
+    color: var(--color-gray-22);
+}
+
+.number-input-select-wrapper-2 .number-input-select-icon {
+    /* Reuses the icon styling from the first number input */
+}
+
+/* State-specific styling for second number input select */
+.input-wrapper.is-focus .number-input-select-wrapper-2 {
+    border-color: var(--color-primary-dark); /* border-[#062d4d] */
+}
+.input-wrapper.is-filled .number-input-select-wrapper-2 {
+    border-color: var(--color-gray-ddd);
+}
+.input-wrapper.is-disabled .number-input-select-wrapper-2 {
+    background-color: var(--color-gray-f8);
+    border-color: var(--color-gray-ddd);
+}
+.input-wrapper.is-disabled .number-input-select-wrapper-2 p,
+.input-wrapper.is-disabled .number-input-select-wrapper-2 .number-input-select-icon {
+    color: var(--color-gray-75);
+    background-color: var(--color-gray-75); /* For mask-image coloring */
+}
+
+/* For the main input field of the second number input, the general .input-field styles apply */
+
