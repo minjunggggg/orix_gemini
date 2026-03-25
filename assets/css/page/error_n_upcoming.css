@@ -1,0 +1,96 @@
+
+/* --- Error, Upcoming page --- */
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    gap: 20px;
+    /* gap-[20px] */
+    align-items: center;
+    /* items-center */
+    text-align: center;
+}
+
+.image-container {
+    width: 285px;
+    height: 263px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-family: var(--font-pretendard-semibold);
+    /* Pretendard SemiBold */
+    font-weight: 600;
+    font-size: 5.4rem;
+    line-height: normal;
+    /* leading-[normal] */
+    color: var(--color-black);
+    /* text-black */
+    white-space: nowrap;
+}
+
+.error-title-red {
+    color: var(--color-error-red);
+    /* text-[red] */
+}
+
+.detail-text-container {
+    border-top: 1px solid var(--color-gray-ddd);
+    /* border-[#ddd] border-solid border-t */
+    padding: 32px 24px;
+    /* px-[24px] py-[32px] */
+    width: 730px;
+    /* w-[730px] */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center (Figma shows items-start, but centering makes more sense for text block) */
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.detail-text {
+    font-family: var(--font-pretendard-regular);
+    /* Pretendard Regular */
+    font-weight: 400;
+    font-size: 2.6rem;
+    /* 26px */
+    line-height: 1.6;
+    /* leading-[1.6] */
+    color: var(--color-gray-66);
+    /* text-[#666] */
+    text-align: center;
+    /* text-center */
+    white-space: nowrap;
+}
+
+.btn-upcoming-lg {
+    font-size: 2.4rem;
+    /* 24px */
+    /* Other styles inherited from btn-primary should be sufficient */
+}
