@@ -1,314 +1,8 @@
 /* === Page Specific Styles - Loading Page === */
-
-/* Header styles (adapted from Figma output and existing header in processing.css) */
-.header-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px; /* h-[70px] */
-    background-color: var(--color-white); /* Figma output indicates white background for header */
-    z-index: 100;
-    overflow: hidden; /* overflow-clip */
-}
-
-.header-content {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 22px; /* top-[22px] */
-    width: 1200px; /* w-[1200px] */
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: space-between; /* justify-between */
-}
-
-.logo img {
-    width: 95px; /* w-[95px] */
-    height: 25px; /* h-[25px] */
-    object-fit: contain;
-}
-
-.contact-info {
-    display: flex; /* flex */
-    gap: 12px; /* gap-[12px] */
-    align-items: center; /* items-center */
-}
-
-.contact-text {
-    font-family: var(--font-pretendard-bold); /* Pretendard Bold */
-    font-weight: 700;
-    font-size: 1.25rem; /* 20px */
-    line-height: normal; /* leading-[normal] */
-    color: var(--color-gray-45); /* text-[#454545] */
-    white-space: nowrap;
-}
-
-.phone-info {
-    display: flex; /* flex */
-    gap: 4px; /* gap-[4px] */
-    align-items: center; /* items-center */
-}
-
-.phone-icon {
-    width: 20px; /* size-[20px] */
-    height: 20px; /* size-[20px] */
-    background-color: var(--color-gray-66); /* Fill color of phone icon */
-    mask-image: url('../images/phone-icon-loading.svg');
-    -webkit-mask-image: url('../images/phone-icon-loading.svg');
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-position: center;
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    flex-shrink: 0;
-}
-
-.phone-number {
-    font-family: var(--font-pretendard-regular); /* Pretendard Regular */
-    font-weight: 400;
-    font-size: 1.125rem; /* 18px */
-    line-height: normal; /* leading-[normal] */
-    color: var(--color-gray-66); /* text-[#666] */
-    white-space: nowrap;
-}
-
 /* Page body background */
 body {
-    background-color: #f2f3f8; /* From Figma: bg-[#f2f3f8] for the main div */
-}
-
-.loading-page-wrap {
-    padding-top: 70px; /* Offset for fixed header */
-    padding-bottom: 136px; /* Offset for fixed footer */
-    min-height: 100vh; /* Ensure it takes at least the full viewport height */
-    box-sizing: border-box;
-    position: relative; /* For absolute positioning of children */
-}
-
-/* Page Title */
-.page-title-wrap {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 122px; /* Figma: top-[122px] for Header Container */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    white-space: nowrap;
-}
-
-.page-title {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: bold;
-    font-size: 2.375rem; /* 38px / 16px = 2.375rem */
-    color: #222222;
-    line-height: normal;
-    flex-shrink: 0;
-}
-
-/* Contract List Container (Accordion items) */
-.contract-list-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 223px; /* Figma: top-[223px] for Container */
-    width: 1200px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px; /* gap-[28px] */
-    align-items: flex-start;
-}
-
-.contract-item {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 99px;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 32px 50px; /* py-[32px] px-[50px] */
-    border-radius: 16px; /* rounded-[16px] */
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.contract-item-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.contract-status-label {
-    background-color: #3182ee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 24px; /* py-[8px] px-[24px] */
-    border-radius: 100px; /* rounded-[100px] */
-    flex-shrink: 0;
-}
-
-.contract-status-label p {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 500; /* Medium */
-    font-size: 1rem; /* 16px */
-    color: #ffffff;
-    line-height: normal;
-    white-space: nowrap;
-}
-
-.contract-name {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 500; /* Medium */
-    font-size: 1.375rem; /* 22px */
-    color: #222222;
-    line-height: normal;
-    white-space: nowrap;
-    margin-left: 18px; /* gap-[18px] from figma*/
-}
-
-.contract-item-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    /* Rotation for the arrow */
-    transform: rotate(180deg); /* -scale-y-100 flex-none rotate-180 */
-}
-
-.contract-item-toggle img {
-    width: 32px; /* size-[32px] */
-    height: 32px; /* size-[32px] */
-    display: block;
-    max-width: none;
-    object-fit: cover;
-}
-
-/* Contract Review Container (Warning message) */
-.contract-review-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 632px; /* Figma: top-[632px] for Container */
-    width: 1200px;
-    background-color: rgba(255, 255, 255, 0.8); /* bg-[rgba(255,255,255,0.8)] */
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* gap-[12px] */
-    align-items: flex-start;
-    padding: 32px 50px 42px; /* pt-[32px] pb-[42px] px-[50px] */
-    border-radius: 20px; /* rounded-[20px] */
-}
-
-.contract-review-icon {
-    width: 22px; /* size-[22px] */
-    height: 22px; /* size-[22px] */
-    flex-shrink: 0;
-}
-
-.contract-review-icon img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    max-width: none;
-    object-fit: cover;
-}
-
-.contract-review-question {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 600; /* SemiBold */
-    font-size: 1.125rem; /* 18px */
-    color: #3182ee;
-    line-height: 1.5;
-    white-space: nowrap;
-    margin-left: 8px; /* gap-[8px] from figma */
-}
-
-.contract-review-disclaimer {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: normal; /* Regular */
-    font-size: 1rem; /* 16px */
-    color: #666666;
-    line-height: 1.5;
-    white-space: nowrap;
-}
-
-/* Footer */
-.footer-wrap {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    max-height: 136px;
-    overflow: hidden;
-    padding: 40px 360px; /* py-[40px] px-[360px] */
-    box-shadow: 0px -5px 20px 0px rgba(221, 221, 221, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* gap-[12px] */
-    align-items: flex-start;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.footer-main-text {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 600; /* SemiBold */
-    font-size: 1.125rem; /* 18px */
-    color: #222222;
-    line-height: normal;
-    flex-shrink: 0;
-}
-
-.footer-disclaimer-container {
-    display: flex;
-    gap: 4px; /* gap-[4px] */
-    align-items: flex-start;
-    line-height: 1.4;
-    width: 100%;
-    color: #666666;
-    font-size: 1rem; /* 16px */
-}
-
-.disclaimer-symbol {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 300; /* Light */
-    flex-shrink: 0;
-}
-
-.disclaimer-text {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: normal; /* Regular */
-    flex-shrink: 0;
-}
-
-.btn-submit {
-    background-color: #3182ee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 40px; /* py-[24px] px-[40px] */
-    border-radius: 12px; /* rounded-[12px] */
-    flex-shrink: 0;
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 600; /* SemiBold */
-    font-size: 1.25rem; /* 20px */
-    color: #ffffff;
-    line-height: normal;
-    text-align: center;
-    white-space: nowrap;
-    min-width: 70px;
+    background-color: #f2f3f8;
+    /* From Figma: bg-[#f2f3f8] for the main div */
 }
 
 /* Overlay */
@@ -318,8 +12,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* bg-[rgba(0,0,0,0.4)] */
-    z-index: 101; /* Above other content, below modal */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* bg-[rgba(0,0,0,0.4)] */
+    z-index: 101;
+    /* Above other content, below modal */
 }
 
 /* Identity Verification Modal */
@@ -331,62 +27,53 @@ body {
     background-color: #ffffff;
     height: 380px;
     width: 509px;
-    overflow: hidden; /* overflow-clip */
-    border-radius: 20px; /* rounded-[20px] */
-    z-index: 102; /* Above overlay */
+    overflow: hidden;
+    /* overflow-clip */
+    border-radius: 20px;
+    /* rounded-[20px] */
+    z-index: 102;
+    /* Above overlay */
+    padding: 43px 40px 48px 40px;
 }
 
 .modal-image-wrap {
-    position: absolute;
-    left: 50%;
-    top: 43px;
-    transform: translateX(-50%);
+    margin: 0 auto;
     width: 239px;
     height: 127px;
 }
 
 .modal-image-wrap img {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
-    max-width: none;
-    object-fit: cover;
-    pointer-events: none;
 }
 
 .modal-title {
-    position: absolute;
-    left: 50%;
-    top: 196px;
-    transform: translateX(-50%);
-    font-family: 'Pretendard', sans-serif;
     font-weight: bold;
     line-height: 1.5;
     font-style: normal;
     color: #454545;
-    font-size: 1.5rem; /* 24px / 16px = 1.5rem */
+    font-size: 2.4rem;
+    /* 24px */
     text-align: center;
     letter-spacing: -0.264px;
-    width: 429px; /* w-[429px] */
-    white-space: pre-wrap;
+    width: 429px;
+    /* w-[429px] */
+    margin: 26px auto 0 auto;
 }
 
 .modal-description {
-    position: absolute;
-    left: 50%;
-    top: 284px;
-    transform: translateX(-50%);
-    font-family: 'Pretendard', sans-serif;
     font-weight: normal;
-    line-height: 1.5; /* leading-[0] for container, but children have leading-[1.5] */
+    line-height: 1.5;
+    /* leading-[0] for container, but children have leading-[1.5] */
     font-style: normal;
     color: #757575;
-    font-size: 1rem; /* 16px / 16px = 1rem */
+    font-size: 1.6rem;
+    /* 16px */
     text-align: center;
     letter-spacing: -0.176px;
-    width: 427px; /* w-[427px] */
-    white-space: pre-wrap;
+    width: 427px;
+    /* w-[427px] */
+    margin: 16px auto 0 auto;
 }
 
 .modal-description p {
