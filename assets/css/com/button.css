@@ -5,7 +5,7 @@
     --color-btn-active-bg: var(--color-primary-blue);
     --color-btn-active-text: var(--color-white);
     --color-btn-hover-bg: var(--color-primary-dark-blue);
-    --color-btn-hover-shadow: 1px 2px 8px 0px rgba(221,221,221,0.25);
+    --color-btn-hover-shadow: 1px 2px 8px 0px rgba(221, 221, 221, 0.25);
 
     --color-btn-secondary-border: var(--color-gray-ccc);
     --color-btn-secondary-hover-border: var(--color-gray-bbb);
@@ -22,58 +22,60 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 40px; /* py-[24px] px-[40px] */
-    border-radius: 12px; /* rounded-[12px] */
+    padding: 24px 40px;
+    /* py-[24px] px-[40px] */
+    border-radius: 12px;
+    /* rounded-[12px] */
     position: relative;
     cursor: pointer;
     min-width: 150px;
-    height: 72px;
+    height: auto;
     box-sizing: border-box;
     transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
 
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem;
+    /* 20px */
     text-align: center;
     white-space: nowrap;
     line-height: normal;
     text-decoration: none;
 }
 
-.btn-primary {
+.btn-primary:disabled {
     background-color: var(--color-btn-inactive-bg);
     border: none;
     font-family: var(--font-pretendard-semibold);
-    font-weight: 600; /* SemiBold */
+    font-weight: 600;
+    /* SemiBold */
     color: var(--color-btn-inactive-text);
 }
 
 /* Primary Button Active State */
-.btn-primary:active,
-.btn-primary.is-active {
+.btn-primary {
     background-color: var(--color-btn-active-bg);
     color: var(--color-btn-active-text);
     box-shadow: none;
 }
 
 /* Primary Button Hover State */
-.btn-primary:hover,
-.btn-primary.is-hover {
+.btn-primary:hover {
     background-color: var(--color-btn-hover-bg);
     color: var(--color-btn-active-text);
     box-shadow: var(--color-btn-hover-shadow);
 }
 
 /* === Secondary Button Component === */
-.btn-secondary {
+.btn-secondary:disabled {
     background-color: var(--color-white);
     border: 1px solid var(--color-btn-secondary-border);
     font-family: var(--font-pretendard-medium);
-    font-weight: 500; /* Medium */
+    font-weight: 500;
+    /* Medium */
     color: var(--color-btn-secondary-text);
 }
 
 /* Secondary Button Hover State */
-.btn-secondary:hover,
-.btn-secondary.is-hover {
+.btn-secondary {
     border-color: var(--color-btn-secondary-hover-border);
     box-shadow: var(--color-btn-hover-shadow);
 }
@@ -94,26 +96,32 @@
 
 /* === Popup Button Modifiers === */
 .btn-size-popup {
-    padding: 20px 40px; /* py-[20px] px-[40px] */
+    padding: 20px 40px;
+    /* py-[20px] px-[40px] */
     min-width: 70px;
-    height: 60px; /* (20px padding * 2) + 18px font-size + line-height (approx 20px) */
-    font-size: 1.125rem; /* 18px */
+    height: 60px;
+    /* (20px padding * 2) + 18px font-size + line-height (approx 20px) */
+    font-size: 1.125rem;
+    /* 18px */
 }
 
 /* Primary Popup Button Text */
 .btn-primary.btn-size-popup {
     font-family: var(--font-pretendard-semibold);
-    font-weight: 600; /* SemiBold */
+    font-weight: 600;
+    /* SemiBold */
 }
 
 /* Secondary Popup Button specific styles */
 .btn-popup-sub {
     background-color: var(--color-white);
     border: 1px solid var(--color-gray-ccc);
-    box-shadow: var(--color-btn-hover-shadow); /* Default shadow for secondary popup */
+    box-shadow: var(--color-btn-hover-shadow);
+    /* Default shadow for secondary popup */
     color: var(--color-btn-secondary-text);
     font-family: var(--font-pretendard-medium);
-    font-weight: 500; /* Medium */
+    font-weight: 500;
+    /* Medium */
 }
 
 /* Secondary Popup Button Hover State */
@@ -126,21 +134,27 @@
 /* === Icon Button Modifiers === */
 .btn-icon {
     display: flex;
-    gap: 8px; /* gap-[8px] */
+    gap: 8px;
+    /* gap-[8px] */
     align-items: center;
     justify-content: center;
 }
 
 .btn-size-small {
-    padding: 16px 32px; /* py-[16px] px-[32px] */
-    border-radius: 8px; /* rounded-[8px] */
+    padding: 16px 32px;
+    /* py-[16px] px-[32px] */
+    border-radius: 8px;
+    /* rounded-[8px] */
 }
 
 .btn-icon__text {
     font-family: var(--font-pretendard-medium);
-    font-weight: 500; /* Medium */
-    font-size: 1.125rem; /* 18px */
-    min-width: 70px; /* min-w-[70px] */
+    font-weight: 500;
+    /* Medium */
+    font-size: 1.125rem;
+    /* 18px */
+    min-width: 70px;
+    /* min-w-[70px] */
 }
 
 .btn-primary.btn-icon .btn-icon__text {
@@ -152,11 +166,15 @@
 }
 
 .btn-icon-download {
-    width: 24px; /* size-[24px] */
+    width: 24px;
+    /* size-[24px] */
     height: 24px;
-    background-color: currentColor; /* Use text color for icon color */
-    mask-image: url('../images/download.svg'); /* Download icon */
-    -webkit-mask-image: url('../images/download.svg'); /* Webkit prefix */
+    background-color: currentColor;
+    /* Use text color for icon color */
+    mask-image: url('../images/download.svg');
+    /* Download icon */
+    -webkit-mask-image: url('../images/download.svg');
+    /* Webkit prefix */
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -172,7 +190,8 @@
 
 /* Override for secondary icon button to make icon gray */
 .btn-secondary.btn-icon .btn-icon-download {
-    background-color: var(--color-gray-45); /* Figma uses #454545 for secondary icon */
+    background-color: var(--color-gray-45);
+    /* Figma uses #454545 for secondary icon */
 }
 
 /* === Postcode Search Button === */
@@ -180,11 +199,16 @@
     background-color: var(--color-postcode-bg-default);
     color: var(--color-white);
     font-family: var(--font-pretendard-medium);
-    font-weight: 500; /* Medium */
-    font-size: 1rem; /* 16px */
-    width: 120px; /* w-[120px] */
-    height: 44px; /* h-[44px] */
-    border-radius: 6px; /* rounded-[6px] */
+    font-weight: 500;
+    /* Medium */
+    font-size: 1rem;
+    /* 16px */
+    width: 120px;
+    /* w-[120px] */
+    height: 44px;
+    /* h-[44px] */
+    border-radius: 6px;
+    /* rounded-[6px] */
     border: none;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
@@ -201,7 +225,8 @@
 .btn-postcode-search:hover,
 .btn-postcode-search.is-hover {
     background-color: var(--color-postcode-bg-hover);
-    box-shadow: var(--color-btn-hover-shadow); /* Reusing existing shadow variable */
+    box-shadow: var(--color-btn-hover-shadow);
+    /* Reusing existing shadow variable */
 }
 
 .btn-postcode-search:focus-visible {
@@ -220,19 +245,28 @@
     background-color: var(--color-white);
     border: 1px solid var(--color-gray-ddd);
     color: var(--color-gray-66);
-    font-family: 'Pretendard', sans-serif; /* Regular font assumed from Figma */
-    font-weight: 400; /* Regular */
-    font-size: 1rem; /* 16px */
+    font-family: 'Pretendard', sans-serif;
+    /* Regular font assumed from Figma */
+    font-weight: 400;
+    /* Regular */
+    font-size: 1rem;
+    /* 16px */
     border-radius: 4px;
-    padding: 10px 16px 10px 10px; /* pl-[10px] pr-[16px] py-[10px] */
-    height: 44px; /* h-[44px] */
+    padding: 10px 16px 10px 10px;
+    /* pl-[10px] pr-[16px] py-[10px] */
+    height: 44px;
+    /* h-[44px] */
     cursor: pointer;
     transition: border-color 0.2s, box-shadow 0.2s;
 
-    display: flex; /* flex */
-    gap: 10px; /* gap-[10px] */
-    align-items: center; /* items-center */
-    justify-content: center; /* justify-center is not explicitly in Figma for the inner div but visually implied */
+    display: flex;
+    /* flex */
+    gap: 10px;
+    /* gap-[10px] */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center is not explicitly in Figma for the inner div but visually implied */
     white-space: nowrap;
     line-height: normal;
     text-decoration: none;
@@ -261,10 +295,14 @@
     border: 1px solid var(--color-gray-ddd);
     color: var(--color-gray-45);
     font-family: var(--font-pretendard-medium);
-    font-weight: 500; /* Medium */
-    font-size: 1.125rem; /* 18px */
-    padding: 14px 32px; /* px-[32px] py-[14px] */
-    border-radius: 100px; /* rounded-[100px] */
+    font-weight: 500;
+    /* Medium */
+    font-size: 1.125rem;
+    /* 18px */
+    padding: 14px 32px;
+    /* px-[32px] py-[14px] */
+    border-radius: 100px;
+    /* rounded-[100px] */
     cursor: pointer;
     transition: border-color 0.2s, box-shadow 0.2s;
 
@@ -295,85 +333,124 @@
 
 /* === Electronic Agreement Start Block === */
 .agreement-start-block {
-    background-color: var(--color-primary-blue); /* bg-[#3182ee] */
-    width: 1249px; /* w-[1249px] */
-    padding: 28px 62px 28px 48px; /* pl-[48px] pr-[62px] py-[28px] */
-    border-top-left-radius: 60px; /* rounded-tl-[60px] */
+    background-color: var(--color-primary-blue);
+    /* bg-[#3182ee] */
+    width: 1249px;
+    /* w-[1249px] */
+    padding: 28px 62px 28px 48px;
+    /* pl-[48px] pr-[62px] py-[28px] */
+    border-top-left-radius: 60px;
+    /* rounded-tl-[60px] */
     cursor: pointer;
     transition: background-color 0.2s;
 
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col */
-    align-items: flex-start; /* items-start */
-    overflow: hidden; /* overflow-clip */
-    position: relative; /* relative */
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    align-items: flex-start;
+    /* items-start */
+    overflow: hidden;
+    /* overflow-clip */
+    position: relative;
+    /* relative */
 }
 
 .agreement-start-block:hover,
 .agreement-start-block.is-hover {
-    background-color: var(--color-agreement-bg-hover); /* bg-[#0f5fcb] */
+    background-color: var(--color-agreement-bg-hover);
+    /* bg-[#0f5fcb] */
 }
 
 .agreement-start-block__content-wrapper {
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: space-between; /* justify-between */
-    width: 100%; /* w-full */
-    position: relative; /* relative */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: space-between;
+    /* justify-between */
+    width: 100%;
+    /* w-full */
+    position: relative;
+    /* relative */
 }
 
 .agreement-start-block__left-content {
     display: flex;
-    gap: 28px; /* gap-[28px] */
-    align-items: center; /* items-center */
+    gap: 28px;
+    /* gap-[28px] */
+    align-items: center;
+    /* items-center */
 }
 
 .agreement-start-block__button-container {
-    background-color: var(--color-white); /* bg-white */
-    padding: 20px 24px; /* px-[24px] py-[20px] */
-    border-radius: 100px; /* rounded-[100px] */
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: center; /* justify-center */
+    background-color: var(--color-white);
+    /* bg-white */
+    padding: 20px 24px;
+    /* px-[24px] py-[20px] */
+    border-radius: 100px;
+    /* rounded-[100px] */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center */
     white-space: nowrap;
     line-height: normal;
 }
 
 .agreement-start-block__button-text {
-    font-family: var(--font-pretendard-bold); /* Pretendard Bold */
-    font-weight: 700; /* Bold */
-    font-size: 1.375rem; /* 22px */
-    color: var(--color-primary-blue); /* text-[#3182ee] */
+    font-family: var(--font-pretendard-bold);
+    /* Pretendard Bold */
+    font-weight: 700;
+    /* Bold */
+    font-size: 2.2rem;
+    /* 22px */
+    color: var(--color-primary-blue);
+    /* text-[#3182ee] */
     transition: color 0.2s;
 }
 
 .agreement-start-block:hover .agreement-start-block__button-text,
 .agreement-start-block.is-hover .agreement-start-block__button-text {
-    color: var(--color-agreement-bg-hover); /* text-[#0f5fcb] */
+    color: var(--color-agreement-bg-hover);
+    /* text-[#0f5fcb] */
 }
 
 .agreement-start-block__description {
-    font-family: 'Pretendard', sans-serif; /* Pretendard Regular */
-    font-weight: 400; /* Regular */
-    font-size: 1.375rem; /* 22px */
-    color: var(--color-white); /* text-white */
+    font-family: 'Pretendard', sans-serif;
+    /* Pretendard Regular */
+    font-weight: 400;
+    /* Regular */
+    font-size: 2.2rem;
+    /* 22px */
+    color: var(--color-white);
+    /* text-white */
     white-space: nowrap;
     line-height: normal;
 }
 
 .agreement-start-block__arrow-wrapper {
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: center; /* justify-center */
-    position: relative; /* relative */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center */
+    position: relative;
+    /* relative */
 }
 
 .agreement-start-block__arrow-icon {
-    width: 40px; /* size-[40px] */
-    height: 40px; /* size-[40px] */
-    background-color: var(--color-white); /* White icon */
-    mask-image: url('../images/right-arrow.svg');
-    -webkit-mask-image: url('../images/right-arrow.svg');
+    width: 40px;
+    /* size-[40px] */
+    height: 40px;
+    /* size-[40px] */
+    background-color: var(--color-white);
+    /* White icon */
+    mask-image: url('../../images/right-arrow.svg');
+    -webkit-mask-image: url('../../images/right-arrow.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -382,13 +459,15 @@
     -webkit-mask-size: contain;
     /* Transformations from Figma: -scale-y-100 rotate-180 */
     /* rotate(180deg) + scaleY(-1) = rotate(180deg) and flip vertical */
-    transform: rotate(180deg) scaleY(-1);
+    transform: rotate(0deg) scaleY(-1);
 }
 
 .btn-edit-action-icon {
-    width: 24px; /* size-[24px] */
+    width: 24px;
+    /* size-[24px] */
     height: 24px;
-    background-color: var(--color-gray-66); /* Use text color for icon color */
+    background-color: var(--color-gray-66);
+    /* Use text color for icon color */
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -398,7 +477,8 @@
 }
 
 .btn-edit-action-reset {
-    width: 102px; /* w-[102px] */
+    width: 102px;
+    /* w-[102px] */
 }
 
 .btn-edit-action-reset .btn-edit-action-icon {
@@ -407,7 +487,8 @@
 }
 
 .btn-edit-action-trash {
-    width: 116px; /* w-[116px] */
+    width: 116px;
+    /* w-[116px] */
 }
 
 .btn-edit-action-trash .btn-edit-action-icon {
@@ -417,35 +498,51 @@
 
 /* === Option Button === */
 .btn-option {
-    background-color: var(--color-option-bg-default); /* bg-[#f3f3f3] */
-    color: var(--color-gray-66); /* text-[#666] */
-    font-family: 'Pretendard', sans-serif; /* Pretendard Regular */
-    font-weight: 400; /* Regular */
-    font-size: 1rem; /* 16px */
-    width: 116.5px; /* w-[116.5px] */
-    padding: 10px 8px; /* px-[8px] py-[10px] */
-    border-radius: 4px; /* rounded-[4px] */
-    border: 1px solid transparent; /* Default transparent border */
+    background-color: var(--color-option-bg-default);
+    /* bg-[#f3f3f3] */
+    color: var(--color-gray-66);
+    /* text-[#666] */
+    font-family: 'Pretendard', sans-serif;
+    /* Pretendard Regular */
+    font-weight: 400;
+    /* Regular */
+    font-size: 1rem;
+    /* 16px */
+    width: 116.5px;
+    /* w-[116.5px] */
+    padding: 10px 8px;
+    /* px-[8px] py-[10px] */
+    border-radius: 4px;
+    /* rounded-[4px] */
+    border: 1px solid transparent;
+    /* Default transparent border */
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, font-weight 0.2s;
 
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: center; /* justify-center */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center */
     white-space: nowrap;
     line-height: normal;
     text-decoration: none;
 }
 
 .btn-option.is-selected {
-    border-color: var(--color-primary-blue); /* border-[#3182ee] */
-    color: var(--color-primary-blue); /* text-[#3182ee] */
-    font-weight: 600; /* SemiBold */
+    border-color: var(--color-primary-blue);
+    /* border-[#3182ee] */
+    color: var(--color-primary-blue);
+    /* text-[#3182ee] */
+    font-weight: 600;
+    /* SemiBold */
 }
 
 /* Hover state for non-selected option button */
 .btn-option:not(.is-selected):hover {
-    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    background-color: #e0e0e0;
+    /* Slightly darker gray on hover */
 }
 
 .btn-option:focus-visible {
@@ -461,35 +558,51 @@
 
 /* === Pagination Number Button === */
 .btn-pagination-number {
-    background-color: var(--color-pagination-bg-default); /* bg-[#dfe4eb] */
-    color: var(--color-gray-66); /* text-[#666] */
-    font-family: 'Pretendard', sans-serif; /* Pretendard Regular */
-    font-weight: 400; /* Regular */
-    font-size: 1.125rem; /* 18px */
-    width: 30px; /* size-[30px] */
-    height: 30px; /* size-[30px] */
-    padding: 8px; /* p-[8px] */
-    border-radius: 100px; /* rounded-[100px] */
+    background-color: var(--color-pagination-bg-default);
+    /* bg-[#dfe4eb] */
+    color: var(--color-gray-66);
+    /* text-[#666] */
+    font-family: 'Pretendard', sans-serif;
+    /* Pretendard Regular */
+    font-weight: 400;
+    /* Regular */
+    font-size: 1.125rem;
+    /* 18px */
+    width: 30px;
+    /* size-[30px] */
+    height: 30px;
+    /* size-[30px] */
+    padding: 8px;
+    /* p-[8px] */
+    border-radius: 100px;
+    /* rounded-[100px] */
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, font-weight 0.2s;
 
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: center; /* justify-center */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center */
     white-space: nowrap;
     line-height: normal;
     text-decoration: none;
 }
 
 .btn-pagination-number.is-selected {
-    background-color: var(--color-primary-blue); /* bg-[#3182ee] */
-    color: var(--color-white); /* text-white */
-    font-weight: 500; /* Medium */
+    background-color: var(--color-primary-blue);
+    /* bg-[#3182ee] */
+    color: var(--color-white);
+    /* text-white */
+    font-weight: 500;
+    /* Medium */
 }
 
 /* Hover state for non-selected pagination number button */
 .btn-pagination-number:not(.is-selected):hover {
-    background-color: #c9d2de; /* Slightly darker gray on hover */
+    background-color: #c9d2de;
+    /* Slightly darker gray on hover */
 }
 
 .btn-pagination-number:focus-visible {
