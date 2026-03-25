@@ -1,121 +1,74 @@
 /* === Page Specific Styles - Main Page === */
 
 /* --- Header --- */
-.header-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 82px;
-    background-color: var(--color-white);
-    z-index: 100; /* Ensure header is on top */
-    overflow: hidden; /* overflow-clip */
+.header {
+    height: 100%;
+    padding: 25px 0 14px;
 }
 
-.nav-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 25px;
-    width: 1400px; /* Adjust as per desired layout width */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
+.logo {
     width: 142px;
     height: 38px;
-    object-fit: contain;
 }
 
-.links-container {
+.qna {
+    color: #454545;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 0 32px;
+    margin: 0 32px;
+    height: 23px;
+    border-right: 1px solid #ccc;
     display: flex;
-    gap: 32px;
     align-items: center;
-}
-
-.nav-link {
-    font-family: var(--font-pretendard-regular);
-    font-weight: 400; /* Regular */
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.5;
-    color: var(--color-gray-45);
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.vertical-divider {
-    width: 23px;
-    height: 1px; /* Original SVG height is 1px, but it's rotated 90deg */
-    background-color: var(--color-gray-ccc); /* Stroke color of the line */
-    transform: rotate(90deg); /* Rotate to make it vertical */
-    flex-shrink: 0;
 }
 
 .contact-info {
+    gap: 0;
+}
+
+.contact-details {
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1px solid #ccc;
     display: flex;
-    flex-direction: column; /* Figma shows flex-col items-start */
-    align-items: flex-start;
-    padding: 8px 18px; /* px-[18px] py-[8px] */
-    width: 243px; /* w-[243px] */
-    border: 1px solid var(--color-gray-ddd);
-    border-radius: 100px; /* rounded-[100px] */
-    flex-shrink: 0;
+    gap: 12px;
+
 }
 
 .contact-text {
-    font-family: var(--font-pretendard-regular);
+    font-size: 1.8rem;
     font-weight: 400;
-    font-size: 1.125rem; /* 18px */
-    line-height: 1.5;
-    color: var(--color-gray-45);
-    white-space: nowrap;
-}
-
-.phone-info {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-}
-
-.phone-icon {
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-gray-66); /* Fill color of phone icon */
-    mask-image: url('../images/phone-icon.svg');
-    -webkit-mask-image: url('../images/phone-icon.svg');
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-position: center;
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    flex-shrink: 0;
 }
 
 .phone-number {
-    font-family: var(--font-pretendard-regular);
+    font-size: 1.6rem;
     font-weight: 400;
-    font-size: 1rem; /* 16px */
-    line-height: normal;
-    color: var(--color-gray-66);
-    white-space: nowrap;
 }
 
 /* --- Main Visual Section --- */
 .main-visual-section {
-    position: absolute; /* Changed from fixed to absolute to prevent content overlap issues with header */
-    top: 98px; /* top-[98px] */
-    left: 83px; /* left-[83px] */
-    width: 1838px; /* w-[1838px] */
-    height: 858px; /* h-[858px] */
-    border-top-left-radius: 100px; /* rounded-tl-[100px] */
-    overflow: hidden; /* overflow-clip */
-    background-image: url('../assets/images/orix_mockup.png'); /* User provided image */
+    position: absolute;
+    /* Changed from fixed to absolute to prevent content overlap issues with header */
+    top: 98px;
+    /* top-[98px] */
+    left: 83px;
+    /* left-[83px] */
+    width: 1838px;
+    /* w-[1838px] */
+    height: 858px;
+    /* h-[858px] */
+    border-top-left-radius: 100px;
+    /* rounded-tl-[100px] */
+    overflow: hidden;
+    /* overflow-clip */
+    background-image: url('../assets/images/orix_mockup.png');
+    /* User provided image */
     background-size: cover;
     background-position: center;
-    display: flex; /* For centering text container */
+    display: flex;
+    /* For centering text container */
     align-items: center;
     justify-content: center;
 }
@@ -126,44 +79,57 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(12, 34, 71, 0.5); /* bg-[rgba(12,34,71,0.5)] */
+    background-color: rgba(12, 34, 71, 0.5);
+    /* bg-[rgba(12,34,71,0.5)] */
 }
 
 .text-container {
-    position: relative; /* To be above overlay */
-    z-index: 1; /* To be above overlay */
+    position: relative;
+    /* To be above overlay */
+    z-index: 1;
+    /* To be above overlay */
     display: flex;
     flex-direction: column;
-    gap: 34px; /* gap-[34px] */
+    gap: 34px;
+    /* gap-[34px] */
     align-items: center;
     text-align: center;
-    color: var(--color-white); /* text-white */
+    color: var(--color-white);
+    /* text-white */
     /* top:[264px] left:[calc(50%-0.5px)] based on parent container */
     /* Will center horizontally with flex and adjust vertical position with padding or margin-top */
-    padding-top: 166px; /* (858px total height - 34px gap - 22px*2 line-height - 86px main title line-height) / 2 approx */
+    padding-top: 166px;
+    /* (858px total height - 34px gap - 22px*2 line-height - 86px main title line-height) / 2 approx */
     /* Simplified centering for demo, can be adjusted if precise Figma px positioning is needed */
 }
 
 .subtitle-container {
     display: flex;
     flex-direction: column;
-    gap: 22px; /* gap-[22px] */
+    gap: 22px;
+    /* gap-[22px] */
     align-items: center;
-    width: 468px; /* w-[468px] */
+    width: 468px;
+    /* w-[468px] */
 }
 
 .subtitle {
-    font-family: var(--font-pretendard-medium); /* Pretendard Medium */
+    font-family: var(--font-pretendard-medium);
+    /* Pretendard Medium */
     font-weight: 500;
-    font-size: 1.5rem; /* 24px */
-    line-height: 0; /* leading-[0] from Figma */
-    white-space: nowrap; /* w-[min-content] */
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 0;
+    /* leading-[0] from Figma */
+    white-space: nowrap;
+    /* w-[min-content] */
 }
 
 .subtitle-eng {
     font-family: var(--font-pretendard-regular);
     font-weight: 400;
-    color: var(--color-subtitle-eng); /* text-[#c5c5c5] */
+    color: var(--color-subtitle-eng);
+    /* text-[#c5c5c5] */
 }
 
 .subtitle-orix {
@@ -173,19 +139,25 @@
 }
 
 .main-subtitle {
-    font-family: var(--font-pretendard-regular); /* Pretendard Regular */
+    font-family: var(--font-pretendard-regular);
+    /* Pretendard Regular */
     font-weight: 400;
-    font-size: 2rem; /* 32px */
-    line-height: normal; /* leading-[normal] */
+    font-size: 2rem;
+    /* 32px */
+    line-height: normal;
+    /* leading-[normal] */
     color: var(--color-white);
     white-space: nowrap;
 }
 
 .main-title {
-    font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
+    font-family: var(--font-pretendard-semibold);
+    /* Pretendard SemiBold */
     font-weight: 600;
-    font-size: 5.375rem; /* 86px */
-    line-height: 0; /* leading-[0] from Figma */
+    font-size: 5.375rem;
+    /* 86px */
+    line-height: 0;
+    /* leading-[0] from Figma */
     white-space: nowrap;
 }
 
@@ -210,6 +182,8 @@
 /* --- Agreement Start Block (reusing existing styles) --- */
 .agreement-start-block {
     position: absolute;
-    bottom: 0; /* Positioned at the bottom of the visible area */
-    right: 0; /* Positioned at the right of the visible area */
+    bottom: 0;
+    /* Positioned at the bottom of the visible area */
+    right: 0;
+    /* Positioned at the right of the visible area */
 }
