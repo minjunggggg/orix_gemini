@@ -1,4 +1,4 @@
-/* === Page Specific Styles - Processing Page === */
+/* === Page Specific Styles - Upcoming Page === */
 
 /* --- Header --- */
 .header-wrap {
@@ -74,8 +74,8 @@
     white-space: nowrap;
 }
 
-/* --- Main Processing Container --- */
-.main-processing-container {
+/* --- Main upcoming Container --- */
+.main-upcoming-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,7 +112,7 @@
     width: 100%; /* w-full */
 }
 
-.processing-title {
+.upcoming-title {
     font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
     font-weight: 600;
     font-size: 3.375rem; /* 54px */
@@ -141,7 +141,7 @@
     white-space: nowrap;
 }
 
-.btn-processing-lg {
+.btn-upcoming-lg {
     font-size: 1.5rem; /* 24px */
     /* Other styles inherited from btn-primary should be sufficient */
 }
