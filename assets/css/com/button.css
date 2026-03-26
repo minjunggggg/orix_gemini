@@ -220,6 +220,10 @@
     white-space: nowrap;
     line-height: normal;
     text-decoration: none;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 
 .btn-postcode-search:hover,

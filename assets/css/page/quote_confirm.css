@@ -1,164 +1,223 @@
 /* === Page Specific Styles - Quote Confirm Page === */
 
-/* --- Page Layout --- */
-body {
-    background-color: var(--color-page-bg); /* bg-[#f2f3f8] */
+:root {
+    --color-page-bg: #f2f3f8;
+    --color-pagination-bg-default: #dfe4eb;
+    --color-primary-blue: #3182ee;
+    --color-white: #ffffff;
+    --color-gray-66: #666666;
+    --color-gray-45: #454545;
+    --color-gray-22: #222222;
+    --color-summary-highlight-bg: #f0f6ff;
+    --color-summary-highlight-text-blue: #3182ee;
+    --color-car-price-highlight-bg: #f3f5f7;
+    --color-car-price-text-dark-blue: #0f3862;
+
+    /* Font Variables */
+    --font-pretendard-light: 'Pretendard Light', sans-serif;
+    --font-pretendard-regular: 'Pretendard Regular', sans-serif;
+    --font-pretendard-medium: 'Pretendard Medium', sans-serif;
+    --font-pretendard-semibold: 'Pretendard SemiBold', sans-serif;
+    --font-pretendard-bold: 'Pretendard Bold', sans-serif;
 }
 
-.container-wrap {
-    width: 1200px; /* Figma main content width */
-    margin: 122px auto 136px; /* Spacing below header, above footer */
-    position: relative;
-    padding-bottom: 20px; /* Space for the fixed footer */
+/* --- Page Layout --- */
+body {
+    background-color: var(--color-page-bg);
+    /* bg-[#f2f3f8] */
+}
+
+.indicator-n-title {
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    align-items: center;
+    /* items-center */
+    margin-top: 122px;
+    /* Spacing from header */
 }
 
 .progress-indicator {
-    display: flex; /* flex */
-    gap: 12px; /* gap-[12px] */
-    align-items: center; /* items-center */
-    justify-content: center; /* Centered */
-    margin-bottom: 20px; /* Spacing from title */
-    position: absolute;
-    top: 122px; /* top-[122px] */
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    /* flex */
+    gap: 12px;
+    /* gap-[12px] */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* Centered */
+    margin-bottom: 20px;
+    /* Spacing from title */
 }
 
 .progress-step {
-    width: 30px; /* size-[30px] */
+    width: 30px;
+    /* size-[30px] */
     height: 30px;
-    background-color: var(--color-pagination-bg-default); /* bg-[#dfe4eb] */
-    border-radius: 100px; /* rounded-[100px] */
+    background-color: var(--color-pagination-bg-default);
+    /* bg-[#dfe4eb] */
+    border-radius: 100px;
+    /* rounded-[100px] */
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-pretendard-medium);
     font-weight: 500;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.8rem;
+    /* 18px */
     color: var(--color-gray-66);
     line-height: normal;
     white-space: nowrap;
 }
 
 .progress-step.is-active {
-    background-color: var(--color-primary-blue); /* bg-[#3182ee] */
-    color: var(--color-white); /* text-white */
+    background-color: var(--color-primary-blue);
+    /* bg-[#3182ee] */
+    color: var(--color-white);
+    /* text-white */
 }
 
-.page-main-title {
-    font-family: var(--font-pretendard-bold);
-    font-weight: 700;
-    font-size: 2.375rem; /* 38px */
-    color: var(--color-gray-22);
-    text-align: center;
-    margin-top: 100px; /* Spacing from progress indicator */
-    margin-bottom: 42px; /* Spacing from main content */
+.page-title {
+    padding-top: 0;
 }
 
-.main-content-area {
-    display: flex; /* flex */
-    gap: 20px; /* gap-[20px] */
-    align-items: flex-start; /* items-start */
-    width: 100%;
+.form-card-group {
+    width: 1200px;
+    display: flex;
+    /* 자식들을 가로로 배치 */
+    gap: 20px;
+    /* 컬럼 사이의 간격 (필요시 추가) */
+    max-width: 100%;
+    /* 모바일 대응을 위해 추가 권장 */
+}
+
+.form-card {
+    align-items: center;
+    flex: 0;
 }
 
 .content-column {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* gap-[20px] between cards */
-    flex: 1; /* flex-[1_0_0] */
-}
+    gap: 20px;
 
-.info-card {
-    background-color: var(--color-form-card-bg); /* bg-white */
-    border-radius: 20px; /* rounded-[20px] */
-    padding: 50px; /* p-[50px] */
-    display: flex;
-    flex-direction: column;
-    gap: 32px; /* gap-[32px] */
-    align-items: flex-start;
-    width: 100%;
-    box-shadow: 0px 5px 20px 0px rgba(221,221,221,0.25); /* Reusing form card shadow */
+    /* 50:50 핵심 설정 */
+    flex: 1;
+    /* 남은 공간을 1:1 비율로 똑같이 나눠 가짐 */
+    min-width: 0;
+    /* 내부 콘텐츠가 너무 길어질 때 레이아웃 깨짐 방지 */
 }
 
 .card-title {
     font-family: var(--font-pretendard-bold);
     font-weight: 700;
-    font-size: 1.5rem; /* 24px */
+    font-size: 2.4rem;
+    /* 24px */
     color: var(--color-gray-22);
     line-height: normal;
     white-space: nowrap;
-    width: 100%; /* w-full */
+    width: 100%;
+    /* w-full */
 }
 
 /* --- Quote Summary Section --- */
 .summary-item {
-    display: flex; /* flex */
-    justify-content: space-between; /* justify-between */
-    align-items: center; /* items-center */
-    width: 100%; /* w-full */
+    display: flex;
+    /* flex */
+    justify-content: space-between;
+    /* justify-between */
+    align-items: center;
+    /* items-center */
+    width: 100%;
+    /* w-full */
     line-height: normal;
     white-space: nowrap;
 }
 
 .summary-item.highlight {
-    background-color: var(--color-summary-highlight-bg); /* bg-[#f0f6ff] */
-    border-radius: 8px; /* rounded-[8px] */
-    padding: 28px 26px; /* px-[26px] py-[28px] */
-    font-size: 1.625rem; /* 26px */
+    background-color: var(--color-summary-highlight-bg);
+    /* bg-[#f0f6ff] */
+    border-radius: 8px;
+    /* rounded-[8px] */
+    padding: 28px 26px;
+    /* px-[26px] py-[28px] */
+    font-size: 2.6rem;
+    /* 26px */
 }
 
 .summary-label {
-    font-family: var(--font-pretendard-light); /* Pretendard Light */
+    font-family: var(--font-pretendard-light);
+    /* Pretendard Light */
     font-weight: 300;
-    font-size: 1.25rem; /* 20px */
-    color: var(--color-gray-66); /* text-[#666] */
+    font-size: 2rem;
+    /* 20px */
+    color: var(--color-gray-66);
+    /* text-[#666] */
 }
 
 .summary-value {
-    font-family: var(--font-pretendard-medium); /* Pretendard Medium */
+    font-family: var(--font-pretendard-medium);
+    /* Pretendard Medium */
     font-weight: 500;
-    font-size: 1.25rem; /* 20px */
-    color: var(--color-gray-45); /* text-[#454545] */
+    font-size: 2rem;
+    /* 20px */
+    color: var(--color-gray-45);
+    /* text-[#454545] */
     text-align: right;
 }
 
 .summary-value.blue {
-    font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
+    font-family: var(--font-pretendard-semibold);
+    /* Pretendard SemiBold */
     font-weight: 600;
-    font-size: 1.625rem; /* 26px */
-    color: var(--color-summary-highlight-text-blue); /* text-[#3182ee] */
+    font-size: 2.6rem;
+    /* 26px */
+    color: var(--color-summary-highlight-text-blue);
+    /* text-[#3182ee] */
 }
 
 /* --- Contact Info Section --- */
 .contact-item {
-    display: flex; /* flex */
-    justify-content: space-between; /* justify-between */
-    align-items: center; /* items-center */
-    width: 100%; /* w-full */
+    display: flex;
+    /* flex */
+    justify-content: space-between;
+    /* justify-between */
+    align-items: center;
+    /* items-center */
+    width: 100%;
+    /* w-full */
     line-height: normal;
     white-space: nowrap;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem;
+    /* 20px */
 }
 
 .contact-label {
-    font-family: var(--font-pretendard-light); /* Pretendard Light */
+    font-family: var(--font-pretendard-light);
+    /* Pretendard Light */
     font-weight: 300;
-    color: var(--color-gray-66); /* text-[#666] */
+    color: var(--color-gray-66);
+    /* text-[#666] */
 }
 
 .contact-value {
-    font-family: var(--font-pretendard-medium); /* Pretendard Medium */
+    font-family: var(--font-pretendard-medium);
+    /* Pretendard Medium */
     font-weight: 500;
-    color: var(--color-gray-45); /* text-[#454545] */
+    color: var(--color-gray-45);
+    /* text-[#454545] */
     text-align: right;
 }
 
 /* --- Vehicle Info Section --- */
 .car-price-highlight {
-    background-color: var(--color-car-price-highlight-bg); /* bg-[#f3f5f7] */
-    border-radius: 8px; /* rounded-[8px] */
-    padding: 28px 26px; /* px-[26px] py-[28px] */
+    background-color: var(--color-car-price-highlight-bg);
+    /* bg-[#f3f5f7] */
+    border-radius: 8px;
+    /* rounded-[8px] */
+    padding: 28px 26px;
+    /* px-[26px] py-[28px] */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,33 +227,43 @@ body {
 }
 
 .car-price-label {
-    font-family: var(--font-pretendard-medium); /* Pretendard Medium */
+    font-family: var(--font-pretendard-medium);
+    /* Pretendard Medium */
     font-weight: 500;
-    font-size: 1.25rem; /* 20px */
-    color: var(--color-gray-22); /* text-[#222] */
+    font-size: 2rem;
+    /* 20px */
+    color: var(--color-gray-22);
+    /* text-[#222] */
 }
 
 .car-price-value {
-    font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
+    font-family: var(--font-pretendard-semibold);
+    /* Pretendard SemiBold */
     font-weight: 600;
-    font-size: 1.625rem; /* 26px */
-    color: var(--color-car-price-text-dark-blue); /* text-[#0f3862] */
+    font-size: 2.6rem;
+    /* 26px */
+    color: var(--color-car-price-text-dark-blue);
+    /* text-[#0f3862] */
 }
 
 .car-details {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* gap-[8px] */
+    gap: 8px;
+    /* gap-[8px] */
     align-items: center;
     width: 100%;
     text-align: center;
 }
 
 .car-image-wrap {
-    width: 360px; /* w-[360px] */
-    height: 168px; /* h-[168px] */
+    width: 360px;
+    /* w-[360px] */
+    height: 168px;
+    /* h-[168px] */
     overflow: hidden;
-    margin-bottom: 20px; /* Spacing below image */
+    margin-bottom: 20px;
+    /* Spacing below image */
 }
 
 .car-image-wrap img {
@@ -206,7 +275,8 @@ body {
 .car-spec {
     font-family: var(--font-pretendard-regular);
     font-weight: 400;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.8rem;
+    /* 18px */
     color: var(--color-gray-66);
     line-height: normal;
     white-space: nowrap;
@@ -215,7 +285,8 @@ body {
 .car-model {
     font-family: var(--font-pretendard-semibold);
     font-weight: 600;
-    font-size: 1.375rem; /* 22px */
+    font-size: 2.2rem;
+    /* 22px */
     color: var(--color-gray-45);
     line-height: normal;
     white-space: nowrap;
@@ -224,18 +295,24 @@ body {
 .car-options {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* gap-[30px] */
+    gap: 30px;
+    /* gap-[30px] */
     width: 100%;
-    margin-top: 32px; /* Spacing from car details */
+    margin-top: 32px;
+    /* Spacing from car details */
 }
 
 .option-item {
-    display: flex; /* flex */
-    justify-content: space-between; /* justify-between */
-    align-items: flex-start; /* items-start */
+    display: flex;
+    /* flex */
+    justify-content: space-between;
+    /* justify-between */
+    align-items: flex-start;
+    /* items-start */
     width: 100%;
     line-height: normal;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem;
+    /* 20px */
 }
 
 .option-label {
@@ -248,74 +325,13 @@ body {
 .option-value-group {
     display: flex;
     flex-direction: column;
-    gap: 18px; /* gap-[18px] */
-    align-items: flex-end; /* text-right */
+    gap: 18px;
+    /* gap-[18px] */
+    align-items: flex-end;
+    /* text-right */
     font-family: var(--font-pretendard-medium);
     font-weight: 500;
     color: var(--color-gray-45);
     line-height: normal;
     white-space: nowrap;
-}
-
-/* --- Footer --- */
-.footer-wrap {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 136px; /* max-h-[136px] */
-    background-color: var(--color-white);
-    box-shadow: var(--color-footer-shadow);
-    z-index: 100;
-    overflow: hidden; /* overflow-clip */
-    padding: 40px 360px; /* py-[40px] px-[360px] */
-}
-
-.footer-content {
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: space-between; /* justify-between */
-    width: 100%; /* w-[1200px] implied by outer padding */
-    height: 100%;
-}
-
-.footer-text-container {
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col */
-    gap: 12px; /* gap-[12px] */
-    align-items: flex-start; /* items-start */
-    white-space: nowrap;
-}
-
-.footer-message {
-    font-family: var(--font-pretendard-semibold);
-    font-weight: 600;
-    font-size: 1.125rem; /* 18px */
-    color: var(--color-gray-22);
-    line-height: normal;
-}
-
-.footer-disclaimer-container {
-    display: flex; /* flex */
-    gap: 4px; /* gap-[4px] */
-    align-items: flex-start; /* items-start */
-    line-height: 1.4; /* leading-[1.4] */
-    font-size: 1rem; /* 16px */
-    color: var(--color-gray-66);
-    width: 100%; /* w-full */
-}
-
-.footer-disclaimer-prefix {
-    font-family: var(--font-pretendard-light); /* Pretendard Light */
-    font-weight: 300;
-}
-
-.footer-disclaimer-text {
-    font-family: var(--font-pretendard-regular); /* Pretendard Regular */
-    font-weight: 400;
-}
-
-.btn-footer-next {
-    font-size: 1.25rem; /* 20px */
-    /* Inherits other styles from btn-primary */
 }
