@@ -6,104 +6,723 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>상세약정서 확인 및 전자서명</title>
-    <link rel="stylesheet" href="../assets/css/com/common.css" />
-    <link rel="stylesheet" href="../assets/css/com/button.css" />
-    <link rel="stylesheet" href="../assets/css/com/header.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/com/sub_page.css" />
     <link rel="stylesheet" href="../assets/css/page/summary_detail.css" />
+    <link rel="stylesheet" href="../assets/css/page/contract_detail.css" />
+    <link rel="stylesheet" href="../assets/css/page/resident_id_consent.css" />
+    <link rel="stylesheet" href="../assets/css/page/auto_transfer_application.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-content">
-            <h1 class="logo">
-                <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
-            </h1>
-            <div class="contact-info">
-                <p class="contact-text">고객센터</p>
-                <div class="phone-info">
-                    <span class="icon phone-icon">
-                        <img src="../../assets/images/phone-icon-header.svg" alt="Phone" />
-                    </span>
-                    <p class="phone-number">02-2050-6700</p>
+    <div class="page-content-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
+                </h1>
+                <div class="contact-info">
+                    <p class="contact-text">고객센터</p>
+                    <div class="phone-info">
+                        <span class="icon phone-icon">
+                            <img src="../../assets/images/phone-icon-header.svg" alt="Phone" />
+                        </span>
+                        <p class="phone-number">02-2050-6700</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-wrap">
+            <h2 class="page-main-title">상세약정서 확인 및 전자서명</h2>
+
+            <div class="agreement-section">
+                <div class="agreement-item">
+                    <div class="agreement-header">
+                        <div class="agreement-status">미확인</div>
+                        <p class="agreement-title">자동차 임대차(렌탈) 계약서</p>
+                        <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
+                    </div>
+                    <div class="accordion-panel is-hidden">
+                        <div class="document-container">
+                            <div class="contract-paper">
+                                <h1 class="contract-title">자동차임대차(렌탈)계약서</h1>
+                                <div class="contract-header">
+                                    <p class="contract-disclaimer">본 계약서는 금융소비자보호에 관한 법률 및 내부통제 기준에 따른 절차를 거쳐 제공됩니다.</p>
+                                    <div class="contract-logo">
+                                        <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
+                                    </div>
+                                </div>
+                                <div class="contract-stamp-info">
+                                    <p class="stamp-text">대한민국정부</p>
+                                    <p class="stamp-text">인지세</p>
+                                    <p class="stamp-text">납부금액</p>
+                                    <p class="stamp-text">수납승인</p>
+                                    <p class="stamp-text">2026년000호</p>
+                                </div>
+
+                                <!-- Customer Info Section -->
+                                <div class="customer-info-section">
+                                    <div class="customer-info-item">
+                                        <p class="customer-info-label">고객명</p>
+                                        <p class="customer-info-value">(주)홍길동컴퍼니</p>
+                                    </div>
+                                    <div class="customer-info-divider"></div>
+                                    <div class="customer-info-item">
+                                        <p class="customer-info-label">고객명영문</p>
+                                        <p class="customer-info-value">Honggildong Company Co</p>
+                                    </div>
+                                    <div class="customer-info-divider"></div>
+                                    <div class="customer-info-item">
+                                        <p class="customer-info-label">계약일자</p>
+                                        <p class="customer-info-value">2026년 00월 00일</p>
+                                    </div>
+                                    <div class="customer-info-divider"></div>
+                                    <div class="customer-info-item">
+                                        <p class="customer-info-label">계약번호</p>
+                                        <p class="customer-info-value">Abc202600-00000</p>
+                                    </div>
+                                </div>
+
+                                <!-- Vehicle Info Section -->
+                                <div class="section-block">
+                                    <div class="section-header dark">
+                                        <p class="section-title">• 대여차량정보</p>
+                                    </div>
+                                    <div class="vehicle-info-details">
+                                        <div class="vehicle-image-column">
+                                            <div class="vehicle-image-wrap">
+                                                <img src="../../assets/images/orix_mockup.png" alt="Vehicle Image"
+                                                    class="vehicle-image" />
+                                            </div>
+                                            <p class="vehicle-model">현대 2025년형 디 올 뉴 그랜저</p>
+                                            <p class="vehicle-spec">가솔린 터보 1.6 하이브리드 익스클루시브</p>
+                                        </div>
+                                        <div class="vehicle-details-table">
+                                            <div class="vehicle-details-row">
+                                                <div class="label-column">
+                                                    <div class="label-item">색상</div>
+                                                </div>
+                                                <div class="sub-label-column">
+                                                    <div class="sub-label-item">외장</div>
+                                                    <div class="sub-label-item">내장</div>
+                                                </div>
+                                                <div class="value-column">
+                                                    <div class="value-item">
+                                                        <p>큐레이티드 실버</p>
+                                                        <p>메탈릭</p>
+                                                    </div>
+                                                    <div class="value-item">
+                                                        <p>다크 그레이/</p>
+                                                        <p>라이트 그레이 투톤</p>
+                                                    </div>
+                                                </div>
+                                                <div class="label-column">
+                                                    <div class="label-item gray">차량가격</div>
+                                                    <div class="label-item gray">총차량가격</div>
+                                                </div>
+                                                <div class="value-column align-right">
+                                                    <div class="value-item price">
+                                                        <p>00,000,000</p>
+                                                        <p>원</p>
+                                                    </div>
+                                                    <div class="value-item price highlight">
+                                                        <p>00,000,000</p>
+                                                        <p>원</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vehicle-details-row">
+                                                <div class="label-column">
+                                                    <div class="label-item">옵션</div>
+                                                </div>
+                                                <div class="value-column wide-value">
+                                                    <p>파노라마 선루프 /</p>
+                                                    <p>현대 스마트 센스 패키지 1 / JBL 사운드 패키지 / 컨비니언스 패키지</p>
+                                                </div>
+                                                <div class="label-column">
+                                                    <div class="label-item gray">옵션/색상 가격</div>
+                                                    <div class="label-item gray">차량등록번호</div>
+                                                    <div class="label-item gray">차대번호</div>
+                                                </div>
+                                                <div class="value-column align-right">
+                                                    <div class="value-item price">
+                                                        <p>00,000,000</p>
+                                                        <p>원</p>
+                                                    </div>
+                                                    <div class="value-item">-</div>
+                                                    <div class="value-item">-</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contract Conditions Section -->
+                                <div class="section-block">
+                                    <div class="section-header dark">
+                                        <p class="section-title">• 대여조건요약표</p>
+                                    </div>
+                                    <div class="contract-conditions-table">
+                                        <div class="condition-row">
+                                            <div class="condition-label">(1)대여기간</div>
+                                            <div class="condition-value">36개월</div>
+                                            <div class="condition-label">(2)월대여료</div>
+                                            <div class="condition-value align-right price">
+                                                <p>00,000,000</p>
+                                                <p>원</p>
+                                            </div>
+                                            <div class="condition-label">(3)대여료선수금</div>
+                                            <div class="condition-value align-right price">
+                                                <p>0</p>
+                                                <p>원</p>
+                                            </div>
+                                        </div>
+                                        <div class="condition-row">
+                                            <div class="condition-label">(4)보증금</div>
+                                            <div class="condition-value align-right price">
+                                                <p>0</p>
+                                                <p>원</p>
+                                            </div>
+                                            <div class="condition-label">(5)보증보험증권</div>
+                                            <div class="condition-value align-right price">
+                                                <p>0</p>
+                                                <p>원</p>
+                                            </div>
+                                        </div>
+                                        <div class="condition-row">
+                                            <div class="condition-label">(6)운전연령</div>
+                                            <div class="condition-value large">만 25세 이상 (면허취득일로부터 만1년 경과자 포함)</div>
+                                            <div class="condition-label">(7)보험조건</div>
+                                            <div class="condition-value wide">
+                                                <p>대물 1억</p>
+                                                <p>자손 1억</p>
+                                            </div>
+                                        </div>
+                                        <div class="condition-row">
+                                            <div class="condition-label">(8)자기차량손해면책금</div>
+                                            <div class="condition-value">300,000 원 / 건당</div>
+                                            <div class="condition-label">(9)정비서비스</div>
+                                            <div class="condition-value service-options">
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="service-none" class="sr-only" />
+                                                    <label for="service-none"></label>
+                                                    <p>없음</p>
+                                                </div>
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="service-slim" class="sr-only" />
+                                                    <label for="service-slim"></label>
+                                                    <p>Slim</p>
+                                                </div>
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="service-premium" class="sr-only" />
+                                                    <label for="service-premium"></label>
+                                                    <p>Premium</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="condition-row">
+                                            <div class="condition-label">(10)계약운행거리</div>
+                                            <div class="condition-value drive-options">
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="drive-unlimited" class="sr-only" />
+                                                    <label for="drive-unlimited"></label>
+                                                    <p>무제한</p>
+                                                </div>
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="drive-limited" class="sr-only" />
+                                                    <label for="drive-limited"></label>
+                                                    <p>( 2만 ) km / 연</p>
+                                                </div>
+                                            </div>
+                                            <div class="condition-label">(11)연체이자율</div>
+                                            <div class="condition-value">년 20%</div>
+                                        </div>
+                                        <div class="condition-row last">
+                                            <div class="condition-label">(12)만기구매가격</div>
+                                            <div class="condition-value large-value align-right">
+                                                <div class="price">
+                                                    <p>00,000,000</p>
+                                                    <p>원</p>
+                                                </div>
+                                                <p class="vat-info">(VAT포함)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Guarantor Info Section -->
+                                <div class="section-block">
+                                    <div class="section-header dark-blue">
+                                        <p class="section-title">• 연대보증인</p>
+                                        <p class="section-description">아래 기재 사항은 보증인의 담보능력 파악, 계약내용 전달 등을 위해 취득하는 정보입니다.
+                                        </p>
+                                    </div>
+                                    <div class="guarantor-details">
+                                        <div class="guarantor-condition">
+                                            <div class="condition-label-wrap">
+                                                <p class="condition-prefix">※</p>
+                                                <p class="condition-text">연대보증인의 입보가 가능한 경우</p>
+                                            </div>
+                                            <div class="condition-options">
+                                                <div class="option-group">
+                                                    <p class="option-label">차주가 개인일 때</p>
+                                                    <div class="checkbox-option">
+                                                        <input type="checkbox" id="guarantor-individual-1"
+                                                            class="sr-only" />
+                                                        <label for="guarantor-individual-1"></label>
+                                                        <p>개인사업자의 사업자등록증상 공동사업자</p>
+                                                    </div>
+                                                </div>
+                                                <div class="option-group">
+                                                    <p class="option-label">차주가 법인일 때</p>
+                                                    <div class="option-sub-group">
+                                                        <div class="checkbox-option">
+                                                            <input type="checkbox" id="guarantor-corporate-1"
+                                                                class="sr-only" />
+                                                            <label for="guarantor-corporate-1"></label>
+                                                            <p>대표이사</p>
+                                                        </div>
+                                                        <div class="checkbox-option">
+                                                            <input type="checkbox" id="guarantor-corporate-2"
+                                                                class="sr-only" />
+                                                            <label for="guarantor-corporate-2"></label>
+                                                            <p>무한책임사원</p>
+                                                        </div>
+                                                        <div class="checkbox-option">
+                                                            <input type="checkbox" id="guarantor-corporate-3"
+                                                                class="sr-only" />
+                                                            <label for="guarantor-corporate-3"></label>
+                                                            <p>상법에 따른 최대주주</p>
+                                                        </div>
+                                                        <div class="checkbox-option">
+                                                            <input type="checkbox" id="guarantor-corporate-4"
+                                                                class="sr-only" />
+                                                            <label for="guarantor-corporate-4"></label>
+                                                            <p>의결권 있는 발행주식 총수의 30%초과 보유주주(특수관계인 포함)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="option-group">
+                                                    <p class="option-label">기타</p>
+                                                    <div class="checkbox-option">
+                                                        <input type="checkbox" id="guarantor-other-1" class="sr-only" />
+                                                        <label for="guarantor-other-1"></label>
+                                                        <p>상기 외 여신거래기본약관 제7조에 해당하는 자</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="guarantee-type">
+                                            <div class="type-label-wrap">
+                                                <p class="type-prefix">※</p>
+                                                <p class="type-text">보증종류</p>
+                                            </div>
+                                            <div class="type-options">
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="guarantee-type-1" class="sr-only" />
+                                                    <label for="guarantee-type-1"></label>
+                                                    <p>특정근보증</p>
+                                                    <p class="type-sub-text">(당해채무(기한연장・증액포함))</p>
+                                                </div>
+                                                <div class="checkbox-option">
+                                                    <input type="checkbox" id="guarantee-type-2" class="sr-only" />
+                                                    <label for="guarantee-type-2"></label>
+                                                    <p>한정근보증</p>
+                                                    <p class="type-sub-text">(특정+동일종류신규대출)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="guarantor-form-table">
+                                            <div class="form-row">
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">성명</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">주민등록번호</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-item-wrap full-width">
+                                                    <div class="form-label">주소</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">신청인과의 관계</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">전화번호</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">직장(사업자)명</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">부서명</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row last">
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">직위</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-item-wrap">
+                                                    <div class="form-label">재직(사업기간)</div>
+                                                    <div class="form-input js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="guarantee-details-table">
+                                            <div class="details-row">
+                                                <div class="details-label-wrap">
+                                                    <div class="details-label main">보증내용</div>
+                                                </div>
+                                                <div class="details-sub-label-wrap">
+                                                    <div class="details-label sub">보증채무최고액</div>
+                                                    <div class="details-input-wrap">
+                                                        <div class="input-text-wrap js-input-component">
+                                                            <input type="text" class="input-field" />
+                                                            <p>원</p>
+                                                        </div>
+                                                        <p class="input-info">[참고] 본 약정에 따른 여신취급금액(금융회사가 본 약정의 이행을 위해
+                                                            지급한 금액의 총액)의 130%입니다.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="details-sub-label-wrap">
+                                                    <div class="details-label sub">보증기간</div>
+                                                    <div class="details-input-wrap js-input-component">
+                                                        <input type="text" class="input-field" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="details-row last">
+                                                <div class="details-label-wrap">
+                                                    <div class="details-label main">특약사항</div>
+                                                </div>
+                                                <div class="details-input-wrap full-width js-input-component">
+                                                    <textarea class="input-field"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="guarantor-disclaimer">● 본 자동차 임대차계약서 작성시 대여이용자 및 연대보증인이 직접 자필 및 날인하였음을
+                                        확인함.</p>
+                                </div>
+
+                                <!-- Contract Signatures Section -->
+                                <div class="contract-signatures-section">
+                                    <p class="signatures-preamble">
+                                        대여이용자, 연대보증인은 본 계약의 주요내용인 기본사항 및 대여조건 요약표, 그리고 자동차임대차(렌탈)약관에 대한 충분한 설명을 듣고 잘 이해한
+                                        후 본인의 의사에 따라 본 계약을 체결하였으며, 오릭스캐피탈코리아(주)로부터 본 계약서의 사본을 확실히 수령하고 계약 내용을 성실히 이행할 것을
+                                        확약합니다.
+                                    </p>
+                                    <div class="signatures-details">
+                                        <div class="signatures-column">
+                                            <div class="signature-row bg-orange-light">
+                                                <p class="signature-label">(갑)대여이용자</p>
+                                                <p class="signature-name">(주)홍길동컴퍼니</p>
+                                                <p class="signature-mark">(인) / 서명</p>
+                                            </div>
+                                            <div class="signature-row bg-orange-light">
+                                                <p class="signature-label">연대보증인</p>
+                                                <p class="signature-mark">(인) / 서명</p>
+                                            </div>
+                                        </div>
+                                        <div class="signatures-column company-info">
+                                            <p class="company-label">(을)대여회사</p>
+                                            <div class="company-details">
+                                                <p class="company-name">오릭스캐피탈코리아(주)</p>
+                                                <p class="company-address">서울시 강남구 테헤란로 306 13층(역삼동 카이트타워)</p>
+                                            </div>
+                                            <div class="ceo-signature">
+                                                <div class="ceo-info">
+                                                    <p class="ceo-title">대표이사</p>
+                                                    <p class="ceo-name">정 성 윤</p>
+                                                </div>
+                                                <p class="ceo-mark">(인) / 서명</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Stamp Area -->
+                                <div class="stamp-area">
+                                    <img src="../../assets/images/stamp.png" alt="Stamp Example" class="stamp-image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agreement-item">
+                    <div class="agreement-header">
+                        <div class="agreement-status">미확인</div>
+                        <p class="agreement-title">주민등록번호 수집・이용 동의서 (렌터카 법인 계약자용)</p>
+                        <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
+                    </div>
+                    <div class="agreement-content accordion-panel is-hidden">
+                        <div class="resident-id-document-container">
+                            <div class="resident-id-document-paper">
+                                <p class="resident-id-preamble">
+                                    귀사와의 렌터카 거래 관련하여 귀사가 본인의 개인(신용)정보를 처리하고자 하는 경우에는 「개인정보 보호법」 제15조, 제22조에 따라 본인의 사전
+                                    동의를 얻어야 합니다. 이에 본인은 귀사가 본인의 주민등록번호를 아래와 같이 처리하는 것에 동의합니다.
+                                </p>
+                                <div class="resident-id-header">
+                                    <h1 class="resident-id-title">주민등록번호 수집・이용 동의서</h1>
+                                    <p class="resident-id-subtitle">렌터카 법인 계약자용</p>
+                                </div>
+                                <p class="resident-id-to">오릭스캐피탈코리아(주) 귀중</p>
+                                <p class="resident-id-below">- 아래 -</p>
+
+                                <div class="resident-id-section-block">
+                                    <div class="resident-id-section-header dark">
+                                        <p class="resident-id-section-title">• 주민등록번호의 수집・이용에 관한 사항</p>
+                                    </div>
+                                    <div class="resident-id-section-content">
+                                        <p class="resident-id-text">
+                                            <span class="resident-id-text-bold">주민등록의 수집・이용 목적 : </span>
+                                            <span class="resident-id-text-normal">부가가치세법 제32조 제1항 제2호에 따라 사업자가 아닌 자에게
+                                            </span>
+                                            <span class="resident-id-text-bold">세금계산서 발급</span>
+                                            <span class="resident-id-text-normal">을 위해서만 주민등록번호를 수집・이용 합니다. 오릭스캐피탈(주)와
+                                                사업자로 계약하는 경우에는 동의할 필요가 없습니다.</span>
+                                        </p>
+                                        <p class="resident-id-text">
+                                            <span class="resident-id-text-bold">주민등록 수집・이용 기간 : </span>
+                                            <span class="resident-id-text-normal">거래가 개시되는 경우에만 유효하며, 해당 거래 종료일까지 동의의
+                                                효력이 지속됩니다.</span>
+                                        </p>
+                                        <p class="resident-id-text">
+                                            <span class="resident-id-text-normal">이 항목에 대해 동의하지 않을 경우, 거래관계의 설정 또는 유지가
+                                                불가능 할 수 있습니다.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="resident-id-consent-options">
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="resident-id-agree" class="sr-only" />
+                                        <label for="resident-id-agree"></label>
+                                        <p>동의함</p>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="resident-id-disagree" class="sr-only" />
+                                        <label for="resident-id-disagree"></label>
+                                        <p>동의하지 않음</p>
+                                    </div>
+                                </div>
+
+                                <div class="resident-id-signatures">
+                                    <div class="resident-id-signature-row bg-orange-light">
+                                        <p class="signature-label">성명</p>
+                                        <p class="signature-name">(주)홍길동컴퍼니</p>
+                                        <p class="signature-mark">(인) / 서명</p>
+                                    </div>
+                                    <div class="resident-id-signature-row bg-orange-light">
+                                        <p class="signature-label">주민번호 앞 7자리</p>
+                                        <div class="resident-id-id-number">
+                                            <p>000000</p>
+                                            <p>-</p>
+                                            <p>0•••••••</p>
+                                        </div>
+                                    </div>
+                                    <div class="resident-id-date-signer">
+                                        <div class="resident-id-date">
+                                            <p>2026</p>
+                                            <p>년</p>
+                                            <p>12</p>
+                                            <p>월</p>
+                                            <p>4</p>
+                                            <p>일</p>
+                                        </div>
+                                        <div class="resident-id-signer">
+                                            <p>동의받은 담당자 명</p>
+                                            <p>김 길 동</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agreement-item">
+                    <div class="agreement-header">
+                        <div class="agreement-status">미확인</div>
+                        <p class="agreement-title">자동이체 신청서</p>
+                        <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
+                    </div>
+                    <div class="agreement-content accordion-panel is-hidden">
+                        <div class="auto-transfer-document-container">
+                            <div class="auto-transfer-document-paper">
+                                <h1 class="auto-transfer-title">자동이체 신청서</h1>
+                                <div class="auto-transfer-section-block">
+                                    <div class="auto-transfer-section-header dark">
+                                        <p class="auto-transfer-section-title">• 자동이체 신청</p>
+                                    </div>
+                                    <p class="auto-transfer-disclaimer">
+                                        ● 본인은 자동이체 약관에 대한 설명을 듣고 이해하였으며, 귀사와 본인이 개설한 결제계좌를 통해 자동이체 즉, 즉시 출금 처리하는 것을
+                                        동의합니다.
+                                    </p>
+                                    <div class="auto-transfer-form-table">
+                                        <div class="form-row">
+                                            <div class="form-item-wrap">
+                                                <div class="form-label">예금주</div>
+                                                <div class="form-input">
+                                                    <p>(주) 홍길동컴퍼니</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-item-wrap">
+                                                <div class="form-label">생년월일</div>
+                                                <div class="form-input">
+                                                    <p>000000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-item-wrap">
+                                                <div class="form-label">결제은행</div>
+                                                <div class="form-input">
+                                                    <p>신한은행</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-item-wrap">
+                                                <div class="form-label">자동이체 결제일</div>
+                                                <div class="form-input">
+                                                    <p>매 15 일</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row last">
+                                            <div class="form-item-wrap full-width">
+                                                <div class="form-label">계좌번호</div>
+                                                <div class="form-input">
+                                                    <p>110-000-00000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="auto-transfer-section-block">
+                                    <div class="auto-transfer-section-header dark">
+                                        <p class="auto-transfer-section-title">• 자동계좌 이체 약관</p>
+                                    </div>
+                                    <div class="auto-transfer-terms-content">
+                                        <ol>
+                                            <li>
+                                                <span>신청인 및 예금주(이하 ‘고객’이라 합니다)는 약정된 납부일을 기준으로 오릭스캐피탈코리아주식회사(이하 ‘회사’라
+                                                    합니다)가 지정하는 계좌이체일(휴일인 경우 익영업일)에 회사가 청구하는 금액을 자동이체 계좌로 선정한 은행 및 자고보유
+                                                    금융기관(이하 ‘금융기관’이라 합니다)계좌(이하 ‘지정계좌’라 합니다)에서 출금하여 납부합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>자동납부를 위하여 지정계좌의 예금을 출금하는 경우에는 예금약관이나 약정서의 규정에도 불구하고 예금청구서나 수표 없이
+                                                    자동계좌이체 처리절차에 의하여 출금처리 되며, 금융기관의 출금마감시간 내에 입금된 금액에 한하여 출금처리
+                                                    됩니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>지정계좌의 예금잔액(자동대출 약정이 있는 경우 대출한도 포함)이 이체일 현재 회사의 청구금액보다 부족하거나 예금의
+                                                    지급제한, 약정대출의 억제 등으로 대체납부가 불가능한 경우의 손해에 대해서는 고객이 책임을 부담합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>이체일에 동일한 수종의 자동이체 청구가 있는 경우의 출금우선순위는 금융기관에 어미약관에 따라 고객과 약정한 바에
+                                                    따르기로 합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>자동이체 일자는 회사의 사정에 따라 변경될 수 있으나 이런 경우 사전에 고객에게 통지하며, 자동이체일 변경으로 인해
+                                                    고객이 불리하지 않도록 하겠습니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>납부자의 사정으로 예금계좌를 변경하거나 자동납부신청을 해지하고자 하는 경우에는 금융기관 소정의 양식에 의한
+                                                    자동납부해지신청서와 통장사본을 제출할 것이며 이의 불이행으로 발생하는 손해는 고객의 책임으로 합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>자동납부 신청에 의한 지정계좌에서의 출금은 회사의 청구대로 출금하되 청구금액에 이의가 있을 때에는 고객과 회사가
+                                                    협의하여 조정합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>이 약관에서 정하지 아니한 사항은 금융기관의 자동이체납부약관에서 정하는 바에 따릅니다.</span>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="auto-transfer-signatures">
+                                    <div class="auto-transfer-signature-row bg-orange-light">
+                                        <p class="signature-label">신청인(본인)</p>
+                                        <p class="signature-name">(주)홍길동컴퍼니</p>
+                                        <p class="signature-mark">(인) / 서명</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="info-box-container">
+                <div class="info-box">
+                    <span class="info-icon"></span>
+                    <div class="info-text-group">
+                        <p class="info-text-bold">상세약정서의 내용을 충분히 검토하셨습니까?</p>
+                        <p class="info-text-regular">전자서명 완료 후 약정서 제출 이후에는 어떠한 경우에도 내용 수정이나 변경이 불가합니다.</p>
+                        <p class="info-text-regular">반드시 모든 항목을 최종 확인하신 후 서명을 진행해 주시기 바랍니다.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <div class="container-wrap">
-        <h2 class="page-main-title">상세약정서 확인 및 전자서명</h2>
-
-        <div class="agreement-section">
-            <div class="agreement-item">
-                <div class="agreement-header">
-                    <div class="agreement-status">미확인</div>
-                    <p class="agreement-title">자동차 임대차(렌탈) 계약서</p>
-                    <button type="button" class="btn-arrow-down is-expanded"></button>
+        <div class="footer-wrap">
+            <div class="footer-content">
+                <div class="footer-confirmation">
+                    <div class="checkbox">
+                        <input type="checkbox" id="final-agreement-check" class="sr-only" />
+                        <label for="final-agreement-check" class="checkbox-label"></label>
+                    </div>
+                    <p class="confirmation-text">
+                        <span class="confirmation-text-bold">상세약정서를 최종 확인</span>하였으며, 내용에 이상 없음을 확인했습니다.
+                    </p>
                 </div>
-                <div class="agreement-content">
-                    <!-- Content for Automobile Lease/Rental Agreement -->
+                <div class="footer-disclaimer-container">
+                    <p class="footer-disclaimer-prefix">※</p>
+                    <p class="footer-disclaimer-text">상세약정서를 모두 확인한 경우, [전자서명 및 제출] 버튼을 통해 전자서명을 진행하실 수 있습니다.</p>
                 </div>
-            </div>
-
-            <div class="agreement-item">
-                <div class="agreement-header">
-                    <div class="agreement-status">미확인</div>
-                    <p class="agreement-title">주민등록번호 수집・이용 동의서 (렌터카 법인 계약자용)</p>
-                    <button type="button" class="btn-arrow-down"></button>
-                </div>
-                <div class="agreement-content">
-                    <!-- Content for Resident Registration Number Collection/Use Consent Form -->
-                </div>
-            </div>
-
-            <div class="agreement-item">
-                <div class="agreement-header">
-                    <div class="agreement-status">미확인</div>
-                    <p class="agreement-title">자동이체 신청서</p>
-                    <button type="button" class="btn-arrow-down"></button>
-                </div>
-                <div class="agreement-content">
-                    <!-- Content for Automatic Transfer Application Form -->
-                </div>
-            </div>
-        </div>
-
-        <div class="info-box-container">
-            <div class="info-box">
-                <span class="info-icon"></span>
-                <div class="info-text-group">
-                    <p class="info-text-bold">상세약정서의 내용을 충분히 검토하셨습니까?</p>
-                    <p class="info-text-regular">전자서명 완료 후 약정서 제출 이후에는 어떠한 경우에도 내용 수정이나 변경이 불가합니다.</p>
-                    <p class="info-text-regular">반드시 모든 항목을 최종 확인하신 후 서명을 진행해 주시기 바랍니다.</p>
-                </div>
+                <button type="button" class="btn-primary btn-footer-submit is-disabled">전자서명 및 제출</button>
             </div>
         </div>
     </div>
-
-    <div class="footer-wrap">
-        <div class="footer-content">
-            <div class="footer-confirmation">
-                <div class="checkbox">
-                    <input type="checkbox" id="final-agreement-check" class="sr-only" />
-                    <label for="final-agreement-check" class="checkbox-label"></label>
-                </div>
-                <p class="confirmation-text">
-                    <span class="confirmation-text-bold">상세약정서를 최종 확인</span>하였으며, 내용에 이상 없음을 확인했습니다.
-                </p>
-            </div>
-            <div class="footer-disclaimer-container">
-                <p class="footer-disclaimer-prefix">※</p>
-                <p class="footer-disclaimer-text">상세약정서를 모두 확인한 경우, [전자서명 및 제출] 버튼을 통해 전자서명을 진행하실 수 있습니다.</p>
-            </div>
-            <button type="button" class="btn-primary btn-footer-submit is-disabled">전자서명 및 제출</button>
-        </div>
-    </div>
-
-    <script src="../assets/js/lib/jquery-1.12.4.min.js"></script>
-    <script src="../assets/js/ui/com/ui-util.js"></script>
-    <script src="../assets/js/ui/com/button.js"></script>
-    <script src="../assets/js/ui/com/input.js"></script>
-    <script src="../assets/js/ui/com/toggle.js"></script>
+    <script src="../assets/js/lib/jquery-4.0.0.js"></script>
+    <script src="../assets/js/page/summary_detail.js"></script>
 </body>
 
 </html>

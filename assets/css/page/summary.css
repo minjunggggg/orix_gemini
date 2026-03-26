@@ -1,9 +1,7 @@
 /* === Page Specific Styles - Document Upload Page === */
 
-/* --- Page Layout --- */
-body {
-    background-color: var(--color-page-bg);
-    /* bg-[#f2f3f8] */
+.page-title {
+    padding-top: 0;
 }
 
 /* --- Summary Lists --- */

@@ -1,0 +1,1278 @@
+/* === Page Specific Styles - Contract Detail Page === */
+:root {
+    --color-page-bg-light: #f8f8f8;
+    --color-black: #000;
+    --color-contract-header-bg: #0f3862;
+    --color-contract-header-dark-blue-bg: #063963;
+    --color-table-border: #e0e0e0;
+    --color-table-label-bg: #f5f5f5;
+    --color-text-dark-gray: #222;
+    --color-text-medium-gray: #454545;
+    --color-text-light-gray: #666;
+    --color-text-footer: #757575;
+    --color-orange-light: #fff7ec;
+    --color-signature-mark: #cb4000;
+    --color-stamp-border: #eee;
+    --color-input-background: #e8ecf0;
+    --color-input-border: #ddd;
+    --color-blue-text: #3182ee;
+    --color-gray-99: #999;
+}
+
+.document-container {
+    background-color: var(--color-page-bg-light);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* Ensure it covers the full viewport height */
+    display: flex;
+    /* Use flex to center contract-paper if needed */
+    justify-content: center;
+    align-items: flex-start;
+    /* Align to top */
+    padding: 50px 0;
+    /* Equivalent to top-[50px] left-[50px] for contract-paper relative to document-container */
+}
+
+.contract-paper {
+    background-color: var(--color-white);
+    width: 1000px;
+    height: 1415px;
+    /* h-[1415px] */
+    position: relative;
+    /* overflow: hidden; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: add a subtle shadow */
+}
+
+.contract-title {
+
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 2.8rem;
+    /* 28px */
+    color: var(--color-black);
+    line-height: 1.5;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.contract-header {
+
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.contract-disclaimer {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-footer);
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.contract-logo {
+
+    width: 112px;
+    height: 27px;
+}
+
+.contract-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Adjust as needed */
+}
+
+/* Re-use existing ORIX logo from images */
+.contract-logo {
+    background-image: url('../../assets/images/orix_logo.png');
+    /* Using existing asset */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-indent: -9999px;
+    /* Hide text if any */
+}
+
+/* Adjusting specific logo from Figma to existing asset, as new logo images are temporary */
+.contract-logo img {
+    display: none;
+    /* Hide the img tag, rely on background-image */
+}
+
+.contract-stamp-info {
+
+    border: 1px solid var(--color-stamp-border);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contract-stamp-info .stamp-text {
+    font-family: var(--font-pretendard-light);
+    font-weight: 300;
+    font-size: 0.8rem;
+    /* 8px */
+    color: var(--color-text-footer);
+    line-height: 1.3;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.customer-info-section {
+
+    width: 952px;
+    background-color: var(--color-table-label-bg);
+    /* #f5f5f5 */
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.customer-info-item {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    white-space: nowrap;
+}
+
+.customer-info-label {
+    font-family: var(--font-pretendard-bold);
+    font-weight: 700;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    line-height: normal;
+}
+
+.customer-info-value {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    line-height: normal;
+}
+
+.customer-info-divider {
+    width: 1px;
+    height: 14px;
+    background-color: var(--color-text-footer);
+    /* Assuming line color */
+    transform: rotate(90deg);
+    /* Rotate for vertical divider */
+    flex-shrink: 0;
+}
+
+/* --- Section Blocks (Vehicle Info, Contract Conditions, Guarantor Info) --- */
+.section-block {
+    width: 952px;
+    /* Positioned relative to contract-paper */
+    left: 24px;
+    /* Matches Figma left:24px */
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--color-table-border);
+    /* from Figma: border-[#ededed] border-b */
+}
+
+.section-block:nth-of-type(1) {
+    /* Vehicle Info Section */
+    top: 173px;
+}
+
+.section-block:nth-of-type(2) {
+    /* Contract Conditions Section */
+    top: 420px;
+}
+
+.section-block:nth-of-type(3) {
+    /* Guarantor Info Section */
+    top: 707px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-header.dark {
+    background-color: var(--color-contract-header-bg);
+    /* #0f3862 */
+}
+
+.section-header.dark-blue {
+    background-color: var(--color-contract-header-dark-blue-bg);
+    /* #063963 */
+    gap: 20px;
+}
+
+.section-header .section-title {
+    font-family: var(--font-pretendard-bold);
+    font-weight: 700;
+    font-size: 1.4rem;
+    /* 14px */
+    color: var(--color-white);
+    line-height: normal;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.section-header .section-description {
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-page-bg-light);
+    /* f8f8f8 */
+    line-height: normal;
+    white-space: nowrap;
+}
+
+/* --- Vehicle Info Details --- */
+.vehicle-info-details {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--color-table-border);
+    /* border-[#e0e0e0] border-b */
+}
+
+.vehicle-image-column {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    /* shrink-0 */
+    border-right: 1px solid var(--color-table-border);
+}
+
+.vehicle-image-wrap {
+    width: 272px;
+    /* 240px + 16px*2 padding from figma Vehicle Info Image */
+    height: 127px;
+    /* 107px + 10px*2 padding from figma Vehicle Info Image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-table-border);
+    border-right: 1px solid var(--color-table-border);
+    box-sizing: border-box;
+}
+
+.vehicle-image {
+    width: 240px;
+    height: 107px;
+    object-fit: cover;
+}
+
+.vehicle-model,
+.vehicle-spec {
+    padding: 10px 16px;
+    /* py-[10px] px-[16px] */
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-table-border);
+    border-bottom: 1px solid var(--color-table-border);
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    /* 14px */
+    line-height: normal;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.vehicle-model {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    width: 100%;
+    /* Full width of its column */
+}
+
+.vehicle-spec {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-light-gray);
+    /* #666 */
+    width: 100%;
+    /* Full width of its column */
+    border-bottom: none;
+    /* Last item in column */
+}
+
+.vehicle-details-table {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* flex-[1_0_0] */
+}
+
+.vehicle-details-row {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+.vehicle-details-row:last-child {
+    border-bottom: none;
+}
+
+.label-column,
+.sub-label-column,
+.value-column {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.label-item {
+    background-color: var(--color-table-label-bg);
+    /* #f5f5f5 */
+    border-right: 1px solid var(--color-table-border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+    line-height: normal;
+    white-space: nowrap;
+    box-sizing: border-box;
+    height: 100%;
+    /* Fill available height in row */
+}
+
+.label-item.gray {
+    background-color: var(--color-table-label-bg);
+}
+
+.sub-label-column {
+    width: 57px;
+    /* w-[57px] */
+}
+
+.sub-label-item {
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-table-border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    line-height: normal;
+    white-space: nowrap;
+    box-sizing: border-box;
+    flex: 1;
+    /* flex-[1_0_0] */
+}
+
+.sub-label-item:not(:last-child) {
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+.value-column {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+}
+
+.value-column.align-right {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.value-item {
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-table-border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Default right alignment for values */
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    line-height: normal;
+    white-space: nowrap;
+    box-sizing: border-box;
+    flex: 1;
+    /* Take remaining space */
+}
+
+.value-item p {
+    margin: 0;
+}
+
+.value-item.price {
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.value-item.highlight p:first-child {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    color: var(--color-blue-text);
+    /* #3182ee */
+}
+
+.value-column .value-item:not(:last-child) {
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+.value-column.wide-value {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 16px;
+    border-right: 1px solid var(--color-table-border);
+    box-sizing: border-box;
+    background-color: var(--color-white);
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    line-height: normal;
+    white-space: pre-wrap;
+    /* Allows wrapping */
+}
+
+.value-column.wide-value p {
+    margin: 0;
+}
+
+/* --- Contract Conditions Table --- */
+.contract-conditions-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-left: 1px solid var(--color-table-border);
+    border-right: 1px solid var(--color-table-border);
+    box-sizing: border-box;
+}
+
+.condition-row {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--color-table-border);
+    box-sizing: border-box;
+    min-height: 34px;
+    /* h-[34px] */
+}
+
+.condition-row:last-child {
+    border-bottom: none;
+}
+
+.condition-label {
+    background-color: var(--color-table-label-bg);
+    /* #f5f5f5 */
+    border-right: 1px solid var(--color-table-border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+    line-height: normal;
+    white-space: nowrap;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 210px;
+    /* w-[210px] */
+}
+
+.condition-value {
+    background-color: var(--color-white);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    line-height: normal;
+    white-space: nowrap;
+    box-sizing: border-box;
+    flex: 1;
+    /* flex-[1_0_0] */
+    border-right: 1px solid var(--color-table-border);
+}
+
+.condition-value.align-right {
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.condition-value.align-right p {
+    margin: 0;
+}
+
+.condition-value.price p {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+}
+
+.condition-value.large {
+    flex: 2;
+    /* Adjust flex for larger content */
+}
+
+.condition-value.wide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 16px;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.condition-value.wide p {
+    margin: 0;
+}
+
+.condition-value.service-options,
+.condition-value.drive-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    /* gap-[14px] */
+    border-right: 1px solid var(--color-table-border);
+}
+
+.condition-value.drive-options {
+    gap: 20px;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    white-space: nowrap;
+}
+
+.checkbox-option input[type="checkbox"] {}
+
+.checkbox-option label {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--color-table-border);
+    /* #e0e0e0 */
+    border-radius: 2px;
+    background-color: var(--color-white);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Checked state - using project's checkmark for consistent look */
+.checkbox-option input[type="checkbox"]:checked+label {
+    background-color: var(--color-blue-text);
+    /* #3182ee */
+    border-color: var(--color-blue-text);
+}
+
+.checkbox-option input[type="checkbox"]:checked+label::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask: url('../../assets/images/check-all.svg') no-repeat center / contain;
+    /* Reusing existing check.svg for now, or check-all.svg */
+    -webkit-mask: url('../../assets/images/check-all.svg') no-repeat center / contain;
+    background-color: var(--color-white);
+}
+
+.condition-value.large-value {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 8px;
+}
+
+.condition-value.large-value .price p {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    color: var(--color-blue-text);
+}
+
+.condition-value .vat-info {
+    font-family: var(--font-pretendard-light);
+    font-weight: 300;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-medium-gray);
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* --- Guarantor Info Section --- */
+.guarantor-details {
+    padding: 8px 20px 10px 20px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.guarantor-condition {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.condition-label-wrap {
+    display: flex;
+    gap: 2px;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* 11px */
+    color: var(--color-contract-header-dark-blue-bg);
+    /* #063963 */
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.condition-label-wrap .condition-text {
+    white-space: pre-wrap;
+    /* Allows wrapping */
+    width: 96px;
+    /* w-[96px] */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.condition-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.option-group .option-label {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.option-sub-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.option-group .checkbox-option {
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+}
+
+.option-group .checkbox-option label {
+    width: 14px;
+    height: 14px;
+}
+
+.option-group .checkbox-option input[type="checkbox"]:checked+label {
+    background-color: var(--color-blue-text);
+    /* #3182ee */
+    border-color: var(--color-blue-text);
+}
+
+.option-group .checkbox-option input[type="checkbox"]:checked+label::after {
+    background-color: var(--color-white);
+}
+
+.option-group .option-label.wide {
+    width: 68px;
+    /* w-[68px] */
+    white-space: pre-wrap;
+}
+
+.guarantee-type {
+    display: flex;
+    gap: 68px;
+    align-items: center;
+    border-bottom: 1px solid var(--color-table-border);
+    padding-bottom: 10px;
+}
+
+.guarantee-type .type-label-wrap {
+    display: flex;
+    gap: 2px;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* 11px */
+    color: var(--color-contract-header-dark-blue-bg);
+    /* #063963 */
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.guarantee-type .type-options {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.guarantee-type .checkbox-option {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-medium-gray);
+    gap: 4px;
+}
+
+.guarantee-type .checkbox-option .type-sub-text {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-light-gray);
+    /* #666 */
+    white-space: nowrap;
+    margin-left: 4px;
+}
+
+.guarantor-form-table,
+.guarantee-details-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--color-input-border);
+    /* border-[#ddd] */
+    box-sizing: border-box;
+    border-left: 1px solid var(--color-input-border);
+    border-right: 1px solid var(--color-input-border);
+}
+
+.guarantor-form-table .form-row,
+.guarantee-details-table .details-row {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid var(--color-input-border);
+}
+
+.guarantor-form-table .form-row:first-child,
+.guarantee-details-table .details-row:first-child {
+    border-top: none;
+}
+
+.guarantor-form-table .form-row.last {
+    border-bottom: none;
+}
+
+.form-item-wrap {
+    display: flex;
+    flex: 1;
+}
+
+.form-item-wrap.full-width {
+    flex: none;
+    /* Override flex for full width item */
+    width: 100%;
+}
+
+.form-label {
+    background-color: var(--color-input-background);
+    /* #e8ecf0 */
+    border-right: 1px solid var(--color-input-border);
+    width: 140px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.form-input {
+    background-color: var(--color-white);
+    flex: 1;
+    height: 34px;
+    /* h-[34px] */
+    border-right: 1px solid var(--color-table-border);
+    /* #e0e0e0 */
+}
+
+.form-input .input-field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0 16px;
+    /* Match form-label padding */
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    /* Remove default styling for webkit browsers */
+    -moz-appearance: none;
+    /* Remove default styling for mozilla browsers */
+    appearance: none;
+    /* Remove default styling */
+    outline: none;
+    /* Remove outline on focus */
+}
+
+.details-input-wrap .input-text-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text-medium-gray);
+    white-space: nowrap;
+}
+
+.details-input-wrap .input-text-wrap .input-field {
+    width: auto;
+    /* Allow input to size naturally */
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 0 5px;
+    /* Adjust padding to fit with '원' */
+    text-align: right;
+    /* Align text to the right */
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text-medium-gray);
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.details-input-wrap .input-text-wrap p {
+    margin: 0;
+    line-height: 1;
+    /* Align with input field */
+}
+
+.details-input-wrap .input-info {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 0.9rem;
+    /* 9px */
+    color: var(--color-text-light-gray);
+    white-space: nowrap;
+    width: 197px;
+    /* w-[197px] */
+    margin-left: 10px;
+}
+
+.details-input-wrap textarea.input-field {
+    width: 100%;
+    min-height: 108px;
+    /* h-[108px] */
+    border: none;
+    background: transparent;
+    padding: 12px;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-medium-gray);
+    line-height: normal;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    resize: none;
+    /* Disable textarea resizing */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+/* Specific styling for focus state, if desired for inputs */
+.js-input-component.is-focus .input-field {
+    border-color: var(--color-blue-text);
+    /* Example: blue border on focus */
+}
+
+
+.form-item-wrap.full-width .form-input {
+    border-right: none;
+}
+
+.guarantee-details-table .details-label-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.guarantee-details-table .details-label.main {
+    background-color: var(--color-input-background);
+    border-right: 1px solid var(--color-input-border);
+    width: 140px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text-dark-gray);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.guarantee-details-table .details-sub-label-wrap {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.guarantee-details-table .details-label.sub {
+    background-color: var(--color-table-label-bg);
+    /* #f5f5f5 */
+    border-right: 1px solid var(--color-input-border);
+    width: 100px;
+    /* w-[100px] */
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* 11px */
+    color: var(--color-text-dark-gray);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.guarantee-details-table .details-sub-label-wrap:nth-child(2) .details-label.sub {
+    width: 112px;
+    /* w-[112px] */
+}
+
+.details-input-wrap {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 10px 16px;
+    border-right: 1px solid var(--color-table-border);
+    min-height: 34px;
+}
+
+.details-input-wrap .input-text-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text-medium-gray);
+    white-space: nowrap;
+}
+
+.details-input-wrap .input-info {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 0.9rem;
+    /* 9px */
+    color: var(--color-text-light-gray);
+    white-space: nowrap;
+    width: 197px;
+    /* w-[197px] */
+    margin-left: 10px;
+}
+
+.details-input-wrap .input-textarea-wrap {
+    flex: 1;
+    min-height: 108px;
+    /* h-[108px] */
+    background-color: var(--color-white);
+    padding: 12px;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* 12px */
+    color: transparent;
+    /* text-[transparent] to hide text but keep structure */
+    line-height: normal;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+.guarantor-disclaimer {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-text-medium-gray);
+    /* #454545 */
+    line-height: 1.5;
+    width: 100%;
+    margin-top: 8px;
+    /* gap-[8px] from figma*/
+    text-align: left;
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+
+/* --- Contract Signatures Section --- */
+.contract-signatures-section {
+
+    width: 952px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 40px;
+    /* pr-[40px] */
+    box-sizing: border-box;
+}
+
+.signatures-preamble {
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.4rem;
+    /* 14px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+    line-height: 1.5;
+    text-align: center;
+    width: 862px;
+    /* w-[862px] */
+}
+
+.signatures-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+    /* adjust from preamble to details */
+}
+
+.signatures-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    white-space: nowrap;
+    width: 454px;
+    /* w-[454px] */
+    flex-shrink: 0;
+}
+
+.signatures-column.company-info {
+    width: auto;
+    gap: 26px;
+}
+
+.signature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 10px 12px 14px;
+    /* pl-[14px] pr-[10px] py-[12px] */
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    /* 14px */
+    line-height: normal;
+}
+
+.signature-row.bg-orange-light {
+    background-color: var(--color-orange-light);
+    /* #fff7ec */
+}
+
+.signature-label {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    color: var(--color-text-footer);
+    /* #757575 */
+}
+
+.signature-name {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    color: var(--color-text-dark-gray);
+    /* #222 */
+}
+
+.signature-mark {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: var(--color-signature-mark);
+    /* #cb4000 */
+}
+
+.company-label {
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.4rem;
+    /* 14px */
+    color: var(--color-text-footer);
+    /* #757575 */
+    white-space: nowrap;
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* gap-[4px] */
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+    width: 100%;
+}
+
+.company-details p {
+    margin: 0;
+}
+
+.ceo-signature {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.ceo-info {
+    display: flex;
+    gap: 12px;
+    /* gap-[12px] */
+    align-items: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* 12px */
+    color: var(--color-text-dark-gray);
+    /* #222 */
+}
+
+.ceo-info .ceo-title {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+}
+
+.ceo-signature .ceo-mark {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    /* 10px */
+    color: #737373;
+    /* #737373 */
+}
+
+.stamp-area {
+
+    width: 80px;
+    height: 80px;
+}
+
+.stamp-area .stamp-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Checkbox specific styles for this page (reusing from form.css) */
+.section-block .checkbox-option label {
+    border-radius: 2px;
+}
+
+.section-block .checkbox-option input[type="checkbox"]:checked+label {
+    background-color: var(--color-blue-text);
+    border-color: var(--color-blue-text);
+}
+
+.section-block .checkbox-option input[type="checkbox"]:checked+label::after {
+    background-color: var(--color-white);
+}

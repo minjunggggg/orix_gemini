@@ -1,0 +1,213 @@
+/* === Page Specific Styles - Auto Transfer Application === */
+.auto-transfer-document-container {
+    background-color: var(--color-page-bg-light);
+    position: relative;
+    width: 100%; /* To fit within the parent agreement-content */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+.auto-transfer-document-paper {
+    background-color: var(--color-white);
+    width: 1000px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auto-transfer-title {
+    position: absolute;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: var(--color-black);
+    line-height: 1.5;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 46px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.auto-transfer-section-block {
+    width: 952px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 114px;
+    box-sizing: border-box;
+}
+
+.auto-transfer-section-header.dark {
+    background-color: var(--color-contract-header-bg);
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.auto-transfer-section-header .auto-transfer-section-title {
+    font-family: var(--font-pretendard-bold);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    line-height: normal;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+.auto-transfer-disclaimer {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--color-text-dark-gray);
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.auto-transfer-form-table {
+    border-top: 1px solid var(--color-table-border);
+    border-bottom: 1px solid var(--color-table-border);
+    width: 100%;
+    background-color: var(--color-white);
+}
+
+.auto-transfer-form-table .form-row {
+    display: flex;
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+.auto-transfer-form-table .form-row.last {
+    border-bottom: none;
+}
+
+.auto-transfer-form-table .form-item-wrap {
+    flex: 1;
+    display: flex;
+    height: 34px;
+}
+
+.auto-transfer-form-table .form-item-wrap.full-width {
+    flex: none;
+    width: 100%;
+}
+
+.auto-transfer-form-table .form-label {
+    width: 120px;
+    background-color: #e8ecf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pretendard-medium);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text-dark-gray);
+    border-right: 1px solid var(--color-table-border);
+}
+
+.auto-transfer-form-table .form-input {
+    flex: 1;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--color-text-medium-gray);
+    border-right: 1px solid var(--color-table-border);
+}
+
+.auto-transfer-form-table .form-input:last-child {
+    border-right: none;
+}
+
+.auto-transfer-form-table .form-input p {
+    margin: 0;
+}
+
+.auto-transfer-terms-content {
+    background-color: var(--color-light-gray);
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.auto-transfer-terms-content ol {
+    margin: 0;
+    padding-left: 18px; /* For the list numbers */
+    list-style: decimal;
+}
+
+.auto-transfer-terms-content li {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--color-text-dark-gray);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.auto-transfer-terms-content li:last-child {
+    margin-bottom: 0;
+}
+
+.auto-transfer-terms-content li span {
+    line-height: inherit; /* Ensure span inherits line height */
+}
+
+.auto-transfer-signatures {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 952px;
+    box-sizing: border-box;
+}
+
+.auto-transfer-signature-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Adjusted to align to the right as in Figma */
+    width: 100%;
+    padding: 12px 10px 12px 14px;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    line-height: normal;
+    gap: 106px;
+}
+
+.auto-transfer-signature-row.bg-orange-light {
+    background-color: var(--color-orange-light);
+}
+
+.auto-transfer-signature-row .signature-label {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    color: var(--color-text-footer);
+    white-space: nowrap;
+}
+
+.auto-transfer-signature-row .signature-name {
+    font-family: var(--font-pretendard-semibold);
+    font-weight: 600;
+    color: var(--color-text-dark-gray);
+    white-space: nowrap;
+}
+
+.auto-transfer-signature-row .signature-mark {
+    font-family: var(--font-pretendard-regular);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-signature-mark);
+    white-space: nowrap;
+}

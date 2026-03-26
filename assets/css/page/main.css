@@ -1,4 +1,9 @@
 /* === Page Specific Styles - Main Page === */
+:root {
+    --border: 1px solid #ccc;
+    --color-subtitle-eng: var(--p-gray-550);
+    --hero-text-white: var(--p-white);
+}
 
 .container {
     display: flex;
@@ -29,7 +34,7 @@
     padding: 0 32px;
     margin: 0 32px;
     height: 23px;
-    border-right: 1px solid #ccc;
+    border-right: var(--border);
     display: flex;
     align-items: center;
 }
@@ -41,10 +46,9 @@
 .contact-details {
     padding: 8px 18px;
     border-radius: 100px;
-    border: 1px solid #ccc;
+    border: var(--border);
     display: flex;
     gap: 12px;
-
 }
 
 .contact-text {
@@ -85,7 +89,7 @@
     gap: 34px;
     align-items: center;
     text-align: center;
-    color: var(--color-white);
+    color: var(--hero-text-white);
     margin-bottom: 20vh;
 }
 
@@ -100,7 +104,6 @@
 }
 
 .subtitle {
-    font-family: var(--font-pretendard-medium);
     /* Pretendard Medium */
     font-weight: 500;
     font-size: 2.4rem;
@@ -112,32 +115,28 @@
 }
 
 .subtitle-eng {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
     color: var(--color-subtitle-eng);
     /* text-[#c5c5c5] */
 }
 
 .subtitle-orix {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
-    color: var(--color-white);
+    color: var(--hero-text-white);
 }
 
 .main-subtitle {
-    font-family: var(--font-pretendard-regular);
     /* Pretendard Regular */
     font-weight: 500;
     font-size: 3.2rem;
     /* 32px */
     line-height: normal;
     /* leading-[normal] */
-    color: var(--color-white);
+    color: var(--hero-text-white);
     white-space: nowrap;
 }
 
 .main-title {
-    font-family: var(--font-pretendard-semibold);
     /* Pretendard SemiBold */
     font-weight: 600;
     font-size: 8.6rem;
@@ -148,19 +147,16 @@
 }
 
 .main-title-text {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
     line-height: normal;
 }
 
 .main-title-bracket {
-    font-family: var(--font-pretendard-medium);
     font-weight: 500;
     line-height: normal;
 }
 
 .main-title-emphasis {
-    font-family: var(--font-pretendard-bold);
     font-weight: 700;
     line-height: normal;
 }

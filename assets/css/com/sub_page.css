@@ -1,0 +1,224 @@
+/* --- layout --- */
+body {
+    background-color: var(--color-bg-page);
+    /* bg-[#f2f3f8] */
+}
+
+.header {
+    background-color: var(--color-bg-page);
+    /* bg-[#f2f3f8] */
+    z-index: 1;
+}
+
+.page-content-wrapper {
+    overflow: auto;
+}
+
+/* --- Page Title --- */
+.page-title {
+    padding-top: 122px;
+    font-weight: 700;
+    font-size: 3.8rem;
+    /* 38px */
+    text-align: center;
+    color: var(--p-gray-900);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.indicator-n-title {
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    align-items: center;
+    /* items-center */
+    margin-top: 122px;
+    /* Spacing from header */
+}
+
+.progress-indicator {
+    display: flex;
+    /* flex */
+    gap: 12px;
+    /* gap-[12px] */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* Centered */
+    margin-bottom: 20px;
+    /* Spacing from title */
+}
+
+.progress-step {
+    width: 30px;
+    /* size-[30px] */
+    height: 30px;
+    background-color: var(--p-gray-350);
+    /* bg-[#dfe4eb] */
+    border-radius: 100px;
+    /* rounded-[100px] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    /* 18px */
+    color: var(--p-gray-800);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.progress-step.is-active {
+    background-color: var(--color-primary);
+    /* bg-[#3182ee] */
+    color: var(--p-white);
+    /* text-white */
+}
+
+/* --- Main Content Area --- */
+.main-content-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 56px;
+    margin-bottom: 216px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    /* Gap between form-card and form-card-group */
+    align-items: flex-start;
+    /* Align top */
+    width: 1200px;
+}
+
+.form-card-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-card {
+    background-color: var(--p-white);
+    /* bg-white */
+    border-radius: 20px;
+    /* rounded-[20px] */
+    padding: 50px;
+    /* p-[50px] */
+    flex: 1;
+    /* flex-[1_0_0] */
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    /* gap-[32px] */
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    /* 24px */
+    color: var(--p-gray-900);
+    line-height: normal;
+    white-space: nowrap;
+    width: 100%;
+    /* w-full */
+}
+
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* 50:50 핵심 설정 */
+    flex: 1;
+    /* 남은 공간을 1:1 비율로 똑같이 나눠 가짐 */
+    min-width: 0;
+    /* 내부 콘텐츠가 너무 길어질 때 레이아웃 깨짐 방지 */
+}
+
+/* --- Footer --- */
+.footer-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 136px;
+    /* max-h-[136px] */
+    background-color: var(--p-white);
+    box-shadow: 0 -5px 20px 0 rgba(221, 221, 221, 0.25);
+    z-index: 100;
+    overflow: hidden;
+    /* overflow-clip */
+    padding: 42px;
+    /* pb-[40px] pt-[42px] px-[360px] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: space-between;
+    /* justify-between */
+    width: 1200px;
+    /* w-[1200px] implied by outer padding */
+    height: 100%;
+}
+
+.footer-text-container {
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    gap: 12px;
+    /* gap-[12px] */
+    align-items: flex-start;
+    /* items-start */
+    white-space: nowrap;
+}
+
+.footer-message {
+    font-weight: 600;
+    font-size: 1.8rem;
+    /* 18px */
+    color: var(--p-gray-900);
+    line-height: normal;
+}
+
+.footer-disclaimer-container {
+    display: flex;
+    /* flex */
+    gap: 4px;
+    /* gap-[4px] */
+    align-items: flex-start;
+    /* items-start */
+    line-height: 1.4;
+    /* leading-[1.4] */
+    font-size: 1.6rem;
+    /* 16px */
+    color: var(--p-gray-800);
+    width: 100%;
+    /* w-full */
+}
+
+.footer-disclaimer-prefix {
+    /* Pretendard Light */
+    font-weight: 300;
+}
+
+.footer-disclaimer-text {
+    /* Pretendard Regular */
+    font-weight: 400;
+}

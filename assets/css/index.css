@@ -1,0 +1,10 @@
+/* Index Styles */
+@import url("./variables.css");
+@import url("./reset.css");
+@import url("./common.css");
+
+/* components */
+@import url("./com/input.css");
+@import url("./com/toggle.css");
+@import url("./com/button.css");
+@import url("./com/header.css");
