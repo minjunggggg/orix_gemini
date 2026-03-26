@@ -9,6 +9,7 @@
 /* --- Header --- */
 .header {
     padding: 25px 0 14px;
+    position: relative;
 }
 
 .header-content {

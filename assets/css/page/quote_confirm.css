@@ -5,13 +5,6 @@ body {
     background-color: var(--color-page-bg); /* bg-[#f2f3f8] */
 }
 
-.container-wrap {
-    width: 1200px; /* Figma main content width */
-    margin: 122px auto 136px; /* Spacing below header, above footer */
-    position: relative;
-    padding-bottom: 20px; /* Space for the fixed footer */
-}
-
 .progress-indicator {
     display: flex; /* flex */
     gap: 12px; /* gap-[12px] */
@@ -34,7 +27,7 @@ body {
     justify-content: center;
     font-family: var(--font-pretendard-medium);
     font-weight: 500;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.8rem; /* 18px */
     color: var(--color-gray-66);
     line-height: normal;
     white-space: nowrap;
@@ -48,18 +41,11 @@ body {
 .page-main-title {
     font-family: var(--font-pretendard-bold);
     font-weight: 700;
-    font-size: 2.375rem; /* 38px */
+    font-size: 3.8rem; /* 38px */
     color: var(--color-gray-22);
     text-align: center;
     margin-top: 100px; /* Spacing from progress indicator */
     margin-bottom: 42px; /* Spacing from main content */
-}
-
-.main-content-area {
-    display: flex; /* flex */
-    gap: 20px; /* gap-[20px] */
-    align-items: flex-start; /* items-start */
-    width: 100%;
 }
 
 .content-column {
@@ -69,22 +55,10 @@ body {
     flex: 1; /* flex-[1_0_0] */
 }
 
-.info-card {
-    background-color: var(--color-form-card-bg); /* bg-white */
-    border-radius: 20px; /* rounded-[20px] */
-    padding: 50px; /* p-[50px] */
-    display: flex;
-    flex-direction: column;
-    gap: 32px; /* gap-[32px] */
-    align-items: flex-start;
-    width: 100%;
-    box-shadow: 0px 5px 20px 0px rgba(221,221,221,0.25); /* Reusing form card shadow */
-}
-
 .card-title {
     font-family: var(--font-pretendard-bold);
     font-weight: 700;
-    font-size: 1.5rem; /* 24px */
+    font-size: 2.4rem; /* 24px */
     color: var(--color-gray-22);
     line-height: normal;
     white-space: nowrap;
@@ -105,20 +79,20 @@ body {
     background-color: var(--color-summary-highlight-bg); /* bg-[#f0f6ff] */
     border-radius: 8px; /* rounded-[8px] */
     padding: 28px 26px; /* px-[26px] py-[28px] */
-    font-size: 1.625rem; /* 26px */
+    font-size: 2.6rem; /* 26px */
 }
 
 .summary-label {
     font-family: var(--font-pretendard-light); /* Pretendard Light */
     font-weight: 300;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem; /* 20px */
     color: var(--color-gray-66); /* text-[#666] */
 }
 
 .summary-value {
     font-family: var(--font-pretendard-medium); /* Pretendard Medium */
     font-weight: 500;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem; /* 20px */
     color: var(--color-gray-45); /* text-[#454545] */
     text-align: right;
 }
@@ -126,7 +100,7 @@ body {
 .summary-value.blue {
     font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
     font-weight: 600;
-    font-size: 1.625rem; /* 26px */
+    font-size: 2.6rem; /* 26px */
     color: var(--color-summary-highlight-text-blue); /* text-[#3182ee] */
 }
 
@@ -138,7 +112,7 @@ body {
     width: 100%; /* w-full */
     line-height: normal;
     white-space: nowrap;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem; /* 20px */
 }
 
 .contact-label {
@@ -170,14 +144,14 @@ body {
 .car-price-label {
     font-family: var(--font-pretendard-medium); /* Pretendard Medium */
     font-weight: 500;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem; /* 20px */
     color: var(--color-gray-22); /* text-[#222] */
 }
 
 .car-price-value {
     font-family: var(--font-pretendard-semibold); /* Pretendard SemiBold */
     font-weight: 600;
-    font-size: 1.625rem; /* 26px */
+    font-size: 2.6rem; /* 26px */
     color: var(--color-car-price-text-dark-blue); /* text-[#0f3862] */
 }
 
@@ -206,7 +180,7 @@ body {
 .car-spec {
     font-family: var(--font-pretendard-regular);
     font-weight: 400;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.8rem; /* 18px */
     color: var(--color-gray-66);
     line-height: normal;
     white-space: nowrap;
@@ -215,7 +189,7 @@ body {
 .car-model {
     font-family: var(--font-pretendard-semibold);
     font-weight: 600;
-    font-size: 1.375rem; /* 22px */
+    font-size: 2.2rem; /* 22px */
     color: var(--color-gray-45);
     line-height: normal;
     white-space: nowrap;
@@ -235,7 +209,7 @@ body {
     align-items: flex-start; /* items-start */
     width: 100%;
     line-height: normal;
-    font-size: 1.25rem; /* 20px */
+    font-size: 2rem; /* 20px */
 }
 
 .option-label {
@@ -255,67 +229,4 @@ body {
     color: var(--color-gray-45);
     line-height: normal;
     white-space: nowrap;
-}
-
-/* --- Footer --- */
-.footer-wrap {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 136px; /* max-h-[136px] */
-    background-color: var(--color-white);
-    box-shadow: var(--color-footer-shadow);
-    z-index: 100;
-    overflow: hidden; /* overflow-clip */
-    padding: 40px 360px; /* py-[40px] px-[360px] */
-}
-
-.footer-content {
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: space-between; /* justify-between */
-    width: 100%; /* w-[1200px] implied by outer padding */
-    height: 100%;
-}
-
-.footer-text-container {
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col */
-    gap: 12px; /* gap-[12px] */
-    align-items: flex-start; /* items-start */
-    white-space: nowrap;
-}
-
-.footer-message {
-    font-family: var(--font-pretendard-semibold);
-    font-weight: 600;
-    font-size: 1.125rem; /* 18px */
-    color: var(--color-gray-22);
-    line-height: normal;
-}
-
-.footer-disclaimer-container {
-    display: flex; /* flex */
-    gap: 4px; /* gap-[4px] */
-    align-items: flex-start; /* items-start */
-    line-height: 1.4; /* leading-[1.4] */
-    font-size: 1rem; /* 16px */
-    color: var(--color-gray-66);
-    width: 100%; /* w-full */
-}
-
-.footer-disclaimer-prefix {
-    font-family: var(--font-pretendard-light); /* Pretendard Light */
-    font-weight: 300;
-}
-
-.footer-disclaimer-text {
-    font-family: var(--font-pretendard-regular); /* Pretendard Regular */
-    font-weight: 400;
-}
-
-.btn-footer-next {
-    font-size: 1.25rem; /* 20px */
-    /* Inherits other styles from btn-primary */
 }

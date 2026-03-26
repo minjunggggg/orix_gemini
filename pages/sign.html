@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/com/reset.css" />
+    <link rel="stylesheet" href="../assets/css/com/common.css" />
+    <link rel="stylesheet" href="../assets/css/com/button.css" />
+    <link rel="stylesheet" href="../assets/css/com/input.css" />
+    <link rel="stylesheet" href="../assets/css/com/toggle.css" />
     <link rel="stylesheet" href="../assets/css/com/header.css" />
+    <link rel="stylesheet" href="../assets/css/page/form.css" />
 </head>
 
 <body>
@@ -25,6 +31,47 @@
             </div>
         </div>
     </header>
+
+    <div class="modal-overlay is-active">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">전자서명</h3>
+                <button type="button" class="btn-modal-close"></button>
+            </div>
+
+            <div class="modal-tabs">
+                <div class="modal-tab-item is-active">서명하기</div>
+                <div class="modal-tab-item">인감도장 업로드</div>
+            </div>
+
+            <div class="modal-content">
+                <canvas class="signature-box"></canvas>
+                <p class="signature-placeholder">반드시 서명 바랍니다.</p>
+                <button type="button" class="btn-reset-signature">
+                    <span class="ico-refresh"></span>
+                    초기화
+                </button>
+                <div class="legal-text-container">
+                    <div class="legal-text-item">
+                        <span class="ico-info-light"></span>
+                        <p class="legal-text">
+                            <span class="legal-text-bold">본 서명(인감)은 '자동차임대차(렌탈)계약서, 주민등록번호 수집・이용 동의서(렌터카 법인 계약자용),
+                                자동이체
+                                신청서'에 일괄 적용됩니다.</span>
+                        </p>
+                    </div>
+                    <div class="legal-text-item">
+                        <span class="ico-info-light"></span>
+                        <p class="legal-text">
+                            본 서명(인감)정보는 비대면 전자약정 프로세스에 따라, 이어지는 법인공동인증서 인증과 결합하여 법적 효력 및 계약의 성립을 확정하며, 이는 법적으로 직접 자필
+                            및
+                            날인한 것과 동일한 효력을 가집니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
