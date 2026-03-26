@@ -1,3 +1,4 @@
+/* --- layout --- */
 body {
     background-color: var(--color-bg-page);
     /* bg-[#f2f3f8] */
@@ -9,6 +10,11 @@ body {
     z-index: 1;
 }
 
+.page-content-wrapper {
+    overflow: auto;
+}
+
+/* --- Page Title --- */
 .page-title {
     padding-top: 122px;
     font-weight: 700;
@@ -18,13 +24,59 @@ body {
     color: var(--p-gray-900);
     line-height: normal;
     white-space: nowrap;
-    /* Ensure it's above other content if necessary */
 }
 
-.page-content-wrapper {
-    overflow: auto;
+.indicator-n-title {
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    align-items: center;
+    /* items-center */
+    margin-top: 122px;
+    /* Spacing from header */
 }
 
+.progress-indicator {
+    display: flex;
+    /* flex */
+    gap: 12px;
+    /* gap-[12px] */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* Centered */
+    margin-bottom: 20px;
+    /* Spacing from title */
+}
+
+.progress-step {
+    width: 30px;
+    /* size-[30px] */
+    height: 30px;
+    background-color: var(--p-gray-350);
+    /* bg-[#dfe4eb] */
+    border-radius: 100px;
+    /* rounded-[100px] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    /* 18px */
+    color: var(--p-gray-800);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.progress-step.is-active {
+    background-color: var(--color-primary);
+    /* bg-[#3182ee] */
+    color: var(--p-white);
+    /* text-white */
+}
+
+/* --- Main Content Area --- */
 .main-content-area {
     width: 100%;
     display: flex;
@@ -78,6 +130,19 @@ body {
     white-space: nowrap;
     width: 100%;
     /* w-full */
+}
+
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* 50:50 핵심 설정 */
+    flex: 1;
+    /* 남은 공간을 1:1 비율로 똑같이 나눠 가짐 */
+    min-width: 0;
+    /* 내부 콘텐츠가 너무 길어질 때 레이아웃 깨짐 방지 */
 }
 
 /* --- Footer --- */
