@@ -6,139 +6,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자동이체 계좌 및 납부정보 입력</title>
+    <link rel="stylesheet" href="../assets/css/com/reset.css" />
     <link rel="stylesheet" href="../assets/css/com/common.css" />
     <link rel="stylesheet" href="../assets/css/com/button.css" />
     <link rel="stylesheet" href="../assets/css/com/input.css" />
     <link rel="stylesheet" href="../assets/css/com/toggle.css" />
     <link rel="stylesheet" href="../assets/css/com/header.css" />
+    <link rel="stylesheet" href="../assets/css/page/form.css" />
+    <link rel="stylesheet" href="../assets/css/page/quote_confirm.css" />
     <link rel="stylesheet" href="../assets/css/page/auto_transfer_input.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-content">
-            <h1 class="logo">
-                <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
-            </h1>
-            <div class="contact-info">
-                <p class="contact-text">고객센터</p>
-                <div class="phone-info">
-                    <span class="icon phone-icon">
-                        <img src="../../assets/images/phone-icon-header.svg" alt="Phone" />
-                    </span>
-                    <p class="phone-number">02-2050-6700</p>
+    <div class="page-content-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
+                </h1>
+                <div class="contact-info">
+                    <p class="contact-text">고객센터</p>
+                    <div class="phone-info">
+                        <span class="icon phone-icon">
+                            <img src="../../assets/images/phone-icon-header.svg" alt="Phone" />
+                        </span>
+                        <p class="phone-number">02-2050-6700</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div class="container-wrap">
-        <div class="progress-indicator">
-            <div class="progress-step">1</div>
-            <div class="progress-step is-active">2</div>
-            <div class="progress-step">3</div>
+        <div class="indicator-n-title">
+            <div class="progress-indicator">
+                <div class="progress-step">1</div>
+                <div class="progress-step is-active">2</div>
+                <div class="progress-step">3</div>
+            </div>
+            <h2 class="page-title">자동이체 계좌 및 납부정보를 입력해주세요</h2>
         </div>
-        <h2 class="page-main-title">자동이체 계좌 및 납부정보를 입력해주세요</h2>
-
         <div class="main-content-area">
-            <div class="content-column">
-                <div class="info-card">
-                    <p class="card-title">고객정보</p>
-                    <div class="input-group-wrapper">
-                        <p class="input-label">예금주</p>
-                        <div class="input-text-wrap">
-                            <input type="text" class="input-text" value="입력전 상태" />
+            <div class="form-section">
+                <div class="form-card-group">
+                    <div class="content-column">
+
+                        <div class="form-card">
+                            <p class="card-title">고객정보</p>
+                            <div class="input-wrapper">
+                                <p class="input-label">예금주</p>
+                                <div class="input-text-wrap">
+                                    <input type="text" class="input-text" value="입력전 상태" />
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <p class="input-label">계좌번호<span class="info-icon"></span></p>
+                                <div class="input-account-number-group">
+                                    <div class="select-box">
+                                        <select class="select-bank">
+                                            <option>입력중</option>
+                                        </select>
+                                        <span class="icon-arrow-down"></span>
+                                    </div>
+                                    <div class="input-text-wrap">
+                                        <input type="text" class="input-text" placeholder="‘-’없이 숫자만 입력해 주세요." />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-wrapper">
+                                <p class="input-label">이메일<span class="info-icon"></span></p>
+                                <div class="input-email-group">
+                                    <div class="input-text-wrap">
+                                        <input type="text" class="input-text" placeholder="이메일을 입력해 주세요." />
+                                    </div>
+                                    <span class="at-symbol">@</span>
+                                    <div class="input-text-wrap">
+                                        <input type="text" class="input-text" value="naver.com" />
+                                    </div>
+                                </div>
+                                <div class="check-line contract-email-same">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="contract-email-same" class="sr-only" />
+                                        <label for="contract-email-same" class="checkbox-label"></label>
+                                    </div>
+                                    <p class="contract-email-text">계약서 및 안내문 수신 메일 정보와 동일</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="input-group-wrapper">
-                        <p class="input-label">계좌번호<span class="info-icon"></span></p>
-                        <div class="input-account-number-group">
-                            <div class="select-box">
-                                <select class="select-bank">
-                                    <option>입력중</option>
-                                </select>
-                                <span class="icon-arrow-down"></span>
+                    <div class="content-column">
+
+                        <div class="form-card">
+                            <p class="card-title">납부일 설정</p>
+                            <div class="payment-date-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="next-month-payment" name="payment-type" class="sr-only"
+                                        checked />
+                                    <label for="next-month-payment" class="radio-label"></label>
+                                    <p class="radio-text">익월납부</p>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="current-month-payment" name="payment-type"
+                                        class="sr-only" />
+                                    <label for="current-month-payment" class="radio-label"></label>
+                                    <p class="radio-text">당월납부</p>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="direct-input-payment" name="payment-type" class="sr-only" />
+                                    <label for="direct-input-payment" class="radio-label"></label>
+                                    <p class="radio-text">직접입력</p>
+                                </div>
                             </div>
-                            <div class="input-text-wrap">
-                                <input type="text" class="input-text" placeholder="‘-’없이 숫자만 입력해 주세요." />
+                            <div class="first-payment-date-options">
+                                <button type="button" class="btn-option">5일</button>
+                                <button type="button" class="btn-option is-selected">15일</button>
+                                <button type="button" class="btn-option">25일</button>
+                                <button type="button" class="btn-option">말일</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="input-group-wrapper">
-                        <p class="input-label">이메일<span class="info-icon"></span></p>
-                        <div class="input-email-group">
-                            <div class="input-text-wrap">
-                                <input type="text" class="input-text" placeholder="이메일을 입력해 주세요." />
+                            <div class="info-message-box">
+                                <span class="info-icon-light"></span>
+                                <p class="info-text">은행 휴무일, 공휴일에는 자동이체가 진행되지 않으며, 돌아오는 첫 영업일에 지연 출금됩니다.</p>
                             </div>
-                            <span class="at-symbol">@</span>
-                            <div class="input-text-wrap">
-                                <input type="text" class="input-text" value="naver.com" />
+                            <div class="first-payment-date-display">
+                                <p class="display-label">첫회차 납부일</p>
+                                <p class="display-value blue">2026.03.15</p>
                             </div>
-                        </div>
-                        <div class="check-line contract-email-same">
-                            <div class="checkbox">
-                                <input type="checkbox" id="contract-email-same" class="sr-only" />
-                                <label for="contract-email-same" class="checkbox-label"></label>
-                            </div>
-                            <p class="contract-email-text">계약서 및 안내문 수신 메일 정보와 동일</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="content-column">
-                <div class="info-card">
-                    <p class="card-title">납부일 설정</p>
-                    <div class="payment-date-options">
-                        <div class="radio-option">
-                            <input type="radio" id="next-month-payment" name="payment-type" class="sr-only" checked />
-                            <label for="next-month-payment" class="radio-label"></label>
-                            <p class="radio-text">익월납부</p>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="current-month-payment" name="payment-type" class="sr-only" />
-                            <label for="current-month-payment" class="radio-label"></label>
-                            <p class="radio-text">당월납부</p>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="direct-input-payment" name="payment-type" class="sr-only" />
-                            <label for="direct-input-payment" class="radio-label"></label>
-                            <p class="radio-text">직접입력</p>
+        <div class="footer-wrap">
+            <div class="footer-content">
+                <div class="footer-text-container">
+                    <div class="footer-account-info">
+                        <div class="footer-item">
+                            <p class="footer-label">법인명</p>
+                            <p class="footer-value">(주)홍길동컴퍼니</p>
                         </div>
                     </div>
-                    <div class="first-payment-date-options">
-                        <button type="button" class="btn-option">5일</button>
-                        <button type="button" class="btn-option is-selected">15일</button>
-                        <button type="button" class="btn-option">25일</button>
-                        <button type="button" class="btn-option">말일</button>
-                    </div>
-                    <div class="info-message-box">
-                        <span class="info-icon-light"></span>
-                        <p class="info-text">은행 휴무일, 공휴일에는 자동이체가 진행되지 않으며, 돌아오는 첫 영업일에 지연 출금됩니다.</p>
-                    </div>
-                    <div class="first-payment-date-display">
-                        <p class="display-label">첫회차 납부일</p>
-                        <p class="display-value blue">2026.03.15</p>
+                    <div class="footer-account-info">
+                        <div class="footer-item">
+                            <p class="footer-label">계약서 및 안내문 수신 메일 주소</p>
+                            <p class="footer-value">orixagreementmanagement@orix.co.kr</p>
+                        </div>
                     </div>
                 </div>
+                <button type="button" class="btn-primary btn-footer-next">다음</button>
             </div>
         </div>
     </div>
-
-    <div class="footer-wrap">
-        <div class="footer-account-info">
-            <div class="footer-item">
-                <p class="footer-label">법인명</p>
-                <p class="footer-value">(주)홍길동컴퍼니</p>
-            </div>
-            <div class="footer-item">
-                <p class="footer-label">계약서 및 안내문 수신 메일 주소</p>
-                <p class="footer-value">orixagreementmanagement@orix.co.kr</p>
-            </div>
-        </div>
-        <button type="button" class="btn-primary btn-footer-action">다음</button>
-    </div>
-
     <script src="../assets/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/ui/com/ui-util.js"></script>
     <script src="../assets/js/ui/com/button.js"></script>
