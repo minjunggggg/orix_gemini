@@ -78,6 +78,10 @@
                                     <p class="accordion-text">오릭스캐피탈코리아(주) 귀중</p>
                                     <p class="accordion-text">귀사와의 금융거래 관련하여 귀사가 본인의 개인(신용)정보를 처리하고자 하는 경우에는「개인정보
                                         보호법」제15조, 제22조,제24조 및 </p>
+                                    <p class="accordion-text">귀사와의 금융거래 관련하여 귀사가 본인의 개인(신용)정보를 처리하고자 하는 경우에는「개인정보
+                                        보호법」제15조, 제22조,제24조 및 </p>
+                                    <p class="accordion-text">귀사와의 금융거래 관련하여 귀사가 본인의 개인(신용)정보를 처리하고자 하는 경우에는「개인정보
+                                        보호법」제15조, 제22조,제24조 및 </p>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +166,6 @@
                                 </div>
                                 <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
                             </div>
-                            <div class="divider"></div>
                             <div class="accordion-panel is-hidden">
                                 <div class="accordion-content">
                                     <p class="accordion-title">[필수]개인정보 수집이용 동의</p>
@@ -186,33 +189,46 @@
                 <div class="form-card-group">
                     <div class="form-card">
                         <p class="card-title">안내문 수신 정보</p>
-                        <div class="input-group-wrapper">
+                        <div class="input-wrapper js-input-component" data-input-type="email">
                             <p class="input-label">이메일</p>
-                            <div class="input-email-group">
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" placeholder="이메일을 입력해 주세요." />
-                                </div>
-                                <span class="at-symbol">@</span>
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" value="naver.com" />
+                            <div class="email-input-holder">
+                                <div class="input-label-wrapper">
+                                    <p class="sr-only" id="email-input-label-default">이메일 주소 입력 필드 (기본)</p>
                                 </div>
                             </div>
+                            <div class="email-input-group">
+                                <div class="input-field-wrapper">
+                                    <input type="text" class="input-field" placeholder="이메일을 입력해 주세요."
+                                        aria-labelledby="email-input-label-default">
+                                </div>
+                                <div class="email-at-separator">
+                                    <p class="sr-only">골뱅이</p>@
+                                </div>
+                                <div class="input-field-wrapper">
+                                    <input type="text" class="input-field" placeholder=""
+                                        aria-labelledby="email-input-label-default">
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="input-group-wrapper">
+                        <div class="input-wrapper js-input-component" data-input-type="number">
                             <p class="input-label">담당자 연락처</p>
-                            <div class="input-phone-group">
-                                <div class="select-box">
-                                    <select class="select-phone-prefix">
-                                        <option>선택</option>
-                                    </select>
-                                    <span class="icon-arrow-down"></span>
+                            <div class="input-label-wrapper">
+                                <p class="sr-only" id="number-input-label-default">숫자 입력 필드 (기본)</p>
+                            </div>
+                            <div class="number-input-group">
+                                <div class="number-input-select-wrapper">
+                                    <p>선택</p>
+                                    <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                                 </div>
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" />
+                                <div class="input-field-wrapper">
+                                    <input type="number" class="input-field" placeholder="1234"
+                                        aria-labelledby="number-input-label-default">
                                 </div>
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" />
+                                <div class="input-field-wrapper">
+                                    <input type="number" class="input-field" placeholder="1234"
+                                        aria-labelledby="number-input-label-default">
                                 </div>
                             </div>
                         </div>
@@ -220,20 +236,33 @@
 
                     <div class="form-card">
                         <p class="card-title">법인 등록 주소지</p>
-                        <div class="input-group-wrapper">
+                        <div class="input-wrapper js-input-component" data-input-type="address">
                             <p class="input-label">주소</p>
-                            <div class="input-address-group">
-                                <div class="input-with-button">
-                                    <div class="input-text-wrap">
-                                        <input type="text" class="input-text" />
+
+                            <div class="input-label-wrapper">
+                                <p class="sr-only" id="address-input-label-default">주소 입력 필드 (기본)</p>
+                            </div>
+                            <div class="address-input-group">
+                                <!-- Postcode and Search Button -->
+                                <div class="address-postcode-group">
+                                    <div class="input-field-wrapper">
+                                        <input type="text" class="input-field" placeholder=""
+                                            aria-labelledby="address-input-label-default">
+                                        <button type="button" class="btn-postcode-search">
+                                            우편번호 검색
+                                        </button>
                                     </div>
-                                    <button type="button" class="btn-postcode-search">우편번호 검색</button>
+
                                 </div>
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" />
+                                <!-- Main Address Input (Read-only initially) -->
+                                <div class="input-field-wrapper address-main-field-wrapper">
+                                    <input type="text" class="input-field" placeholder="" readonly=""
+                                        aria-labelledby="address-input-label-default">
                                 </div>
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" placeholder="상세주소를 입력해 주세요. (ex. A동 1508호)" />
+                                <!-- Detailed Address Input -->
+                                <div class="input-field-wrapper address-detailed-field-wrapper">
+                                    <input type="text" class="input-field" placeholder="상세주소를 입력해 주세요. (ex. A동 1508호)"
+                                        aria-labelledby="address-input-label-default">
                                 </div>
                             </div>
                         </div>
