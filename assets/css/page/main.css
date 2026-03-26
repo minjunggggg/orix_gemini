@@ -1,4 +1,9 @@
 /* === Page Specific Styles - Main Page === */
+:root {
+    --border: 1px solid #ccc;
+    --color-subtitle-eng: var(--p-gray-550);
+    --hero-text-white: var(--p-white);
+}
 
 .container {
     display: flex;
@@ -29,7 +34,7 @@
     padding: 0 32px;
     margin: 0 32px;
     height: 23px;
-    border-right: 1px solid #ccc;
+    border-right: var(--border);
     display: flex;
     align-items: center;
 }
@@ -41,10 +46,9 @@
 .contact-details {
     padding: 8px 18px;
     border-radius: 100px;
-    border: 1px solid #ccc;
+    border: var(--border);
     display: flex;
     gap: 12px;
-
 }
 
 .contact-text {
@@ -85,7 +89,7 @@
     gap: 34px;
     align-items: center;
     text-align: center;
-    color: var(--color-white);
+    color: var(--hero-text-white);
     margin-bottom: 20vh;
 }
 
@@ -121,7 +125,7 @@
 .subtitle-orix {
     font-family: var(--font-pretendard-regular);
     font-weight: 400;
-    color: var(--color-white);
+    color: var(--hero-text-white);
 }
 
 .main-subtitle {
@@ -132,7 +136,7 @@
     /* 32px */
     line-height: normal;
     /* leading-[normal] */
-    color: var(--color-white);
+    color: var(--hero-text-white);
     white-space: nowrap;
 }
 

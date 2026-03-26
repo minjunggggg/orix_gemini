@@ -2,55 +2,92 @@
 
 /* === Common CSS Variables === */
 :root {
-    /* Colors */
-    --p-white: #ffffff;
-    --p-black: #000000;
+   /* =========================================================
+       1. Primitive Palette (원천 색상: 절대값)
+       사용처를 고민하지 않고 색상 그 자체의 밝기 단계로 정의합니다.
+       ========================================================= */
+   /* Colors */
+   --p-white: #ffffff;
+   --p-black: #000000;
 
-    /* Grays */
-    --p-gray-50:  #fafafa;
-    --p-gray-100: #f8f8f8; 
-    --p-gray-150: #f5f5f5; 
-    --p-gray-200: #f3f3f3; 
-    --p-gray-250: #f2f3f8; 
-    --p-gray-300: #eeeeee; 
-    --p-gray-350: #dfe4eb; 
-    --p-gray-400: #dddddd; 
-    --p-gray-450: #cccccc; 
-    --p-gray-500: #bbbbbb; 
-    --p-gray-550: #c5c5c5; 
-    --p-gray-600: #999999; 
-    --p-gray-700: #757575; 
-    --p-gray-800: #666666; 
-    --p-gray-850: #454545; 
-    --p-gray-900: #222222; 
+   /* Grays */
+   --p-gray-50: #fafafa;
+   --p-gray-100: #f8f8f8;
+   --p-gray-150: #f5f5f5;
+   --p-gray-200: #f3f3f3;
+   --p-gray-250: #f2f3f8;
+   --p-gray-300: #eeeeee;
+   --p-gray-350: #dfe4eb;
+   --p-gray-400: #dddddd;
+   --p-gray-450: #cccccc;
+   --p-gray-500: #bbbbbb;
+   --p-gray-550: #c5c5c5;
+   --p-gray-600: #999999;
+   --p-gray-700: #757575;
+   --p-gray-800: #666666;
+   --p-gray-850: #454545;
+   --p-gray-900: #222222;
 
-    /* Blues */
-    --p-blue-light: #f0f6ff; 
-    --p-blue-400:   #3182ee; 
-    --p-blue-500:   #156cdf; 
-    --p-blue-600:   #0f71f3; 
-    --p-blue-700:   #0f5fcb; 
-    --p-blue-800:   #0f3862; 
-    
-    /* Navy */
-    --p-navy-500:   #062d4d; 
-    --p-navy-700:   #08131d; 
-    --p-navy-900:   #0c2247; 
+   /* Blues */
+   --p-blue-light: #f0f6ff;
+   --p-blue-400: #3182ee;
+   --p-blue-500: #156cdf;
+   --p-blue-600: #0f71f3;
+   --p-blue-700: #0f5fcb;
+   --p-blue-800: #0f3862;
 
-    /* Others */
-    --p-red: #ff0000;
+   /* Navy */
+   --p-navy-500: #062d4d;
+   --p-navy-700: #08131d;
+   --p-navy-900: #0c2247;
 
-    /* Overlays & Shadows (Alpha 포함) */
-    --color-overlay-dark:     rgba(12, 34, 71, 0.5); /* #0C224780 */
-    --color-modal-backdrop:   rgba(0, 0, 0, 0.4);
-    --color-info-box-bg:      rgba(255, 255, 255, 0.8);
-    --color-placeholder-sig:  rgba(34, 34, 34, 0.1);
-    
-    --shadow-footer:    0px -5px 20px 0px rgba(221, 221, 221, 0.25);
-    --shadow-card:      0px 5px 20px 0px rgba(221, 221, 221, 0.25);
+   /* Others */
+   --p-red: #ff0000;
 
-    /* Font Families */
-    --font-pretendard-bold: 'Pretendard', sans-serif;
-    --font-pretendard-regular: 'Pretendard', sans-serif;
-    --font-pretendard-light: 'Pretendard', sans-serif;
+   /* Overlays & Shadows (Alpha 포함) */
+   --color-overlay-dark: rgba(12, 34, 71, 0.5);
+   /* #0C224780 */
+   --color-modal-backdrop: rgba(0, 0, 0, 0.4);
+   --color-info-box-bg: rgba(255, 255, 255, 0.8);
+   --color-placeholder-sig: rgba(34, 34, 34, 0.1);
+
+   --shadow-footer: 0px -5px 20px 0px rgba(221, 221, 221, 0.25);
+   --shadow-card: 0px 5px 20px 0px rgba(221, 221, 221, 0.25);
+
+   /* =========================================================
+       2. Semantic Tokens (의미론적 색상: 용도)
+       실제 CSS에서 가져다 쓸 변수들입니다.
+       ========================================================= */
+   /* Backgrounds */
+   --color-bg-page: var(--p-gray-250);
+   --color-bg-card: var(--p-white);
+   --color-bg-gray: var(--p-gray-350);
+   --color-bg-highlight: var(--p-blue-light);
+   --color-bg-scroll: var(--p-gray-50);
+
+   /* Text Colors */
+   --color-text-main: var(--p-gray-900);
+   --color-text-sub: var(--p-gray-700);
+   --color-text-disabled: var(--p-gray-500);
+   --color-text-inverse: var(--p-white);
+   --color-text-primary: var(--p-blue-400);
+   --color-text-price: var(--p-blue-800);
+
+   /* Brand / Action */
+   --color-primary: var(--p-blue-400);
+   --color-primary-dark: var(--p-blue-500);
+   --color-secondary: var(--p-blue-700);
+   --color-accent: var(--p-blue-600);
+   --color-error: var(--p-red);
+
+   /* UI Elements (Borders, Dividers) */
+   --color-border: var(--p-gray-400);
+   --color-divider: var(--p-gray-300);
+
+   /* Font Families */
+   --font-pretendard-bold: 'Pretendard', sans-serif;
+   --font-pretendard-semibold: 'Pretendard', sans-serif;
+   --font-pretendard-regular: 'Pretendard', sans-serif;
+   --font-pretendard-medium: 'Pretendard', sans-serif;
+   --font-pretendard-light: 'Pretendard', sans-serif;
 }

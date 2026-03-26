@@ -1,9 +1,9 @@
 /* === CSS Variables for Buttons === */
 :root {
-    --color-btn-inactive-bg: var(--color-gray-ddd);
-    --color-btn-inactive-text: var(--color-gray-99);
-    --color-btn-active-bg: var(--color-primary-blue);
-    --color-btn-active-text: var(--color-white);
+    --color-btn-inactive-bg: var(--p-gray-400);
+    --color-btn-inactive-text: var(--p-gray-600);
+    --color-btn-active-bg: var(--color-primary);
+    --color-btn-active-text: var(--p-white);
     --color-btn-hover-bg: var(--color-primary-dark-blue);
     --color-btn-hover-shadow: 1px 2px 8px 0px rgba(221, 221, 221, 0.25);
 
@@ -337,7 +337,7 @@
 
 /* === Electronic Agreement Start Block === */
 .agreement-start-block {
-    background-color: var(--color-primary-blue);
+    background-color: var(--color-primary);
     /* bg-[#3182ee] */
     width: 1249px;
     /* w-[1249px] */
@@ -362,7 +362,7 @@
 
 .agreement-start-block:hover,
 .agreement-start-block.is-hover {
-    background-color: var(--color-agreement-bg-hover);
+    background-color: var(--color-accent);
     /* bg-[#0f5fcb] */
 }
 
@@ -388,7 +388,7 @@
 }
 
 .agreement-start-block__button-container {
-    background-color: var(--color-white);
+    background-color: var(--p-white);
     /* bg-white */
     padding: 20px 24px;
     /* px-[24px] py-[20px] */
@@ -411,14 +411,14 @@
     /* Bold */
     font-size: 2.2rem;
     /* 22px */
-    color: var(--color-primary-blue);
+    color: var(--color-primary);
     /* text-[#3182ee] */
     transition: color 0.2s;
 }
 
 .agreement-start-block:hover .agreement-start-block__button-text,
 .agreement-start-block.is-hover .agreement-start-block__button-text {
-    color: var(--color-agreement-bg-hover);
+    color: var(--color-accent);
     /* text-[#0f5fcb] */
 }
 
@@ -429,7 +429,7 @@
     /* Regular */
     font-size: 2.2rem;
     /* 22px */
-    color: var(--color-white);
+    color: var(--p-white);
     /* text-white */
     white-space: nowrap;
     line-height: normal;
@@ -451,7 +451,7 @@
     /* size-[40px] */
     height: 40px;
     /* size-[40px] */
-    background-color: var(--color-white);
+    background-color: var(--p-white);
     /* White icon */
     mask-image: url('../../images/right-arrow.svg');
     -webkit-mask-image: url('../../images/right-arrow.svg');
@@ -470,7 +470,7 @@
     width: 24px;
     /* size-[24px] */
     height: 24px;
-    background-color: var(--color-gray-66);
+    background-color: var(--p-gray-800);
     /* Use text color for icon color */
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
@@ -535,9 +535,9 @@
 }
 
 .btn-option.is-selected {
-    border-color: var(--color-primary-blue);
+    border-color: var(--color-primary);
     /* border-[#3182ee] */
-    color: var(--color-primary-blue);
+    color: var(--color-primary);
     /* text-[#3182ee] */
     font-weight: 600;
     /* SemiBold */
@@ -550,13 +550,13 @@
 }
 
 .btn-option:focus-visible {
-    outline: 2px solid var(--color-primary-blue);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
 /* IE11 fallback for :focus-visible */
 .btn-option:focus {
-    outline: 2px solid var(--color-primary-blue);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
@@ -595,7 +595,7 @@
 }
 
 .btn-pagination-number.is-selected {
-    background-color: var(--color-primary-blue);
+    background-color: var(--color-primary);
     /* bg-[#3182ee] */
     color: var(--color-white);
     /* text-white */
@@ -610,12 +610,12 @@
 }
 
 .btn-pagination-number:focus-visible {
-    outline: 2px solid var(--color-primary-blue);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
 /* IE11 fallback for :focus-visible */
 .btn-pagination-number:focus {
-    outline: 2px solid var(--color-primary-blue);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
