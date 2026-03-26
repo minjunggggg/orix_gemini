@@ -10,9 +10,6 @@ body {
     z-index: 1;
 }
 
-.page-content-wrapper {
-    overflow: auto;
-}
 
 /* --- Page Title --- */
 .page-title {
