@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <title>Input Components</title>
-    <link rel="stylesheet" href="../assets/css/com/common.css">
-    <link rel="stylesheet" href="../assets/css/com/input.css">
+    <link rel="stylesheet" href="../assets/css/index.css" />
     <style>
-        body {
-            padding: 20px;
-            background-color: #f0f2f5; /* Light background for visibility */
-        }
-
         .input-components-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px; /* Gap between different input types/rows */
+            gap: 30px;
+            /* Gap between different input types/rows */
             justify-content: flex-start;
             align-items: flex-start;
-            max-width: 1760px; /* Based on Figma frame width */
-            margin: 0 auto; /* Center the container */
+            max-width: 1760px;
+            /* Based on Figma frame width */
+            margin: 0 auto;
+            /* Center the container */
         }
 
         .input-type-text-container,
@@ -31,15 +29,19 @@
         .input-type-address-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px; /* Gap between states of the same input type */
+            gap: 20px;
+            /* Gap between states of the same input type */
             border: 1px solid #eee;
             padding: 20px;
             background-color: var(--color-white);
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            min-width: 490px; /* Ensure at least one input fits */
-            flex: 1 1 calc(33.33% - 20px); /* Approx 3 per row if they were 490px */
-            box-sizing: border-box; /* Include padding/border in width */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            min-width: 490px;
+            /* Ensure at least one input fits */
+            flex: 1 1 calc(33.33% - 20px);
+            /* Approx 3 per row if they were 490px */
+            box-sizing: border-box;
+            /* Include padding/border in width */
         }
 
         .input-type-text-container h3,
@@ -51,32 +53,32 @@
             width: 100%;
             margin-bottom: 15px;
             color: var(--color-gray-22);
-            font-size: 1.25rem; /* 20px */
+            font-size: 1.25rem;
+            /* 20px */
             font-weight: 600;
         }
 
         /* Individual input wrappers within their type containers */
         .input-wrapper {
-            margin-bottom: 0; /* Remove extra margin from initial HTML */
+            margin-bottom: 0;
+            /* Remove extra margin from initial HTML */
             flex-shrink: 0;
-            width: 490px; /* Explicit width as per Figma */
+            width: 490px;
+            /* Explicit width as per Figma */
             box-sizing: border-box;
         }
     </style>
 </head>
-<body>
-    <div class="input-components-container">
-        <!-- === Text Input - Examples for States === -->
-        <div class="input-type-text-container">
-            <h3>Text Input Examples (Base)</h3>
 
+<body>
+    <div>
+        <!-- === Text Input - Examples for States === -->
+        <div>
+            <h3>base input</h3>
             <div class="input-wrapper js-input-component" data-input-type="text">
-                <div class="input-label-wrapper">
-                    <p class="sr-only" id="text-input-label-default">기본 텍스트 입력 필드</p>
-                </div>
-                <div class="input-field-wrapper">
-                    <input type="text" class="input-field" placeholder="이름을 입력해주세요" aria-labelledby="text-input-label-default">
-                </div>
+                <p class="sr-only" id="text-input-label-default">기본 텍스트 입력 필드</p>
+                <input type="text" class="input-field" placeholder="이름을 입력해주세요"
+                    aria-labelledby="text-input-label-default">
             </div>
 
             <br><br>
@@ -108,7 +110,8 @@
                     <p class="sr-only" id="text-input-label-disabled">비활성화된 텍스트 입력 필드</p>
                 </div>
                 <div class="input-field-wrapper">
-                    <input type="text" class="input-field" value="홍길동" disabled aria-labelledby="text-input-label-disabled">
+                    <input type="text" class="input-field" value="홍길동" disabled
+                        aria-labelledby="text-input-label-disabled">
                 </div>
             </div>
         </div>
@@ -129,13 +132,15 @@
                 </div>
                 <div class="email-input-group">
                     <div class="input-field-wrapper">
-                        <input type="text" class="input-field" placeholder="abc123" aria-labelledby="email-input-label-default">
+                        <input type="text" class="input-field" placeholder="abc123"
+                            aria-labelledby="email-input-label-default">
                     </div>
                     <div class="email-at-separator">
                         <p class="sr-only">골뱅이</p>@
                     </div>
                     <div class="input-field-wrapper">
-                        <input type="text" class="input-field" placeholder="naver.com" aria-labelledby="email-input-label-default">
+                        <input type="text" class="input-field" placeholder="naver.com"
+                            aria-labelledby="email-input-label-default">
                     </div>
                 </div>
                 <div class="email-input-checkbox-wrapper">
@@ -165,7 +170,8 @@
                         <p class="sr-only">골뱅이</p>@
                     </div>
                     <div class="input-field-wrapper">
-                        <input type="text" class="input-field" value="naver.com" aria-labelledby="email-input-label-focus">
+                        <input type="text" class="input-field" value="naver.com"
+                            aria-labelledby="email-input-label-focus">
                     </div>
                 </div>
                 <div class="email-input-checkbox-wrapper">
@@ -189,13 +195,15 @@
                 </div>
                 <div class="email-input-group">
                     <div class="input-field-wrapper">
-                        <input type="text" class="input-field" value="abc123" aria-labelledby="email-input-label-filled">
+                        <input type="text" class="input-field" value="abc123"
+                            aria-labelledby="email-input-label-filled">
                     </div>
                     <div class="email-at-separator">
                         <p class="sr-only">골뱅이</p>@
                     </div>
                     <div class="input-field-wrapper">
-                        <input type="text" class="input-field" value="naver.com" aria-labelledby="email-input-label-filled">
+                        <input type="text" class="input-field" value="naver.com"
+                            aria-labelledby="email-input-label-filled">
                     </div>
                 </div>
                 <div class="email-input-checkbox-wrapper">
@@ -223,10 +231,12 @@
                             <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" placeholder="1234" aria-labelledby="number-input-label-default">
+                            <input type="number" class="input-field" placeholder="1234"
+                                aria-labelledby="number-input-label-default">
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" placeholder="1234" aria-labelledby="number-input-label-default">
+                            <input type="number" class="input-field" placeholder="1234"
+                                aria-labelledby="number-input-label-default">
                         </div>
                     </div>
                 </div>
@@ -244,10 +254,12 @@
                             <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" value="1234" aria-labelledby="number-input-label-focus">
+                            <input type="number" class="input-field" value="1234"
+                                aria-labelledby="number-input-label-focus">
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" value="1234" aria-labelledby="number-input-label-focus">
+                            <input type="number" class="input-field" value="1234"
+                                aria-labelledby="number-input-label-focus">
                         </div>
                     </div>
                 </div>
@@ -265,10 +277,12 @@
                             <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" value="1234" aria-labelledby="number-input-label-filled">
+                            <input type="number" class="input-field" value="1234"
+                                aria-labelledby="number-input-label-filled">
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" value="1234" aria-labelledby="number-input-label-filled">
+                            <input type="number" class="input-field" value="1234"
+                                aria-labelledby="number-input-label-filled">
                         </div>
                     </div>
                 </div>
@@ -286,7 +300,8 @@
                         <div class="input-label-wrapper">
                             <p class="sr-only" id="number-2-input-label-default">전화번호 입력 필드 (기본)</p>
                         </div>
-                        <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span> <!-- Reusing email-input-ico for consistency -->
+                        <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span>
+                        <!-- Reusing email-input-ico for consistency -->
                     </div>
                     <div class="number-input-group">
                         <div class="number-input-select-wrapper-2">
@@ -294,7 +309,8 @@
                             <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" placeholder="내용을 입력해주세요" aria-labelledby="number-2-input-label-default">
+                            <input type="number" class="input-field" placeholder="내용을 입력해주세요"
+                                aria-labelledby="number-2-input-label-default">
                         </div>
                     </div>
                 </div>
@@ -315,7 +331,8 @@
                             <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" value="123-123456-78910" aria-labelledby="number-2-input-label-focus">
+                            <input type="number" class="input-field" value="123-123456-78910"
+                                aria-labelledby="number-2-input-label-focus">
                         </div>
                     </div>
                 </div>
@@ -336,149 +353,163 @@
                             <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                         </div>
                         <div class="input-field-wrapper">
-                            <input type="number" class="input-field" value="123-123456-78910" aria-labelledby="number-2-input-label-filled">
+                            <input type="number" class="input-field" value="123-123456-78910"
+                                aria-labelledby="number-2-input-label-filled">
                         </div>
                     </div>
                 </div>
             </div>
 
-            </div>
+        </div>
 
-            <br><br>
+        <br><br>
 
-            <!-- === Date Input - Examples for States === -->
-            <div class="input-type-date-container">
-                <h3>Date Input Examples</h3>
+        <!-- === Date Input - Examples for States === -->
+        <div class="input-type-date-container">
+            <h3>Date Input Examples</h3>
 
-                <!-- Default State -->
-                <div class="input-wrapper js-input-component" data-input-type="date">
-                    <div class="input-label-wrapper">
-                        <p class="sr-only" id="date-input-label-default">날짜 입력 필드 (기본)</p>
-                    </div>
-                    <div class="date-input-field-wrapper">
-                        <input type="text" class="date-input-field input-field" placeholder="날짜를 입력해주세요" aria-labelledby="date-input-label-default">
-                        <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
-                    </div>
+            <!-- Default State -->
+            <div class="input-wrapper js-input-component" data-input-type="date">
+                <div class="input-label-wrapper">
+                    <p class="sr-only" id="date-input-label-default">날짜 입력 필드 (기본)</p>
                 </div>
-
-                <br><br>
-
-                <!-- Focus State -->
-                <div class="input-wrapper is-focus js-input-component" data-input-type="date">
-                    <div class="input-label-wrapper">
-                        <p class="sr-only" id="date-input-label-focus">날짜 입력 필드 (포커스)</p>
-                    </div>
-                    <div class="date-input-field-wrapper is-focus">
-                        <input type="text" class="date-input-field input-field" value="2026.02.04" aria-labelledby="date-input-label-focus">
-                        <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
-                    </div>
+                <div class="date-input-field-wrapper">
+                    <input type="text" class="date-input-field input-field" placeholder="날짜를 입력해주세요"
+                        aria-labelledby="date-input-label-default">
+                    <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
                 </div>
-
-                <br><br>
-
-                <!-- Filled State -->
-                <div class="input-wrapper is-filled js-input-component" data-input-type="date">
-                    <div class="input-label-wrapper">
-                        <p class="sr-only" id="date-input-label-filled">날짜 입력 필드 (채워짐)</p>
-                    </div>
-                    <div class="date-input-field-wrapper is-filled">
-                        <input type="text" class="date-input-field input-field" value="2026.02.04" aria-labelledby="date-input-label-filled">
-                        <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
-                    </div>
-                </div>
-            </div>
-
             </div>
 
             <br><br>
 
-            <!-- === Address Input - Examples for States === -->
-            <div class="input-type-address-container">
-                <h3>Address Input Examples</h3>
-
-                <!-- Default State -->
-                <div class="input-wrapper js-input-component" data-input-type="address">
-                    <div class="input-label-wrapper">
-                        <p class="sr-only" id="address-input-label-default">주소 입력 필드 (기본)</p>
-                    </div>
-                    <div class="address-input-group">
-                        <!-- Postcode and Search Button -->
-                        <div class="address-postcode-group">
-                            <div class="input-field-wrapper">
-                                <input type="text" class="input-field" placeholder="" aria-labelledby="address-input-label-default">
-                            </div>
-                            <button type="button" class="address-search-button">
-                                <p>우편번호 검색</p>
-                            </button>
-                        </div>
-                        <!-- Main Address Input (Read-only initially) -->
-                        <div class="input-field-wrapper address-main-field-wrapper">
-                            <input type="text" class="input-field" placeholder="" readonly aria-labelledby="address-input-label-default">
-                        </div>
-                        <!-- Detailed Address Input -->
-                        <div class="input-field-wrapper address-detailed-field-wrapper">
-                            <input type="text" class="input-field" placeholder="상세주소를 입력해 주세요. (ex. A동 1508호)" aria-labelledby="address-input-label-default">
-                        </div>
-                    </div>
+            <!-- Focus State -->
+            <div class="input-wrapper is-focus js-input-component" data-input-type="date">
+                <div class="input-label-wrapper">
+                    <p class="sr-only" id="date-input-label-focus">날짜 입력 필드 (포커스)</p>
                 </div>
-
-                <br><br>
-
-                <!-- Focus State -->
-                <div class="input-wrapper is-focus js-input-component" data-input-type="address">
-                    <div class="input-label-wrapper">
-                        <p class="sr-only" id="address-input-label-focus">주소 입력 필드 (포커스)</p>
-                    </div>
-                    <div class="address-input-group">
-                        <!-- Postcode and Search Button -->
-                        <div class="address-postcode-group">
-                            <div class="input-field-wrapper">
-                                <input type="text" class="input-field" value="54321" aria-labelledby="address-input-label-focus">
-                            </div>
-                            <button type="button" class="address-search-button">
-                                <p>우편번호 검색</p>
-                            </button>
-                        </div>
-                        <!-- Main Address Input -->
-                        <div class="input-field-wrapper address-main-field-wrapper">
-                            <input type="text" class="input-field" value="서울 강남구 테헤란로 306" aria-labelledby="address-input-label-focus">
-                        </div>
-                        <!-- Detailed Address Input -->
-                        <div class="input-field-wrapper address-detailed-field-wrapper">
-                            <input type="text" class="input-field" value="13층 (역삼동,카이트타워)" aria-labelledby="address-input-label-focus">
-                        </div>
-                    </div>
-                </div>
-
-                <br><br>
-
-                <!-- Filled State -->
-                <div class="input-wrapper is-filled js-input-component" data-input-type="address">
-                    <div class="input-label-wrapper">
-                        <p class="sr-only" id="address-input-label-filled">주소 입력 필드 (채워짐)</p>
-                    </div>
-                    <div class="address-input-group">
-                        <!-- Postcode and Search Button -->
-                        <div class="address-postcode-group">
-                            <div class="input-field-wrapper">
-                                <input type="text" class="input-field" value="54321" aria-labelledby="address-input-label-filled">
-                            </div>
-                            <button type="button" class="address-search-button">
-                                <p>우편번호 검색</p>
-                            </button>
-                        </div>
-                        <!-- Main Address Input -->
-                        <div class="input-field-wrapper address-main-field-wrapper">
-                            <input type="text" class="input-field" value="서울 강남구 테헤란로 306" aria-labelledby="address-input-label-filled">
-                        </div>
-                        <!-- Detailed Address Input -->
-                        <div class="input-field-wrapper address-detailed-field-wrapper">
-                            <input type="text" class="input-field" value="13층 (역삼동,카이트타워)" aria-labelledby="address-input-label-filled">
-                        </div>
-                    </div>
+                <div class="date-input-field-wrapper is-focus">
+                    <input type="text" class="date-input-field input-field" value="2026.02.04"
+                        aria-labelledby="date-input-label-focus">
+                    <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
                 </div>
             </div>
+
+            <br><br>
+
+            <!-- Filled State -->
+            <div class="input-wrapper is-filled js-input-component" data-input-type="date">
+                <div class="input-label-wrapper">
+                    <p class="sr-only" id="date-input-label-filled">날짜 입력 필드 (채워짐)</p>
+                </div>
+                <div class="date-input-field-wrapper is-filled">
+                    <input type="text" class="date-input-field input-field" value="2026.02.04"
+                        aria-labelledby="date-input-label-filled">
+                    <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- === Address Input - Examples for States === -->
+    <div class="input-type-address-container">
+        <h3>Address Input Examples</h3>
+
+        <!-- Default State -->
+        <div class="input-wrapper js-input-component" data-input-type="address">
+            <div class="input-label-wrapper">
+                <p class="sr-only" id="address-input-label-default">주소 입력 필드 (기본)</p>
+            </div>
+            <div class="address-input-group">
+                <!-- Postcode and Search Button -->
+                <div class="address-postcode-group">
+                    <div class="input-field-wrapper">
+                        <input type="text" class="input-field" placeholder=""
+                            aria-labelledby="address-input-label-default">
+                    </div>
+                    <button type="button" class="address-search-button">
+                        <p>우편번호 검색</p>
+                    </button>
+                </div>
+                <!-- Main Address Input (Read-only initially) -->
+                <div class="input-field-wrapper address-main-field-wrapper">
+                    <input type="text" class="input-field" placeholder="" readonly
+                        aria-labelledby="address-input-label-default">
+                </div>
+                <!-- Detailed Address Input -->
+                <div class="input-field-wrapper address-detailed-field-wrapper">
+                    <input type="text" class="input-field" placeholder="상세주소를 입력해 주세요. (ex. A동 1508호)"
+                        aria-labelledby="address-input-label-default">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Focus State -->
+        <div class="input-wrapper is-focus js-input-component" data-input-type="address">
+            <div class="input-label-wrapper">
+                <p class="sr-only" id="address-input-label-focus">주소 입력 필드 (포커스)</p>
+            </div>
+            <div class="address-input-group">
+                <!-- Postcode and Search Button -->
+                <div class="address-postcode-group">
+                    <div class="input-field-wrapper">
+                        <input type="text" class="input-field" value="54321"
+                            aria-labelledby="address-input-label-focus">
+                    </div>
+                    <button type="button" class="address-search-button">
+                        <p>우편번호 검색</p>
+                    </button>
+                </div>
+                <!-- Main Address Input -->
+                <div class="input-field-wrapper address-main-field-wrapper">
+                    <input type="text" class="input-field" value="서울 강남구 테헤란로 306"
+                        aria-labelledby="address-input-label-focus">
+                </div>
+                <!-- Detailed Address Input -->
+                <div class="input-field-wrapper address-detailed-field-wrapper">
+                    <input type="text" class="input-field" value="13층 (역삼동,카이트타워)"
+                        aria-labelledby="address-input-label-focus">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Filled State -->
+        <div class="input-wrapper is-filled js-input-component" data-input-type="address">
+            <div class="input-label-wrapper">
+                <p class="sr-only" id="address-input-label-filled">주소 입력 필드 (채워짐)</p>
+            </div>
+            <div class="address-input-group">
+                <!-- Postcode and Search Button -->
+                <div class="address-postcode-group">
+                    <div class="input-field-wrapper">
+                        <input type="text" class="input-field" value="54321"
+                            aria-labelledby="address-input-label-filled">
+                    </div>
+                    <button type="button" class="address-search-button">
+                        <p>우편번호 검색</p>
+                    </button>
+                </div>
+                <!-- Main Address Input -->
+                <div class="input-field-wrapper address-main-field-wrapper">
+                    <input type="text" class="input-field" value="서울 강남구 테헤란로 306"
+                        aria-labelledby="address-input-label-filled">
+                </div>
+                <!-- Detailed Address Input -->
+                <div class="input-field-wrapper address-detailed-field-wrapper">
+                    <input type="text" class="input-field" value="13층 (역삼동,카이트타워)"
+                        aria-labelledby="address-input-label-filled">
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
 </body>
+
 </html>
