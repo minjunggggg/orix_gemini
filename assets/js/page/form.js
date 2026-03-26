@@ -9,7 +9,6 @@ var FormPage = (function () {
             var $divider = $this.closest('.agreement-item').find('.divider');
 
             $accordionPanel.toggleClass('is-hidden');
-            $divider.toggleClass('is-hidden');
         });
     };
     init();
