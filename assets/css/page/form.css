@@ -1,4 +1,17 @@
 /* === Page Specific Styles - Form Page === */
+:root {
+    --color-check-box-default: #ddd;
+    --color-check-box-checked: #3182ee;
+    --color-required-text: #3182ee;
+    --color-modal-backdrop: rgba(0, 0, 0, 0.4);
+    --color-modal-tab-active-color: #0871f3;
+    --color-modal-tab-active-border: #0871f3;
+    --color-signature-box-bg: #f8f8f8;
+    --color-signature-box-border: #eee;
+    --color-signature-placeholder-text: rgba(34, 34, 34, 0.1);
+    --color-footer-shadow: 0px 5px 20px 0px rgba(221, 221, 221, 0.25);
+
+}
 
 /* --- Page Layout --- */
 body {
@@ -103,8 +116,6 @@ body {
     gap: 18px;
     /* gap-[18px] */
     align-items: center;
-    justify-content: space-between;
-    /* To push arrow to the right */
     width: 100%;
 }
 
@@ -135,32 +146,79 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: var(--color-check-box-default);
-    /* bg-[#ddd] */
     border-radius: 30px;
     /* rounded-[30px] for terms-all */
     cursor: pointer;
-    background-size: 50%;
-    /* Adjust size of checkmark within the background */
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-color 0.2s, background-size 0.2s;
-    /* Transition background-size for smooth checkmark animation */
-    /* Checkmark as mask initially hidden */
-    mask-image: url('../assets/images/check.svg');
-    -webkit-mask-image: url('../assets/images/check.svg');
+}
+
+.checkbox-label.terms-all {
+
+    background-color: #ddd;
+}
+
+.checkbox-label.terms-all::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 100%;
+    background-color: #ddd;
+    /* White checkmark on blue background */
+    mask-image: url('../../images/check.svg');
+    -webkit-mask-image: url('../../images/check.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
     -webkit-mask-position: center;
-    mask-size: 0%;
-    /* Start hidden */
-    -webkit-mask-size: 0%;
-    /* Start hidden */
-    background-color: transparent;
-    /* Initially transparent background */
-    border: 1px solid var(--color-check-box-default);
-    /* Border for unchecked state */
+    mask-size: contain;
+    -webkit-mask-size: contain;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+/* 1. 기본 상태 (회색 체크) */
+input[type="checkbox"]:not(#terms-all) + .checkbox-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 100%;
+    background-color: #ddd; /* 기본 회색 */
+    
+    /* 마스크 설정 (중복 코드 제거를 위해 여기에 한 번만 선언) */
+    mask: url('../../images/check.svg') no-repeat center / contain;
+    -webkit-mask: url('../../images/check.svg') no-repeat center / contain;
+}
+
+/* 2. 체크된 상태 (파란색으로 변경) */
+/* 핵심: input이 :checked 일 때 + 뒤에 오는 label의 ::after를 바꾼다! */
+input[type="checkbox"]:checked:not(#terms-all) + .checkbox-label::after {
+    background-color: #3182ee; /* 파란색으로 변경 */
+}
+
+.checkbox-n-text{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* 1. 기본 체크박스는 화면에서 숨김 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .checkbox input[type="checkbox"]:checked+.checkbox-label {
@@ -172,7 +230,7 @@ body {
     /* Make checkmark larger when checked */
     -webkit-mask-size: 70%;
     /* Make checkmark larger when checked */
-    background-color: var(--color-white);
+    background-color: #3182EE;
     /* White checkmark on blue background */
 }
 
@@ -185,15 +243,6 @@ body {
 
 .agreement-item .checkbox-label {
     border-radius: 4px;
-    /* rounded-[4px] for individual */
-    background-color: var(--color-check-box-default);
-    /* bg-[#ddd] */
-    mask-size: 0%;
-    /* Start hidden */
-    -webkit-mask-size: 0%;
-    /* Start hidden */
-    border: 1px solid var(--color-check-box-default);
-    /* Border for unchecked state */
 }
 
 .agreement-item .checkbox input[type="checkbox"]:checked+.checkbox-label {
@@ -238,7 +287,7 @@ body {
 .agreement-item .check-line {
     gap: 12px;
     /* gap-[12px] */
-    justify-content: flex-start;
+    justify-content: space-between;
     /* Align to left to match Figma */
 }
 
@@ -261,7 +310,8 @@ body {
 .agreement-text .required {
     font-family: var(--font-pretendard-semibold);
     font-weight: 600;
-    color: var(--color-required-text);
+    color: #3182ee;
+    /* var(--color-required-text); */
     /* text-[#3182ee] */
     line-height: normal;
 }
@@ -272,8 +322,8 @@ body {
     height: 20px;
     background-color: var(--color-gray-66);
     /* fill color of arrow icon */
-    mask-image: url('../assets/images/ep_arrow-down.svg');
-    -webkit-mask-image: url('../assets/images/ep_arrow-down.svg');
+    mask-image: url('../../images/ep_arrow-down.svg');
+    -webkit-mask-image: url('../../images/ep_arrow-down.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -372,8 +422,8 @@ body {
     /* size-[24px] */
     height: 24px;
     background-color: var(--color-gray-66);
-    mask-image: url('../assets/images/ep_arrow-down.svg');
-    -webkit-mask-image: url('../assets/images/ep_arrow-down.svg');
+    mask-image: url('../../images/ep_arrow-down.svg');
+    -webkit-mask-image: url('../../images/ep_arrow-down.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -606,8 +656,8 @@ body {
     height: 30px;
     background-color: var(--color-gray-22);
     /* Dark gray fill */
-    mask-image: url('../assets/images/close-icon.svg');
-    -webkit-mask-image: url('../assets/images/close-icon.svg');
+    mask-image: url('../../images/close-icon.svg');
+    -webkit-mask-image: url('../../images/close-icon.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -725,8 +775,8 @@ body {
     width: 24px;
     height: 24px;
     background-color: var(--color-gray-66);
-    mask-image: url('../assets/images/refresh.svg');
-    -webkit-mask-image: url('../assets/images/refresh.svg');
+    mask-image: url('../../images/refresh.svg');
+    -webkit-mask-image: url('../../images/refresh.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -762,8 +812,8 @@ body {
     height: 20px;
     background-color: var(--color-gray-75);
     /* text-[#757575] */
-    mask-image: url('../assets/images/info-icon-light.svg');
-    -webkit-mask-image: url('../assets/images/info-icon-light.svg');
+    mask-image: url('../../images/info-icon-light.svg');
+    -webkit-mask-image: url('../../images/info-icon-light.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
