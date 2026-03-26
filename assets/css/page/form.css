@@ -9,100 +9,6 @@
     --color-signature-box-bg: #f8f8f8;
     --color-signature-box-border: #eee;
     --color-signature-placeholder-text: rgba(34, 34, 34, 0.1);
-    --color-footer-shadow: 0px 5px 20px 0px rgba(221, 221, 221, 0.25);
-
-}
-
-/* --- Page Layout --- */
-body {
-    background-color: var(--color-page-bg);
-    /* bg-[#f2f3f8] */
-}
-
-.header {
-    background-color: var(--color-page-bg);
-    /* bg-[#f2f3f8] */
-    z-index: 1;
-}
-
-.container-wrap {
-    width: 1200px;
-    /* Figma main content width */
-    margin: 0 auto;
-    /* Center the container */
-    position: relative;
-}
-
-.page-title {
-    padding-top: 122px;
-    font-weight: 700;
-    font-size: 3.8rem;
-    /* 38px */
-    text-align: center;
-    color: var(--color-gray-22);
-    line-height: normal;
-    white-space: nowrap;
-    /* Ensure it's above other content if necessary */
-}
-
-.page-content-wrapper {
-    overflow: auto;
-}
-
-.main-content-area {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 56px;
-    margin-bottom: 216px;
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-    /* Gap between form-card and form-card-group */
-    align-items: flex-start;
-    /* Align top */
-    width: 1200px;
-}
-
-.form-card-group {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
-}
-
-.form-card {
-    background-color: var(--color-white);
-    /* bg-white */
-    border-radius: 20px;
-    /* rounded-[20px] */
-    padding: 50px;
-    /* p-[50px] */
-    flex: 1;
-    /* flex-[1_0_0] */
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    /* gap-[32px] */
-    align-items: flex-start;
-    width: 100%;
-    min-width: 0;
-}
-
-.card-title {
-    font-family: var(--font-pretendard-bold);
-    font-weight: 700;
-    font-size: 2.4rem;
-    /* 24px */
-    color: var(--color-gray-22);
-    line-height: normal;
-    white-space: nowrap;
-    width: 100%;
-    /* w-full */
 }
 
 /* --- Terms Agreement Section --- */
@@ -216,17 +122,6 @@ input[type="checkbox"]:checked:not(#terms-all)+.checkbox-label::after {
 }
 
 /* 1. 기본 체크박스는 화면에서 숨김 */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
 .is-hidden {
     visibility: hidden;
     height: 0;
@@ -547,8 +442,6 @@ input[type="checkbox"]:checked:not(#terms-all)+.checkbox-label::after {
     font-weight: 500;
     font-size: 1.6rem;
     /* 16px */
-    color: var(--color-white);
-    /* text-white */
     text-align: center;
     line-height: 44px;
     /* Vertically center text */
@@ -572,92 +465,6 @@ input[type="checkbox"]:checked:not(#terms-all)+.checkbox-label::after {
 
 .input-phone-group .input-text-wrap {
     flex: 1 0 0;
-}
-
-/* --- Footer --- */
-.footer-wrap {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 136px;
-    /* max-h-[136px] */
-    background-color: var(--color-white);
-    box-shadow: var(--color-footer-shadow);
-    z-index: 100;
-    overflow: hidden;
-    /* overflow-clip */
-    padding: 42px;
-    /* pb-[40px] pt-[42px] px-[360px] */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-content {
-    display: flex;
-    /* flex */
-    align-items: center;
-    /* items-center */
-    justify-content: space-between;
-    /* justify-between */
-    width: 1200px;
-    /* w-[1200px] implied by outer padding */
-    height: 100%;
-}
-
-.footer-text-container {
-    display: flex;
-    /* flex */
-    flex-direction: column;
-    /* flex-col */
-    gap: 12px;
-    /* gap-[12px] */
-    align-items: flex-start;
-    /* items-start */
-    white-space: nowrap;
-}
-
-.footer-message {
-    font-weight: 600;
-    font-size: 1.8rem;
-    /* 18px */
-    color: var(--color-gray-22);
-    line-height: normal;
-}
-
-.footer-disclaimer-container {
-    display: flex;
-    /* flex */
-    gap: 4px;
-    /* gap-[4px] */
-    align-items: flex-start;
-    /* items-start */
-    line-height: 1.4;
-    /* leading-[1.4] */
-    font-size: 1.6rem;
-    /* 16px */
-    color: var(--color-gray-66);
-    width: 100%;
-    /* w-full */
-}
-
-.footer-disclaimer-prefix {
-    font-family: var(--font-pretendard-light);
-    /* Pretendard Light */
-    font-weight: 300;
-}
-
-.footer-disclaimer-text {
-    font-family: var(--font-pretendard-regular);
-    /* Pretendard Regular */
-    font-weight: 400;
-}
-
-.btn-footer-action {
-    font-size: 2rem;
-    /* 20px */
-    /* Other styles inherited from btn-primary should be sufficient */
 }
 
 /* === Modal Styles === */
