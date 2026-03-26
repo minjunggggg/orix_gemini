@@ -1,5 +1,8 @@
-
 /* --- Error, Upcoming page --- */
+:root {
+    --border: 1px solid #ddd;
+}
+
 .main-container {
     position: absolute;
     top: 50%;
@@ -43,24 +46,21 @@
 }
 
 .title {
-    font-family: var(--font-pretendard-semibold);
     /* Pretendard SemiBold */
     font-weight: 600;
     font-size: 5.4rem;
     line-height: normal;
     /* leading-[normal] */
-    color: var(--color-black);
-    /* text-black */
     white-space: nowrap;
 }
 
 .error-title-red {
-    color: var(--color-error-red);
+    color: var(--color-error);
     /* text-[red] */
 }
 
 .detail-text-container {
-    border-top: 1px solid var(--color-gray-ddd);
+    border-top: var(--border);
     /* border-[#ddd] border-solid border-t */
     padding: 32px 24px;
     /* px-[24px] py-[32px] */
@@ -75,14 +75,13 @@
 }
 
 .detail-text {
-    font-family: var(--font-pretendard-regular);
     /* Pretendard Regular */
     font-weight: 400;
     font-size: 2.6rem;
     /* 26px */
     line-height: 1.6;
     /* leading-[1.6] */
-    color: var(--color-gray-66);
+    color: var(--color-text-sub);
     /* text-[#666] */
     text-align: center;
     /* text-center */

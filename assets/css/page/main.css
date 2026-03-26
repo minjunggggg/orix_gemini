@@ -104,7 +104,6 @@
 }
 
 .subtitle {
-    font-family: var(--font-pretendard-medium);
     /* Pretendard Medium */
     font-weight: 500;
     font-size: 2.4rem;
@@ -116,20 +115,17 @@
 }
 
 .subtitle-eng {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
     color: var(--color-subtitle-eng);
     /* text-[#c5c5c5] */
 }
 
 .subtitle-orix {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
     color: var(--hero-text-white);
 }
 
 .main-subtitle {
-    font-family: var(--font-pretendard-regular);
     /* Pretendard Regular */
     font-weight: 500;
     font-size: 3.2rem;
@@ -141,7 +137,6 @@
 }
 
 .main-title {
-    font-family: var(--font-pretendard-semibold);
     /* Pretendard SemiBold */
     font-weight: 600;
     font-size: 8.6rem;
@@ -152,19 +147,16 @@
 }
 
 .main-title-text {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
     line-height: normal;
 }
 
 .main-title-bracket {
-    font-family: var(--font-pretendard-medium);
     font-weight: 500;
     line-height: normal;
 }
 
 .main-title-emphasis {
-    font-family: var(--font-pretendard-bold);
     font-weight: 700;
     line-height: normal;
 }

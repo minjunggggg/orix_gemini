@@ -42,7 +42,7 @@
    --p-navy-900: #0c2247;
 
    /* Others */
-   --p-red: #ff0000;
+   --p-red: #f00;
 
    /* Overlays & Shadows (Alpha 포함) */
    --color-overlay-dark: rgba(12, 34, 71, 0.5);
@@ -67,7 +67,7 @@
 
    /* Text Colors */
    --color-text-main: var(--p-gray-900);
-   --color-text-sub: var(--p-gray-700);
+   --color-text-sub: var(--p-gray-800);
    --color-text-disabled: var(--p-gray-500);
    --color-text-inverse: var(--p-white);
    --color-text-primary: var(--p-blue-400);
