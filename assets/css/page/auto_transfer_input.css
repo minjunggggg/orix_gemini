@@ -1,8 +1,7 @@
 /* === Page Specific Styles - Auto Transfer Input Page === */
 
-/* --- Page Layout --- */
-body {
-    background-color: var(--color-page-bg); /* bg-[#f2f3f8] */
+.page-title {
+    padding-top: 0;
 }
 
 /* --- Customer Info Section --- */
@@ -326,14 +325,12 @@ body {
 }
 
 .footer-label {
-    font-family: var(--font-pretendard-regular);
     font-weight: 400;
     font-size: 1.8rem; /* 18px */
     color: var(--color-gray-66);
 }
 
 .footer-value {
-    font-family: var(--font-pretendard-medium);
     font-weight: 500;
     font-size: 1.8rem; /* 18px */
     color: var(--color-gray-45);
