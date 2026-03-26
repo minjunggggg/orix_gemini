@@ -1,0 +1,56 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css");
+
+/* === Common CSS Variables === */
+:root {
+    /* Colors */
+    --p-white: #ffffff;
+    --p-black: #000000;
+
+    /* Grays */
+    --p-gray-50:  #fafafa;
+    --p-gray-100: #f8f8f8; 
+    --p-gray-150: #f5f5f5; 
+    --p-gray-200: #f3f3f3; 
+    --p-gray-250: #f2f3f8; 
+    --p-gray-300: #eeeeee; 
+    --p-gray-350: #dfe4eb; 
+    --p-gray-400: #dddddd; 
+    --p-gray-450: #cccccc; 
+    --p-gray-500: #bbbbbb; 
+    --p-gray-550: #c5c5c5; 
+    --p-gray-600: #999999; 
+    --p-gray-700: #757575; 
+    --p-gray-800: #666666; 
+    --p-gray-850: #454545; 
+    --p-gray-900: #222222; 
+
+    /* Blues */
+    --p-blue-light: #f0f6ff; 
+    --p-blue-400:   #3182ee; 
+    --p-blue-500:   #156cdf; 
+    --p-blue-600:   #0f71f3; 
+    --p-blue-700:   #0f5fcb; 
+    --p-blue-800:   #0f3862; 
+    
+    /* Navy */
+    --p-navy-500:   #062d4d; 
+    --p-navy-700:   #08131d; 
+    --p-navy-900:   #0c2247; 
+
+    /* Others */
+    --p-red: #ff0000;
+
+    /* Overlays & Shadows (Alpha 포함) */
+    --color-overlay-dark:     rgba(12, 34, 71, 0.5); /* #0C224780 */
+    --color-modal-backdrop:   rgba(0, 0, 0, 0.4);
+    --color-info-box-bg:      rgba(255, 255, 255, 0.8);
+    --color-placeholder-sig:  rgba(34, 34, 34, 0.1);
+    
+    --shadow-footer:    0px -5px 20px 0px rgba(221, 221, 221, 0.25);
+    --shadow-card:      0px 5px 20px 0px rgba(221, 221, 221, 0.25);
+
+    /* Font Families */
+    --font-pretendard-bold: 'Pretendard', sans-serif;
+    --font-pretendard-regular: 'Pretendard', sans-serif;
+    --font-pretendard-light: 'Pretendard', sans-serif;
+}
