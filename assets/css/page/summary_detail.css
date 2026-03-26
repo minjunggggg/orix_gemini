@@ -27,11 +27,6 @@
 }
 
 /* --- Page Layout --- */
-body {
-    background-color: var(--color-page-bg);
-    /* bg-[#f2f3f8] */
-}
-
 .container-wrap {
     width: 1200px;
     /* Figma main content width */
@@ -243,34 +238,6 @@ body {
 
 
 /* --- Footer --- */
-.footer-wrap {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 136px;
-    /* max-h-[136px] */
-    background-color: var(--color-white);
-    box-shadow: var(--color-footer-shadow);
-    z-index: 100;
-    overflow: hidden;
-    /* overflow-clip */
-    padding: 40px 360px;
-    /* py-[40px] px-[360px] */
-}
-
-.footer-content {
-    display: flex;
-    /* flex */
-    align-items: center;
-    /* items-center */
-    justify-content: space-between;
-    /* justify-content */
-    width: 100%;
-    /* w-[1200px] implied by outer padding */
-    height: 100%;
-}
-
 .footer-confirmation {
     display: flex;
     /* flex */
@@ -363,4 +330,8 @@ body {
 
 .accordion-panel {
     max-height: 100%;
+}
+
+.accordion-panel.is-hidden {
+    height: 0;
 }
