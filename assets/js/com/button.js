@@ -1,10 +1,11 @@
 var Button = (function () {
     'use strict';
-    return {
-        init: function () {
-            // Button component initialization logic
-        }
-    };
+    function init() {
+        $(".btn-option").on('click', function () {
+            $(this).toggleClass('is-selected');
+        });
+    }
+    init();
 })();
 
 $(document).ready(function() {

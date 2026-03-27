@@ -147,13 +147,24 @@
 input[type="text"],
 input[type="email"],
 input[type="number"],
-input[type="date"] {
+input[type="date"],
+input[type="radio"] {
     -webkit-appearance: none;
     /* For iOS Safari */
     -moz-appearance: none;
     /* For older Firefox */
     appearance: none;
     /* Standard property */
+}
+
+input[type="radio"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    position: absolute;
+    /* Hide the default radio button */
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
@@ -215,9 +226,8 @@ input[type="date"]::-webkit-datetime-edit {
 
 .email-input-ico {
     position: relative;
-    width: var(--size-checkbox);
-    /* 20px */
-    height: var(--size-checkbox);
+    width: 18px;
+    height: 18px;
     /* 20px */
     /* Placeholder for icon */
     background-color: var(--color-gray-99);
@@ -226,9 +236,10 @@ input[type="date"]::-webkit-datetime-edit {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--p-white);
-    margin-bottom: 14px;
+    flex-shrink: 0;
+    margin: 1px 1px 14px 0;
 }
 
 .email-input-ico::before {
@@ -316,6 +327,9 @@ input[type="date"]::-webkit-datetime-edit {
 
 .email-input-checkbox-label p {
     line-height: normal;
+    color: #757575;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
 /* === Number Input Specific Styles === */

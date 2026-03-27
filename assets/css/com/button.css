@@ -503,7 +503,7 @@
 
 /* === Option Button === */
 .btn-option {
-    background-color: var(--color-option-bg-default);
+    background-color: #F3F3F3;
     /* bg-[#f3f3f3] */
     color: var(--color-gray-66);
     /* text-[#666] */
@@ -545,18 +545,13 @@
 }
 
 .btn-option.is-selected {
+    background-color: var(--p-white);
     border-color: var(--color-primary);
     /* border-[#3182ee] */
     color: var(--color-primary);
     /* text-[#3182ee] */
     font-weight: 600;
     /* SemiBold */
-}
-
-/* Hover state for non-selected option button */
-.btn-option:not(.is-selected):hover {
-    background-color: #e0e0e0;
-    /* Slightly darker gray on hover */
 }
 
 .btn-option:focus-visible {

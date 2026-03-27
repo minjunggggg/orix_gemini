@@ -157,10 +157,15 @@ a:focus {
 }
 
 /* === Toggle Card Components === */
+.toggle-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
 
 .toggle-card-wrap {
-    width: 200px;
-    /* w-[200px] */
+    width: 100%;
     background-color: #fff;
     /* bg-white */
     border-radius: 8px;
@@ -169,8 +174,6 @@ a:focus {
     /* px-[20px] py-[24px] */
     position: relative;
     /* relative */
-    margin-bottom: 10px;
-    /* Spacing between cards */
     display: flex;
     /* For overall layout if needed */
     align-items: flex-start;
