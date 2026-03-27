@@ -159,10 +159,6 @@
     /* min-w-[70px] */
 }
 
-.btn-primary.btn-icon .btn-icon__text {
-    color: var(--color-text-light-gray);
-}
-
 .btn-secondary.btn-icon .btn-icon__text {
     color: var(--color-btn-secondary-text);
 }

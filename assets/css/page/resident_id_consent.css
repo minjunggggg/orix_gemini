@@ -13,7 +13,7 @@
 }
 
 .resident-id-document-paper {
-    background-color: var(--color-white);
+    background-color: var(--p-white);
     width: 1000px;
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
