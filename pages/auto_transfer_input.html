@@ -12,111 +12,152 @@
 </head>
 
 <body>
-    <div class="page-content-wrapper">
-        <header class="header">
-            <div class="header-content">
-                <h1 class="logo">
-                    <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
-                </h1>
-                <div class="contact-info">
-                    <p class="contact-text">고객센터</p>
-                    <div class="phone-info">
-                        <span class="icon phone-icon">
-                            <img src="../../assets/images/phone-icon-header.svg" alt="Phone" />
-                        </span>
-                        <p class="phone-number">02-2050-6700</p>
-                    </div>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">
+                <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
+            </h1>
+            <div class="contact-info">
+                <p class="contact-text">고객센터</p>
+                <div class="phone-info">
+                    <span class="icon phone-icon">
+                        <img src="../../assets/images/phone-icon-header.svg" alt="Phone" />
+                    </span>
+                    <p class="phone-number">02-2050-6700</p>
                 </div>
             </div>
-        </header>
-
-        <div class="indicator-n-title">
-            <div class="progress-indicator">
-                <div class="progress-step">1</div>
-                <div class="progress-step is-active">2</div>
-                <div class="progress-step">3</div>
-            </div>
-            <h2 class="page-title">자동이체 계좌 및 납부정보를 입력해주세요</h2>
         </div>
-        <div class="main-content-area">
-            <div class="form-section">
-                <div class="form-card-group">
-                    <div class="content-column">
+    </header>
 
-                        <div class="form-card">
-                            <p class="card-title">고객정보</p>
-                            <div class="input-wrapper">
-                                <p class="input-label">예금주</p>
-                                <div class="input-text-wrap">
-                                    <input type="text" class="input-text" value="입력전 상태" />
+    <div class="indicator-n-title">
+        <div class="progress-indicator">
+            <div class="progress-step">1</div>
+            <div class="progress-step is-active">2</div>
+            <div class="progress-step">3</div>
+        </div>
+        <h2 class="page-title">자동이체 계좌 및 납부정보를 입력해주세요</h2>
+    </div>
+    <div class="main-content-area">
+        <div class="form-section">
+            <div class="form-card-group">
+                <div class="content-column">
+
+                    <div class="form-card">
+                        <p class="card-title">고객정보</p>
+                        <div class="input-wrapper js-input-component" data-input-type="text">
+                            <p class="input-label">예금주</p>
+                            <div class="input-label-wrapper">
+                                <p class="sr-only" id="text-input-label-default">기본 텍스트 입력 필드</p>
+                            </div>
+                            <div class="input-field-wrapper">
+                                <input type="text" class="input-field" placeholder="입력전 상태"
+                                    aria-labelledby="text-input-label-default">
+                            </div>
+                        </div>
+                        <div class="input-wrapper js-input-component" data-input-type="number">
+                            <div class="email-input-holder">
+                                <p class="input-label">계좌번호</p>
+                                <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span>
+                                <div class="input-label-wrapper">
+                                    <p class="sr-only" id="number-input-label-default">숫자 입력 필드 (기본)</p>
                                 </div>
                             </div>
-                            <div class="input-wrapper">
-                                <p class="input-label">계좌번호<span class="info-icon"></span></p>
-                                <div class="input-account-number-group">
-                                    <div class="select-box">
-                                        <select class="select-bank">
-                                            <option>입력중</option>
-                                        </select>
-                                        <span class="icon-arrow-down"></span>
-                                    </div>
-                                    <div class="input-text-wrap">
-                                        <input type="text" class="input-text" placeholder="‘-’없이 숫자만 입력해 주세요." />
-                                    </div>
+                            <div class="number-input-group">
+                                <div class="number-input-select-wrapper">
+                                    <p>입력중</p>
+                                    <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
+                                    <select>
+                                        <option value="option1">Option 1</option>
+                                        <option value="option2">Option 2</option>
+                                        <option value="option3">Option 3</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <div class="input-group-wrapper">
-                                <p class="input-label">이메일<span class="info-icon"></span></p>
-                                <div class="input-email-group">
-                                    <div class="input-text-wrap">
-                                        <input type="text" class="input-text" placeholder="이메일을 입력해 주세요." />
-                                    </div>
-                                    <span class="at-symbol">@</span>
-                                    <div class="input-text-wrap">
-                                        <input type="text" class="input-text" value="naver.com" />
-                                    </div>
-                                </div>
-                                <div class="check-line contract-email-same">
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="contract-email-same" class="sr-only" />
-                                        <label for="contract-email-same" class="checkbox-label"></label>
-                                    </div>
-                                    <p class="contract-email-text">계약서 및 안내문 수신 메일 정보와 동일</p>
+                                <div class="input-field-wrapper">
+                                    <input type="number" class="input-field" placeholder="‘-’없이 숫자만 입력해 주세요."
+                                        aria-labelledby="number-input-label-default">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="content-column">
+                        <div class="input-wrapper js-input-component" data-input-type="email">
 
-                        <div class="form-card">
-                            <p class="card-title">납부일 설정</p>
-                            <div class="payment-date-options">
-                                <div class="radio-option">
-                                    <input type="radio" id="next-month-payment" name="payment-type" class="sr-only"
-                                        checked />
-                                    <label for="next-month-payment" class="radio-label"></label>
-                                    <p class="radio-text">익월납부</p>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" id="current-month-payment" name="payment-type"
-                                        class="sr-only" />
-                                    <label for="current-month-payment" class="radio-label"></label>
-                                    <p class="radio-text">당월납부</p>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" id="direct-input-payment" name="payment-type" class="sr-only" />
-                                    <label for="direct-input-payment" class="radio-label"></label>
-                                    <p class="radio-text">직접입력</p>
+                            <div class="email-input-holder">
+                                <p class="input-label">이메일</p>
+                                <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span>
+                                <div class="input-label-wrapper">
+                                    <p class="sr-only" id="email-input-label-default">이메일 주소 입력 필드 (기본)</p>
                                 </div>
                             </div>
+                            <div class="email-input-group">
+                                <div class="input-field-wrapper">
+                                    <input type="text" class="input-field" placeholder="이메일을 입력해 주세요."
+                                        aria-labelledby="email-input-label-default">
+                                </div>
+                                <div class="email-at-separator">
+                                    <p class="sr-only">골뱅이</p>@
+                                </div>
+                                <div class="input-field-wrapper">
+                                    <input type="text" class="input-field" placeholder="naver.com"
+                                        aria-labelledby="email-input-label-default">
+                                </div>
+                            </div>
+                            <div class="email-input-checkbox-wrapper">
+                                <input type="checkbox" class="email-input-checkbox" id="email-default-checkbox">
+                                <label for="email-default-checkbox" class="email-input-checkbox-label">
+                                    <p>계약서 및 안내문 수신 메일 정보와 동일</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-column">
+
+                    <div class="form-card">
+                        <p class="card-title">납부일 설정</p>
+                        <div class="toggle-cards">
+                            <div class="toggle-card-wrap">
+                                <input type="radio" id="myToggleCardChecked" name="item" class="toggle-input"
+                                    aria-checked="true" checked="">
+                                <label for="myToggleCardChecked" class="toggle-card-label">
+                                    <span class="toggle-card-checkbox-visual" role="checkbox">
+                                        <span class="toggle-card-icon-wrap"></span>
+                                    </span>
+                                    <span class="toggle-card-text">익월납부</span>
+                                </label>
+                            </div>
+                            <div class="toggle-card-wrap">
+                                <input type="radio" id="myToggleCardChecked2" name="item" class="toggle-input"
+                                    aria-checked="true">
+                                <label for="myToggleCardChecked2" class="toggle-card-label">
+                                    <span class="toggle-card-checkbox-visual" role="checkbox">
+                                        <span class="toggle-card-icon-wrap"></span>
+                                    </span>
+                                    <span class="toggle-card-text">당월납부</span>
+                                </label>
+                            </div>
+                            <div class="toggle-card-wrap">
+                                <input type="radio" id="myToggleCardChecked3" name="item" class="toggle-input"
+                                    aria-checked="true">
+                                <label for="myToggleCardChecked3" class="toggle-card-label">
+                                    <span class="toggle-card-checkbox-visual" role="checkbox">
+                                        <span class="toggle-card-icon-wrap"></span>
+                                    </span>
+                                    <span class="toggle-card-text">직접입력</span>
+                                </label>
+                            </div>
+
                             <div class="first-payment-date-options">
-                                <button type="button" class="btn-option">5일</button>
-                                <button type="button" class="btn-option is-selected">15일</button>
-                                <button type="button" class="btn-option">25일</button>
-                                <button type="button" class="btn-option">말일</button>
+                                <input type="radio" id="option1" name="payment-date" class="option-input">
+                                <label for="option1" class="btn-option">5일</label>
+                                <input type="radio" id="option2" name="payment-date" class="option-input" checked>
+                                <label for="option2" class="btn-option is-selected">15일</label>
+                                <input type="radio" id="option3" name="payment-date" class="option-input">
+                                <label for="option3" class="btn-option">25일</label>
+                                <input type="radio" id="option4" name="payment-date" class="option-input">
+                                <label for="option4" class="btn-option">말일</label>
                             </div>
+
                             <div class="info-message-box">
-                                <span class="info-icon-light"></span>
+                                <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span>
                                 <p class="info-text">은행 휴무일, 공휴일에는 자동이체가 진행되지 않으며, 돌아오는 첫 영업일에 지연 출금됩니다.</p>
                             </div>
                             <div class="first-payment-date-display">
@@ -128,27 +169,29 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer-wrap">
-            <div class="footer-content">
-                <div class="footer-text-container">
-                    <div class="footer-account-info">
-                        <div class="footer-item">
-                            <p class="footer-label">법인명</p>
-                            <p class="footer-value">(주)홍길동컴퍼니</p>
-                        </div>
-                    </div>
-                    <div class="footer-account-info">
-                        <div class="footer-item">
-                            <p class="footer-label">계약서 및 안내문 수신 메일 주소</p>
-                            <p class="footer-value">orixagreementmanagement@orix.co.kr</p>
-                        </div>
+    <div class="footer-wrap">
+        <div class="footer-content">
+            <div class="footer-text-container">
+                <div class="footer-account-info">
+                    <div class="footer-item">
+                        <p class="footer-label">법인명</p>
+                        <p class="footer-value">(주)홍길동컴퍼니</p>
                     </div>
                 </div>
-                <button type="button" class="btn-primary btn-footer-next">다음</button>
+                <div class="footer-account-info">
+                    <div class="footer-item">
+                        <p class="footer-label">계약서 및 안내문 수신 메일 주소</p>
+                        <p class="footer-value">orixagreementmanagement@orix.co.kr</p>
+                    </div>
+                </div>
             </div>
+            <button type="button" class="btn-primary btn-footer-next">다음</button>
         </div>
     </div>
+    <script src="../assets/js/lib/jquery-4.0.0.js"></script>
+    <script src="../assets/js/page/auto_transfer_input.js"></script>
 </body>
 
 </html>

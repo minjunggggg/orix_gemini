@@ -322,17 +322,6 @@ input[type="checkbox"]:checked:not(#terms-all)+.checkbox-label::after {
     /* w-[490px] */
 }
 
-.input-label {
-    font-family: var(--font-pretendard-semibold);
-    font-weight: 600;
-    font-size: 1.8rem;
-    /* 18px */
-    color: var(--color-gray-45);
-    line-height: normal;
-    white-space: nowrap;
-    padding-bottom: 14px;
-}
-
 .input-email-group {
     display: flex;
     gap: 6px;

@@ -40,23 +40,27 @@
     width: 100%;
 }
 
+.input-label {
+    font-weight: 600;
+    font-size: 1.8rem;
+    /* 18px */
+    color: var(--color-gray-45);
+    line-height: normal;
+    white-space: nowrap;
+    padding-bottom: 14px;
+}
+
 .input-label-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     line-height: 0;
     /* leading-[0] */
-    font-size: var(--font-size-18);
+    font-size: 1.8rem;
     /* text-[18px] */
     font-weight: 600;
     /* SemiBold */
     width: 100%;
-    /* Font family: Pretendard, sans-serif; - Assume Pretendard is imported globally */
-}
-
-.input-label-wrapper p {
-    line-height: normal;
-    /* This will be dynamic content in HTML, so no fixed text here */
 }
 
 .input-field-wrapper {
@@ -85,9 +89,8 @@
     border: none;
     outline: none;
     background: transparent;
-    font-size: var(--font-size-18);
+    font-size: 1.8rem;
     /* text-[18px] */
-    /* Font family: Pretendard, sans-serif; - Assume Pretendard is imported globally */
     font-weight: 400;
     /* Regular */
     line-height: normal;
@@ -95,7 +98,6 @@
 }
 
 /* State-specific styling */
-
 /* Default state colors */
 .input-label-wrapper {
     color: var(--color-gray-45);
@@ -112,37 +114,10 @@
     /* For actual input value */
 }
 
-
 /* Focus state */
-.input-wrapper.is-focus .input-label-wrapper {
-    color: var(--color-gray-45);
-    /* Stays the same as default label color */
-}
-
-.input-wrapper.is-focus .input-field-wrapper {
-    border-color: var(--color-primary-dark);
+.input-field-wrapper:has(input:focus) {
+    border: 1px solid var(--color-primary-dark);
     /* border-[#062d4d] */
-}
-
-.input-wrapper.is-focus .input-field {
-    color: var(--color-gray-22);
-    /* text-[#222] */
-}
-
-/* Filled state */
-.input-wrapper.is-filled .input-label-wrapper {
-    color: var(--color-gray-45);
-    /* Stays the same as default label color */
-}
-
-.input-wrapper.is-filled .input-field-wrapper {
-    border-color: var(--color-gray-ddd);
-    /* Stays the same as default border color */
-}
-
-.input-wrapper.is-filled .input-field {
-    color: var(--color-gray-22);
-    /* text-[#222] */
 }
 
 /* Disabled state */
@@ -172,13 +147,37 @@
 input[type="text"],
 input[type="email"],
 input[type="number"],
-input[type="date"] {
+input[type="date"],
+input[type="radio"] {
     -webkit-appearance: none;
     /* For iOS Safari */
     -moz-appearance: none;
     /* For older Firefox */
     appearance: none;
     /* Standard property */
+}
+
+input[type="radio"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    position: absolute;
+    /* Hide the default radio button */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-datetime-edit {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
 }
 
 /* Placeholder styling for cross-browser consistency */
@@ -219,6 +218,7 @@ input[type="date"] {
     display: flex;
     gap: var(--spacing-email-input-gap-holder);
     /* 4px */
+    justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -226,9 +226,8 @@ input[type="date"] {
 
 .email-input-ico {
     position: relative;
-    width: var(--size-checkbox);
-    /* 20px */
-    height: var(--size-checkbox);
+    width: 18px;
+    height: 18px;
     /* 20px */
     /* Placeholder for icon */
     background-color: var(--color-gray-99);
@@ -237,8 +236,10 @@ input[type="date"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    color: var(--color-white);
+    font-size: 1.4rem;
+    color: var(--p-white);
+    flex-shrink: 0;
+    margin: 1px 1px 14px 0;
 }
 
 .email-input-ico::before {
@@ -292,6 +293,8 @@ input[type="date"] {
     /* Based on Figma's gap-[8px] */
     align-items: center;
     position: relative;
+
+    padding-top: 14px;
 }
 
 .email-input-checkbox {
@@ -324,6 +327,9 @@ input[type="date"] {
 
 .email-input-checkbox-label p {
     line-height: normal;
+    color: #757575;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
 /* === Number Input Specific Styles === */
@@ -351,11 +357,14 @@ input[type="date"] {
     position: relative;
     border-radius: var(--border-radius-8);
     border: 1px solid var(--color-gray-ddd);
-    width: var(--width-number-input-select);
-    /* 136px */
+    width: 180px;
     flex-shrink: 0;
     height: 60px;
     /* Matches input-field-wrapper height */
+}
+
+.number-input-select-wrapper.three-inputs {
+    width: 136px;
 }
 
 .number-input-select-wrapper p {
@@ -367,11 +376,15 @@ input[type="date"] {
     line-height: normal;
 }
 
-.number-input-select-wrapper.is-filled p,
-.number-input-select-wrapper.is-focus p {
-    color: var(--color-gray-22);
+select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
-
 
 .number-input-select-icon {
     position: relative;
@@ -390,13 +403,6 @@ input[type="date"] {
     background-color: var(--color-gray-99);
     /* Default icon color */
 }
-
-.number-input-select-wrapper.is-focus .number-input-select-icon,
-.number-input-select-wrapper.is-filled .number-input-select-icon {
-    background-color: var(--color-gray-22);
-    /* Icon color when focused/filled */
-}
-
 
 .number-input-group .input-field-wrapper {
     flex: 1;
@@ -423,7 +429,6 @@ input[type="date"] {
 .input-wrapper.is-disabled .number-input-select-wrapper p,
 .input-wrapper.is-disabled .number-input-select-icon {
     color: var(--color-gray-75);
-    background-color: var(--color-gray-75);
     /* For mask-image coloring */
 }
 
@@ -501,6 +506,58 @@ input[type="date"] {
     color: var(--color-gray-75);
     background-color: var(--color-gray-75);
     /* For mask-image coloring */
+}
+
+/* date input specific styles */
+.date-input-field-wrapper {
+    position: relative;
+}
+
+.date-input-field-wrapper .input-field {
+    padding-right: 40px;
+    /* Space for the calendar icon */
+}
+
+.date-input-icon {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    /* Placeholder color for the calendar icon */
+    -webkit-mask-image: url('../../images/calendar.svg');
+    mask-image: url('../../images/calendar.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: #333;
+}
+
+/* 2. 값이 없을 때 placeholder 텍스트 강제 삽입 */
+input[type=date]::before {
+    content: "날짜를 입력해주세요";
+    width: 100%;
+    color: #aaa;
+    position: absolute;
+    top: 50%;
+    left: 51.6%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+input[type="date"].has-value::before {
+    content: var(--date-content);
+    margin-right: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+input[type=date].has-value::before {
+    display: none;
+    /* 날짜가 들어오면 placeholder 숨김 */
 }
 
 /* For the main input field of the second number input, the general .input-field styles apply */
