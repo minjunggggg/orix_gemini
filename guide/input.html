@@ -60,17 +60,17 @@
                     </div>
                 </div>
             </div>
-            <div class="input-wrapper js-input-component" data-input-type="number">
+            <div class="input-wrapper is-disabled js-input-component" data-input-type="number">
                 <p class="input-label">전화번호</p>
                 <div class="input-label-wrapper">
                     <p class="sr-only" id="number-input-label-default">숫자 입력 필드 (기본)</p>
                 </div>
                 <div class="number-input-group">
-                    <div class="number-input-select-wrapper">
+                    <div class="number-input-select-wrapper three-inputs">
                         <p>선택</p>
                         <span class="number-input-select-icon" aria-hidden="true" title="드롭다운 아이콘"></span>
                     </div>
-                    <div class="input-field-wrapper">
+                    <div class="input-field-wrapper ">
                         <input type="number" class="input-field" placeholder="1234"
                             aria-labelledby="number-input-label-default">
                     </div>
@@ -87,11 +87,13 @@
 
             <!-- Default State -->
             <div class="input-wrapper js-input-component" data-input-type="email">
+
                 <div class="email-input-holder">
+                    <p class="input-label">디폴트</p>
+                    <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span>
                     <div class="input-label-wrapper">
                         <p class="sr-only" id="email-input-label-default">이메일 주소 입력 필드 (기본)</p>
                     </div>
-                    <span class="email-input-ico" aria-hidden="true" title="정보 아이콘"></span>
                 </div>
                 <div class="email-input-group">
                     <div class="input-field-wrapper">
@@ -121,11 +123,12 @@
 
             <!-- Default State -->
             <div class="input-wrapper js-input-component" data-input-type="date">
+                <p class="input-label">디폴트</p>
                 <div class="input-label-wrapper">
                     <p class="sr-only" id="date-input-label-default">날짜 입력 필드 (기본)</p>
                 </div>
-                <div class="date-input-field-wrapper">
-                    <input type="text" class="date-input-field input-field" placeholder="날짜를 입력해주세요"
+                <div class="input-field-wrapper">
+                    <input type="date" class="input-field date" placeholder="날짜를 입력해주세요"
                         aria-labelledby="date-input-label-default">
                     <span class="date-input-icon" aria-hidden="true" title="달력 아이콘"></span>
                 </div>
@@ -137,23 +140,24 @@
 
             <!-- Default State -->
             <div class="input-wrapper js-input-component" data-input-type="address">
+                <p class="input-label">디폴트</p>
                 <div class="input-label-wrapper">
                     <p class="sr-only" id="address-input-label-default">주소 입력 필드 (기본)</p>
                 </div>
                 <div class="address-input-group">
-                    <!-- Postcode and Search Button -->
+                    <!-- Postcode and Search Button (Read-only initially) -->
                     <div class="address-postcode-group">
                         <div class="input-field-wrapper">
-                            <input type="text" class="input-field" placeholder=""
+                            <input type="text" class="input-field" placeholder="" readonly
                                 aria-labelledby="address-input-label-default">
                         </div>
-                        <button type="button" class="address-search-button">
-                            <p>우편번호 검색</p>
+                        <button type="button" class="btn-postcode-search">
+                            우편번호 검색
                         </button>
                     </div>
-                    <!-- Main Address Input (Read-only initially) -->
+                    <!-- Main Address Input -->
                     <div class="input-field-wrapper address-main-field-wrapper">
-                        <input type="text" class="input-field" placeholder="" readonly
+                        <input type="text" class="input-field" placeholder=""
                             aria-labelledby="address-input-label-default">
                     </div>
                     <!-- Detailed Address Input -->
@@ -166,6 +170,9 @@
 
         </div>
     </div>
+
+    <script src="../assets/js/lib/jquery-4.0.0.js"></script>
+    <script src="../assets/js/com/input.js"></script>
 </body>
 
 </html>

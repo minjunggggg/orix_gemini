@@ -44,9 +44,29 @@ var Input = (function () {
         } else {
             $inputWrapper.removeClass('is-disabled');
         }
-    };
 
-    return {
-        init: init
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        dateInputs.forEach(input => {
+            const updateValue = (el) => {
+                if (el.value) {
+                    el.classList.add('has-value');
+                    // CSS 변수 --date-content에 현재 날짜 값을 할당
+                    el.style.setProperty('--date-content', `"${el.value}"`);
+                } else {
+                    el.classList.remove('has-value');
+                    el.style.setProperty('--date-content', '""');
+                }
+            };
+
+            // 1. 초기 로드 시 실행
+            updateValue(input);
+
+            // 2. 값이 바뀔 때마다 실행
+            input.addEventListener('input', function () {
+                updateValue(this);
+            });
+        });
     };
+    init();
+
 })();

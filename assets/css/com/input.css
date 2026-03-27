@@ -156,6 +156,19 @@ input[type="date"] {
     /* Standard property */
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-datetime-edit {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
 /* Placeholder styling for cross-browser consistency */
 .input-field::-webkit-input-placeholder {
     /* Chrome, Safari, Opera */
@@ -194,6 +207,7 @@ input[type="date"] {
     display: flex;
     gap: var(--spacing-email-input-gap-holder);
     /* 4px */
+    justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -212,8 +226,9 @@ input[type="date"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    color: var(--color-white);
+    font-size: 1.5rem;
+    color: var(--p-white);
+    margin-bottom: 14px;
 }
 
 .email-input-ico::before {
@@ -267,6 +282,8 @@ input[type="date"] {
     /* Based on Figma's gap-[8px] */
     align-items: center;
     position: relative;
+
+    padding-top: 14px;
 }
 
 .email-input-checkbox {
@@ -326,10 +343,14 @@ input[type="date"] {
     position: relative;
     border-radius: var(--border-radius-8);
     border: 1px solid var(--color-gray-ddd);
-    width: 30%;
+    width: 180px;
     flex-shrink: 0;
     height: 60px;
     /* Matches input-field-wrapper height */
+}
+
+.number-input-select-wrapper.three-inputs {
+    width: 136px;
 }
 
 .number-input-select-wrapper p {
@@ -394,7 +415,6 @@ select {
 .input-wrapper.is-disabled .number-input-select-wrapper p,
 .input-wrapper.is-disabled .number-input-select-icon {
     color: var(--color-gray-75);
-    background-color: var(--color-gray-75);
     /* For mask-image coloring */
 }
 
@@ -472,6 +492,58 @@ select {
     color: var(--color-gray-75);
     background-color: var(--color-gray-75);
     /* For mask-image coloring */
+}
+
+/* date input specific styles */
+.date-input-field-wrapper {
+    position: relative;
+}
+
+.date-input-field-wrapper .input-field {
+    padding-right: 40px;
+    /* Space for the calendar icon */
+}
+
+.date-input-icon {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    /* Placeholder color for the calendar icon */
+    -webkit-mask-image: url('../../images/calendar.svg');
+    mask-image: url('../../images/calendar.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: #333;
+}
+
+/* 2. 값이 없을 때 placeholder 텍스트 강제 삽입 */
+input[type=date]::before {
+    content: "날짜를 입력해주세요";
+    width: 100%;
+    color: #aaa;
+    position: absolute;
+    top: 50%;
+    left: 51.6%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+input[type="date"].has-value::before {
+    content: var(--date-content);
+    margin-right: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+input[type=date].has-value::before {
+    display: none;
+    /* 날짜가 들어오면 placeholder 숨김 */
 }
 
 /* For the main input field of the second number input, the general .input-field styles apply */

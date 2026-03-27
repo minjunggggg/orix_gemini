@@ -196,12 +196,11 @@
 
 /* === Postcode Search Button === */
 .btn-postcode-search {
-    background-color: var(--color-postcode-bg-default);
-    color: var(--color-white);
-    font-family: var(--font-pretendard-medium);
+    background-color: #062D4D;
+    color: var(--p-white);
     font-weight: 500;
     /* Medium */
-    font-size: 1rem;
+    font-size: 1.6rem;
     /* 16px */
     width: 120px;
     /* w-[120px] */
@@ -228,7 +227,7 @@
 
 .btn-postcode-search:hover,
 .btn-postcode-search.is-hover {
-    background-color: var(--color-postcode-bg-hover);
+    background-color: #08131D;
     box-shadow: var(--color-btn-hover-shadow);
     /* Reusing existing shadow variable */
 }
