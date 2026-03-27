@@ -3,7 +3,8 @@
     --color-gray-ccc: #ccc;
     --color-gray-454545: #454545;
     --color-gray-757575: #757575;
-    --color-blue-checked: #4285F4; /* Corrected: Based on eyedropper from Figma screenshot */
+    --color-blue-checked: #4285F4;
+    /* Corrected: Based on eyedropper from Figma screenshot */
     --color-card-border-checked: #3182ee;
     --color-card-bg-checked: #3182ee;
     --color-card-border-default: #e0e0e0;
@@ -17,7 +18,8 @@
 .toggle-wrap {
     display: flex;
     align-items: center;
-    padding: 10px; /* Example padding */
+    padding: 10px;
+    /* Example padding */
 }
 
 .toggle-input {
@@ -33,31 +35,59 @@
 
 .toggle-label {
     display: flex;
-    gap: 8px; /* flex gap-[8px] */
-    align-items: center; /* items-center */
-    position: relative; /* relative */
+    gap: 8px;
+    /* flex gap-[8px] */
+    align-items: center;
+    /* items-center */
+    position: relative;
+    /* relative */
     cursor: pointer;
-    line-height: 1; /* Adjust line-height for better alignment */
+    line-height: 1;
+    /* Adjust line-height for better alignment */
     /* Add for accessibility */
     -webkit-tap-highlight-color: transparent;
 }
 
 .toggle-checkbox-visual {
     display: block;
-    width: 28px; /* size-[28px] */
-    height: 28px; /* size-[28px] */
-    background-color: #fff; /* bg-white */
-    border: 1px solid var(--color-gray-ccc); /* border border-[#ccc] border-solid */
-    border-radius: 4px; /* rounded-[4px] */
-    flex-shrink: 0; /* shrink-0 */
-    box-sizing: border-box; /* To include padding and border in the width/height */
-    transition: background-color 0.2s, border-color 0.2s; /* Smooth transition */
+    width: 28px;
+    /* size-[28px] */
+    height: 28px;
+    /* size-[28px] */
+    background-color: #fff;
+    /* bg-white */
+    border: 1px solid var(--color-gray-ccc);
+    /* border border-[#ccc] border-solid */
+    border-radius: 4px;
+    /* rounded-[4px] */
+    flex-shrink: 0;
+    /* shrink-0 */
+    box-sizing: border-box;
+    /* To include padding and border in the width/height */
+    transition: background-color 0.2s, border-color 0.2s;
+    /* Smooth transition */
+
+    position: relative;
+}
+
+.toggle-input:checked+.toggle-label .toggle-checkbox-visual {
+    background-color: var(--color-blue-checked);
+    /* Blue background for checked state */
+    border-color: var(--color-blue-checked);
+    /* Match border color to background for checked state */
 }
 
 /* Checked State */
-.toggle-input:checked + .toggle-label .toggle-checkbox-visual {
-    background-color: var(--color-blue-checked);
-    border-color: var(--color-blue-checked);
+.toggle-input:checked+.toggle-label .toggle-checkbox-visual::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 11px;
+    background-color: var(--p-white);
+    border: 1px solid var(--color-blue-checked);
     -webkit-mask-image: url('../../images/check.svg');
     mask-image: url('../../images/check.svg');
     -webkit-mask-mode: alpha;
@@ -68,16 +98,26 @@
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
+    z-index: 100;
+}
+
+.toggle-input:checked+.toggle-label.toggle-size-s .toggle-checkbox-visual::after {
+
+    width: 10px;
+    height: 8px;
+
 }
 
 .toggle-text {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 500; /* Medium weight, assuming 500 */
+    font-weight: 500;
+    /* Medium weight, assuming 500 */
     color: var(--color-gray-454545);
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.8rem;
+    /* 18px */
     white-space: nowrap;
     position: relative;
-    user-select: none; /* Prevent text selection */
+    user-select: none;
+    /* Prevent text selection */
 }
 
 /* Small Size (toggle-size-s) */
@@ -90,20 +130,23 @@
 
 .toggle-label.toggle-size-s .toggle-text {
     font-family: 'Pretendard', sans-serif;
-    font-weight: 400; /* Regular weight, assuming 400 */
+    font-weight: 400;
+    /* Regular weight, assuming 400 */
     color: var(--color-gray-757575);
-    font-size: 1rem; /* 16px */
+    font-size: 1.6rem;
+    /* 16px */
 }
 
 /* Accessibility: Focus state for keyboard navigation */
-.toggle-input:focus-visible + .toggle-label .toggle-checkbox-visual {
-    outline: 2px solid var(--color-blue-checked); /* Blue outline */
+.toggle-input:focus-visible+.toggle-label .toggle-checkbox-visual {
+    outline: 2px solid var(--color-blue-checked);
+    /* Blue outline */
     outline-offset: 2px;
 }
 
 /* For IE11, if :focus-visible isn't supported, use :focus */
 /* Modified: Adding a fallback for :focus-visible for broader browser compatibility, especially IE11 */
-.toggle-input:focus + .toggle-label .toggle-checkbox-visual {
+.toggle-input:focus+.toggle-label .toggle-checkbox-visual {
     outline: 2px solid var(--color-blue-checked);
     outline-offset: 2px;
 }
@@ -116,26 +159,39 @@ a:focus {
 /* === Toggle Card Components === */
 
 .toggle-card-wrap {
-    width: 200px; /* w-[200px] */
-    background-color: #fff; /* bg-white */
-    border-radius: 8px; /* rounded-[8px] */
-    padding: 24px 20px; /* px-[20px] py-[24px] */
-    position: relative; /* relative */
-    margin-bottom: 10px; /* Spacing between cards */
-    display: flex; /* For overall layout if needed */
-    align-items: flex-start; /* items-start */
-    gap: 8px; /* gap-[8px] */
-    border: 1px solid var(--color-card-border-default); /* border-[#e0e0e0] for default */
+    width: 200px;
+    /* w-[200px] */
+    background-color: #fff;
+    /* bg-white */
+    border-radius: 8px;
+    /* rounded-[8px] */
+    padding: 24px 20px;
+    /* px-[20px] py-[24px] */
+    position: relative;
+    /* relative */
+    margin-bottom: 10px;
+    /* Spacing between cards */
+    display: flex;
+    /* For overall layout if needed */
+    align-items: flex-start;
+    /* items-start */
+    gap: 8px;
+    /* gap-[8px] */
+    border: 1px solid var(--color-card-border-default);
+    /* border-[#e0e0e0] for default */
 }
 
 /* Checked state of the card wrap */
-.toggle-card-wrap.is-checked {
-    border-color: var(--color-card-border-checked); /* border-[#3182ee] */
+.toggle-card-wrap:has(input:checked) {
+    border-color: var(--color-card-border-checked);
+    /* border-[#3182ee] */
 }
 
 .toggle-card-wrap.toggle-card-disabled {
-    background-color: var(--color-card-bg-disabled); /* bg-[#f8f8f8] */
-    border-color: var(--color-card-border-default); /* border-[#e0e0e0] */
+    background-color: var(--color-card-bg-disabled);
+    /* bg-[#f8f8f8] */
+    border-color: var(--color-card-border-default);
+    /* border-[#e0e0e0] */
     cursor: not-allowed;
 }
 
@@ -153,45 +209,53 @@ a:focus {
 
 .toggle-card-label {
     display: flex;
-    gap: 8px; /* gap-[8px] */
-    align-items: flex-start; /* items-start from parent wrap */
-    position: relative; /* relative */
+    gap: 8px;
+    /* gap-[8px] */
+    align-items: flex-start;
+    /* items-start from parent wrap */
+    position: relative;
+    /* relative */
     cursor: pointer;
     line-height: 1;
-    flex-grow: 1; /* Make label take available space */
+    flex-grow: 1;
+    /* Make label take available space */
     /* Add for accessibility */
     -webkit-tap-highlight-color: transparent;
 }
 
 /* Visually hidden but still takes some space to push content to the right, to match Figma */
 .toggle-card-label .toggle-card-checkbox-visual {
-    width: 24px; /* size-[24px] */
-    height: 24px; /* size-[24px] */
-    border-radius: 20px; /* rounded-[20px] */
-    overflow: hidden; /* overflow-clip */
-    flex-shrink: 0; /* shrink-0 */
+    width: 24px;
+    /* size-[24px] */
+    height: 24px;
+    /* size-[24px] */
+    border-radius: 20px;
+    /* rounded-[20px] */
+    overflow: hidden;
+    /* overflow-clip */
+    flex-shrink: 0;
+    /* shrink-0 */
     position: relative;
-    background-color: var(--color-card-bg-default-checkbox); /* bg-[#ddd] for default/unchecked */
+    background-color: var(--color-card-bg-default-checkbox);
+    /* bg-[#ddd] for default/unchecked */
     transition: background-color 0.2s;
 }
 
-.toggle-input:checked + .toggle-card-label .toggle-card-checkbox-visual {
-    background-color: var(--color-card-bg-checked); /* bg-[#3182ee] for checked */
+.toggle-input:checked+.toggle-card-label .toggle-card-checkbox-visual {
+    background-color: var(--color-card-bg-checked);
+    position: relative;
+    /* bg-[#3182ee] for checked */
 }
 
-.toggle-card-wrap.toggle-card-disabled .toggle-card-checkbox-visual {
-    background-color: var(--color-card-bg-default-checkbox); /* bg-[#ddd] for disabled */
-}
-
-.toggle-card-icon-wrap {
+.toggle-input+.toggle-card-label .toggle-card-checkbox-visual .toggle-card-icon-wrap::after {
+    content: '';
     position: absolute;
-    top: 8.33%; /* inset-[8.33%] */
-    left: 8.33%; /* inset-[8.33%] */
-    right: 8.33%; /* inset-[8.33%] */
-    bottom: 8.33%; /* inset-[8.33%] */
-    display: block;
-    width: auto;
-    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 9px;
+    background-color: var(--p-white);
     -webkit-mask-image: url('../../images/check.svg');
     mask-image: url('../../images/check.svg');
     -webkit-mask-mode: alpha;
@@ -204,46 +268,74 @@ a:focus {
     mask-position: center;
 }
 
-.toggle-input:checked + .toggle-card-label .toggle-card-icon-wrap {
-    background-color: var(--color-card-bg-checked); /* Blue for checked state */
+.toggle-input:disabled+.toggle-card-label .toggle-card-checkbox-visual .toggle-card-icon-wrap::after {
+    background-color: #999;
 }
 
-.toggle-input:not(:checked) + .toggle-card-label .toggle-card-icon-wrap {
-    background-color: var(--color-card-bg-default-checkbox); /* Light gray for unchecked state (or matching image color) */
+.toggle-card-wrap.toggle-card-disabled .toggle-card-checkbox-visual {
+    background-color: var(--color-card-bg-default-checkbox);
+    /* bg-[#ddd] for disabled */
+}
+
+.toggle-input:checked+.toggle-card-label .toggle-card-icon-wrap {
+    background-color: var(--color-card-bg-checked);
+    /* Blue for checked state */
+}
+
+.toggle-input:not(:checked)+.toggle-card-label .toggle-card-icon-wrap {
+    background-color: var(--color-card-bg-default-checkbox);
+    /* Light gray for unchecked state (or matching image color) */
 }
 
 .toggle-card-wrap.toggle-card-disabled .toggle-card-icon-wrap {
-    background-color: var(--color-card-bg-default-checkbox); /* Gray for disabled state (or matching image color) */
+    background-color: var(--color-card-bg-default-checkbox);
+    /* Gray for disabled state (or matching image color) */
 }
 
 .toggle-card-text {
-    font-family: 'Pretendard', sans-serif; /* font-['Pretendard:Medium',sans-serif] */
-    font-weight: 500; /* Medium weight, assuming 500 */
-    color: var(--color-gray-454545); /* text-[#454545] */
-    font-size: 1.125rem; /* 18px */
-    white-space: nowrap; /* whitespace-nowrap */
-    position: relative; /* relative */
-    user-select: none; /* Prevent text selection */
-    width: 128px; /* w-[128px] */
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col */
-    justify-content: center; /* justify-center */
-    align-self: stretch; /* self-stretch */
-    line-height: normal; /* leading-[normal] */
+    font-family: 'Pretendard', sans-serif;
+    /* font-['Pretendard:Medium',sans-serif] */
+    font-weight: 500;
+    /* Medium weight, assuming 500 */
+    color: var(--color-gray-454545);
+    /* text-[#454545] */
+    font-size: 1.8rem;
+    /* 18px */
+    white-space: nowrap;
+    /* whitespace-nowrap */
+    position: relative;
+    /* relative */
+    user-select: none;
+    /* Prevent text selection */
+    width: 128px;
+    /* w-[128px] */
+    display: flex;
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    justify-content: center;
+    /* justify-center */
+    align-self: stretch;
+    /* self-stretch */
+    line-height: normal;
+    /* leading-[normal] */
 }
 
 .toggle-card-wrap.toggle-card-disabled .toggle-card-text {
-    color: var(--color-card-text-disabled); /* text-[#999] */
+    color: var(--color-card-text-disabled);
+    /* text-[#999] */
 }
 
 /* Focus states for accessibility */
-.toggle-input:focus-visible + .toggle-card-label {
+.toggle-input:focus-visible+.toggle-card-label {
     outline: 2px solid var(--color-card-border-checked);
     outline-offset: 2px;
-    border-radius: 8px; /* Match the card border-radius */
+    border-radius: 8px;
+    /* Match the card border-radius */
 }
 
-.toggle-input:focus + .toggle-card-label { /* IE11 fallback */
+.toggle-input:focus+.toggle-card-label {
+    /* IE11 fallback */
     outline: 2px solid var(--color-card-border-checked);
     outline-offset: 2px;
     border-radius: 8px;
@@ -253,10 +345,14 @@ a:focus {
 
 .toggle-line-wrap {
     display: flex;
-    gap: 8px; /* gap-[8px] */
-    align-items: center; /* items-center */
-    position: relative; /* relative */
-    padding: 10px; /* Example padding for consistency */
+    gap: 8px;
+    /* gap-[8px] */
+    align-items: center;
+    /* items-center */
+    position: relative;
+    /* relative */
+    padding: 10px;
+    /* Example padding for consistency */
 }
 
 /* Hide default input */
@@ -273,9 +369,12 @@ a:focus {
 
 .toggle-line-label {
     display: flex;
-    gap: 8px; /* gap-[8px] */
-    align-items: center; /* items-center */
-    position: relative; /* relative */
+    gap: 8px;
+    /* gap-[8px] */
+    align-items: center;
+    /* items-center */
+    position: relative;
+    /* relative */
     cursor: pointer;
     line-height: 1;
     /* Add for accessibility */
@@ -283,11 +382,16 @@ a:focus {
 }
 
 .toggle-line-checkbox-visual {
-    width: 20px; /* size-[20px] */
-    height: 20px; /* size-[20px] */
-    border-radius: 20px; /* rounded-[20px] */
-    overflow: hidden; /* overflow-clip */
-    flex-shrink: 0; /* shrink-0 */
+    width: 20px;
+    /* size-[20px] */
+    height: 20px;
+    /* size-[20px] */
+    border-radius: 20px;
+    /* rounded-[20px] */
+    overflow: hidden;
+    /* overflow-clip */
+    flex-shrink: 0;
+    /* shrink-0 */
     position: relative;
     -webkit-mask-image: url('../../images/check.svg');
     mask-image: url('../../images/check.svg');
@@ -303,52 +407,69 @@ a:focus {
 
 /* Default/Unchecked state icon */
 .toggle-line-checkbox-visual {
-    background-color: #ddd; /* Match background of original image */
+    background-color: #ddd;
+    /* Match background of original image */
 }
 
 /* Checked state icon */
-.toggle-input:checked + .toggle-line-label .toggle-line-checkbox-visual {
+.toggle-input:checked+.toggle-line-label .toggle-line-checkbox-visual {
     background-color: var(--color-blue-checked);
 }
 
 /* Disabled state icon */
 .toggle-line-wrap.toggle-line-disabled .toggle-line-checkbox-visual {
-    background-color: #ddd; /* Match background of original image */
+    background-color: #ddd;
+    /* Match background of original image */
 }
 
 .toggle-line-text {
-    font-family: 'Pretendard', sans-serif; /* font-['Pretendard:Regular',sans-serif] */
-    font-weight: 400; /* Regular weight, assuming 400 */
-    color: var(--color-gray-454545); /* text-[#454545] */
-    font-size: 1rem; /* 16px */
-    white-space: nowrap; /* whitespace-nowrap */
-    position: relative; /* relative */
-    user-select: none; /* Prevent text selection */
-    line-height: normal; /* leading-[normal] */
+    font-family: 'Pretendard', sans-serif;
+    /* font-['Pretendard:Regular',sans-serif] */
+    font-weight: 400;
+    /* Regular weight, assuming 400 */
+    color: var(--color-gray-454545);
+    /* text-[#454545] */
+    font-size: 1.6rem;
+    /* 16px */
+    white-space: nowrap;
+    /* whitespace-nowrap */
+    position: relative;
+    /* relative */
+    user-select: none;
+    /* Prevent text selection */
+    line-height: normal;
+    /* leading-[normal] */
 }
 
 .toggle-line-wrap.toggle-line-disabled .toggle-line-text {
-    color: var(--color-card-text-disabled); /* text-[#999] */
+    color: var(--color-card-text-disabled);
+    /* text-[#999] */
 }
 
 /* Focus states for accessibility */
-.toggle-input:focus-visible + .toggle-line-label {
+.toggle-input:focus-visible+.toggle-line-label {
     outline: 2px solid var(--color-blue-checked);
     outline-offset: 2px;
 }
 
-.toggle-input:focus + .toggle-line-label { /* IE11 fallback */
+.toggle-input:focus+.toggle-line-label {
+    /* IE11 fallback */
     outline: 2px solid var(--color-blue-checked);
     outline-offset: 2px;
 }
+
 /* === Toggle Check Components === */
 
 .toggle-check-wrap {
     display: flex;
-    gap: 8px; /* gap-[8px] */
-    align-items: center; /* items-center */
-    position: relative; /* relative */
-    padding: 10px; /* Example padding for consistency */
+    gap: 8px;
+    /* gap-[8px] */
+    align-items: center;
+    /* items-center */
+    position: relative;
+    /* relative */
+    padding: 10px;
+    /* Example padding for consistency */
 }
 
 /* Hide default input */
@@ -365,9 +486,12 @@ a:focus {
 
 .toggle-check-label {
     display: flex;
-    gap: 8px; /* gap-[8px] */
-    align-items: center; /* items-center */
-    position: relative; /* relative */
+    gap: 8px;
+    /* gap-[8px] */
+    align-items: center;
+    /* items-center */
+    position: relative;
+    /* relative */
     cursor: pointer;
     line-height: 1;
     /* Add for accessibility */
@@ -375,12 +499,34 @@ a:focus {
 }
 
 .toggle-check-checkbox-visual {
-    width: 24px; /* size-[24px] */
-    height: 24px; /* size-[24px] */
-    border-radius: 20px; /* rounded-[20px] */
-    overflow: hidden; /* overflow-clip */
-    flex-shrink: 0; /* shrink-0 */
+    width: 24px;
+    /* size-[24px] */
+    height: 24px;
+    /* size-[24px] */
+    border-radius: 20px;
+    /* rounded-[20px] */
+    overflow: hidden;
+    /* overflow-clip */
+    flex-shrink: 0;
+    /* shrink-0 */
     position: relative;
+    background-color: var(--color-card-bg-default-checkbox);
+    /* bg-[#ddd] for default/unchecked */
+    transition: background-color 0.2s;
+    /* Smooth transition */
+}
+
+/* Default/Unchecked state icon background */
+.toggle-check-checkbox-visual::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 9px;
+    background-color: var(--p-white);
+    /* bg-[#ddd] */
     -webkit-mask-image: url('../../images/check.svg');
     mask-image: url('../../images/check.svg');
     -webkit-mask-mode: alpha;
@@ -393,43 +539,51 @@ a:focus {
     mask-position: center;
 }
 
-/* Default/Unchecked state icon background */
-.toggle-check-checkbox-visual {
-    background-color: var(--color-card-bg-default-checkbox); /* bg-[#ddd] */
+input:disabled+.toggle-check-label .toggle-check-checkbox-visual::after {
+
+    background-color: #999;
+
 }
+
 
 /* Checked state icon background */
-.toggle-input:checked + .toggle-check-label .toggle-check-checkbox-visual {
-    background-color: var(--color-card-bg-checked); /* bg-[#3182ee] */
-}
-
-/* Disabled state icon background */
-.toggle-check-wrap.toggle-check-disabled .toggle-check-checkbox-visual {
-    background-color: var(--color-card-bg-default-checkbox); /* bg-[#ddd] */
+.toggle-input:checked+.toggle-check-label .toggle-check-checkbox-visual {
+    background-color: var(--color-card-bg-checked);
+    /* bg-[#3182ee] */
 }
 
 .toggle-check-text {
-    font-family: 'Pretendard', sans-serif; /* font-['Pretendard:Medium',sans-serif] */
-    font-weight: 500; /* Medium weight, assuming 500 */
-    color: var(--color-gray-454545); /* text-[#454545] */
-    font-size: 1.125rem; /* 18px */
-    white-space: nowrap; /* whitespace-nowrap */
-    position: relative; /* relative */
-    user-select: none; /* Prevent text selection */
-    line-height: normal; /* leading-[normal] */
+    font-family: 'Pretendard', sans-serif;
+    /* font-['Pretendard:Medium',sans-serif] */
+    font-weight: 500;
+    /* Medium weight, assuming 500 */
+    color: var(--color-gray-454545);
+    /* text-[#454545] */
+    font-size: 1.8rem;
+    /* 18px */
+    white-space: nowrap;
+    /* whitespace-nowrap */
+    position: relative;
+    /* relative */
+    user-select: none;
+    /* Prevent text selection */
+    line-height: normal;
+    /* leading-[normal] */
 }
 
 .toggle-check-wrap.toggle-check-disabled .toggle-check-text {
-    color: var(--color-card-text-disabled); /* text-[#999] */
+    color: var(--color-card-text-disabled);
+    /* text-[#999] */
 }
 
 /* Focus states for accessibility */
-.toggle-input:focus-visible + .toggle-check-label {
+.toggle-input:focus-visible+.toggle-check-label {
     outline: 2px solid var(--color-blue-checked);
     outline-offset: 2px;
 }
 
-.toggle-input:focus + .toggle-check-label { /* IE11 fallback */
+.toggle-input:focus+.toggle-check-label {
+    /* IE11 fallback */
     outline: 2px solid var(--color-blue-checked);
     outline-offset: 2px;
 }

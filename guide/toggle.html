@@ -7,122 +7,129 @@
     <meta name="viewport" content="width=device-width" />
     <title>Toggle Component</title>
     <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/guide/guide.css" />
 </head>
 
 <body>
-    <div class="toggle-wrap">
-        <input type="checkbox" id="myToggle" class="toggle-input" aria-checked="false">
-        <label for="myToggle" class="toggle-label">
-            <span class="toggle-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-text">Check</span>
-        </label>
-    </div>
+    <div class="guide-container">
+        <div class="guide-item">
+            <h3>checkbox default</h3>
+            <div class="toggle-wrap">
+                <input type="checkbox" id="myToggle" class="toggle-input" aria-checked="false">
+                <label for="myToggle" class="toggle-label">
+                    <span class="toggle-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-text">Check</span>
+                </label>
 
-    <div class="toggle-wrap">
-        <input type="checkbox" id="myToggle2" class="toggle-input" aria-checked="true" checked>
-        <label for="myToggle2" class="toggle-label">
-            <span class="toggle-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-text">Checked State</span>
-        </label>
-    </div>
+            </div>
+            <div class="toggle-wrap">
+                <input type="checkbox" id="myToggle2" class="toggle-input" aria-checked="true" checked>
+                <label for="myToggle2" class="toggle-label">
+                    <span class="toggle-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-text">Checked State</span>
+                </label>
+            </div>
+            <div class="toggle-wrap">
+                <input type="checkbox" id="myToggleSmall" class="toggle-input" aria-checked="false">
+                <label for="myToggleSmall" class="toggle-label toggle-size-s">
+                    <span class="toggle-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-text">Small Toggle</span>
+                </label>
+            </div>
+            <div class="toggle-wrap">
+                <input type="checkbox" id="myToggleSmallChecked" class="toggle-input" aria-checked="true" checked>
+                <label for="myToggleSmallChecked" class="toggle-label toggle-size-s">
+                    <span class="toggle-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-text">Small Checked</span>
+                </label>
+            </div>
+        </div>
 
-    <div class="toggle-wrap">
-        <input type="checkbox" id="myToggleSmall" class="toggle-input" aria-checked="false">
-        <label for="myToggleSmall" class="toggle-label toggle-size-s">
-            <span class="toggle-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-text">Small Toggle</span>
-        </label>
-    </div>
+        <div class="guide-item">
+            <h3>checkbox card</h3>
+            <div class="toggle-card-wrap">
+                <input type="checkbox" id="myToggleCardChecked" class="toggle-input" aria-checked="true" checked>
+                <label for="myToggleCardChecked" class="toggle-card-label">
+                    <span class="toggle-card-checkbox-visual" role="checkbox">
+                        <span class="toggle-card-icon-wrap"></span>
+                    </span>
+                    <span class="toggle-card-text">Check Card</span>
+                </label>
+            </div>
 
-    <div class="toggle-wrap">
-        <input type="checkbox" id="myToggleSmallChecked" class="toggle-input" aria-checked="true" checked>
-        <label for="myToggleSmallChecked" class="toggle-label toggle-size-s">
-            <span class="toggle-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-text">Small Checked</span>
-        </label>
-    </div>
+            <div class="toggle-card-wrap">
+                <input type="checkbox" id="myToggleCardUnchecked" class="toggle-input" aria-checked="false">
+                <label for="myToggleCardUnchecked" class="toggle-card-label">
+                    <span class="toggle-card-checkbox-visual" role="checkbox">
+                        <span class="toggle-card-icon-wrap"></span>
+                    </span>
+                    <span class="toggle-card-text">Default Card</span>
+                </label>
+            </div>
 
-    <!-- Toggle Card Components -->
-    <div class="toggle-card-wrap">
-        <input type="checkbox" id="myToggleCardChecked" class="toggle-input" aria-checked="true" checked>
-        <label for="myToggleCardChecked" class="toggle-card-label">
-            <span class="toggle-card-checkbox-visual" role="checkbox">
-                <span class="toggle-card-icon-wrap"></span>
-            </span>
-            <span class="toggle-card-text">Check Card</span>
-        </label>
-    </div>
+            <div class="toggle-card-wrap toggle-card-disabled">
+                <input type="checkbox" id="myToggleCardDisabled" class="toggle-input" aria-checked="false" disabled>
+                <label for="myToggleCardDisabled" class="toggle-card-label">
+                    <span class="toggle-card-checkbox-visual" role="checkbox">
+                        <span class="toggle-card-icon-wrap"></span>
+                    </span>
+                    <span class="toggle-card-text">Disabled Card</span>
+                </label>
+            </div>
+        </div>
+        <div class="guide-item">
+            <h3>checkbox circle</h3>
+            <div class="toggle-check-wrap">
+                <input type="checkbox" id="myToggleCheckOn" class="toggle-input" aria-checked="true" checked>
+                <label for="myToggleCheckOn" class="toggle-check-label">
+                    <span class="toggle-check-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-check-text">Check</span>
+                </label>
+            </div>
 
-    <div class="toggle-card-wrap">
-        <input type="checkbox" id="myToggleCardUnchecked" class="toggle-input" aria-checked="false">
-        <label for="myToggleCardUnchecked" class="toggle-card-label">
-            <span class="toggle-card-checkbox-visual" role="checkbox">
-                <span class="toggle-card-icon-wrap"></span>
-            </span>
-            <span class="toggle-card-text">Default Card</span>
-        </label>
-    </div>
+            <div class="toggle-check-wrap">
+                <input type="checkbox" id="myToggleCheckOff" class="toggle-input" aria-checked="false">
+                <label for="myToggleCheckOff" class="toggle-check-label">
+                    <span class="toggle-check-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-check-text">Default</span>
+                </label>
+            </div>
+            <div class="toggle-check-wrap toggle-check-disabled">
+                <input type="checkbox" id="myToggleCheckDisabled" class="toggle-input" aria-checked="false" disabled>
+                <label for="myToggleCheckDisabled" class="toggle-check-label">
+                    <span class="toggle-check-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-check-text">Disable</span>
+                </label>
+            </div>
 
-    <div class="toggle-card-wrap toggle-card-disabled">
-        <input type="checkbox" id="myToggleCardDisabled" class="toggle-input" aria-checked="false" disabled>
-        <label for="myToggleCardDisabled" class="toggle-card-label">
-            <span class="toggle-card-checkbox-visual" role="checkbox">
-                <span class="toggle-card-icon-wrap"></span>
-            </span>
-            <span class="toggle-card-text">Disabled Card</span>
-        </label>
-    </div>
+        </div>
+        <div class="guide-item">
+            <h3>checkbox line</h3>
+            <div class="toggle-line-wrap">
+                <input type="checkbox" id="myToggleLineOff" class="toggle-input" aria-checked="false">
+                <label for="myToggleLineOff" class="toggle-line-label">
+                    <span class="toggle-line-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-line-text">Check Box OFF</span>
+                </label>
+            </div>
 
-    <!-- Toggle Line Components -->
-    <div class="toggle-line-wrap">
-        <input type="checkbox" id="myToggleLineOff" class="toggle-input" aria-checked="false">
-        <label for="myToggleLineOff" class="toggle-line-label">
-            <span class="toggle-line-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-line-text">Check Box OFF</span>
-        </label>
-    </div>
+            <div class="toggle-line-wrap">
+                <input type="checkbox" id="myToggleLineOn" class="toggle-input" aria-checked="true" checked>
+                <label for="myToggleLineOn" class="toggle-line-label">
+                    <span class="toggle-line-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-line-text">Check Box ON</span>
+                </label>
+            </div>
 
-    <div class="toggle-line-wrap">
-        <input type="checkbox" id="myToggleLineOn" class="toggle-input" aria-checked="true" checked>
-        <label for="myToggleLineOn" class="toggle-line-label">
-            <span class="toggle-line-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-line-text">Check Box ON</span>
-        </label>
+            <div class="toggle-line-wrap toggle-line-disabled">
+                <input type="checkbox" id="myToggleLineDisabled" class="toggle-input" aria-checked="false" disabled>
+                <label for="myToggleLineDisabled" class="toggle-line-label">
+                    <span class="toggle-line-checkbox-visual" role="checkbox"></span>
+                    <span class="toggle-line-text">Check Box Disable-checked</span>
+                </label>
+            </div>
+        </div>
     </div>
-
-    <div class="toggle-line-wrap toggle-line-disabled">
-        <input type="checkbox" id="myToggleLineDisabled" class="toggle-input" aria-checked="false" disabled>
-        <label for="myToggleLineDisabled" class="toggle-line-label">
-            <span class="toggle-line-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-line-text">Check Box Disable-checked</span>
-        </label>
-    </div>
-
-    <!-- Toggle Check Components -->
-    <div class="toggle-check-wrap">
-        <input type="checkbox" id="myToggleCheckOn" class="toggle-input" aria-checked="true" checked>
-        <label for="myToggleCheckOn" class="toggle-check-label">
-            <span class="toggle-check-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-check-text">Check</span>
-        </label>
-    </div>
-
-    <div class="toggle-check-wrap toggle-check-disabled">
-        <input type="checkbox" id="myToggleCheckDisabled" class="toggle-input" aria-checked="false" disabled>
-        <label for="myToggleCheckDisabled" class="toggle-check-label">
-            <span class="toggle-check-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-check-text">Disable</span>
-        </label>
-    </div>
-
-    <div class="toggle-check-wrap">
-        <input type="checkbox" id="myToggleCheckOff" class="toggle-input" aria-checked="false">
-        <label for="myToggleCheckOff" class="toggle-check-label">
-            <span class="toggle-check-checkbox-visual" role="checkbox"></span>
-            <span class="toggle-check-text">Default</span>
-        </label>
-    </div>
-
     <!-- Include jQuery and the component's JS if interactive behavior is needed -->
     <script src="../assets/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/com/toggle.js"></script>
