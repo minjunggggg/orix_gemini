@@ -393,3 +393,7 @@
     /* 18px */
     color: var(--color-gray-45);
 }
+
+.footer-text-container {
+    gap: 16px;
+}

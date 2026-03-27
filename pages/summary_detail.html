@@ -32,8 +32,9 @@
         </div>
     </header>
 
-    <div class="container-wrap">
-        <h2 class="page-main-title">상세약정서 확인 및 전자서명</h2>
+    <h2 class="page-title">상세약정서 확인 및 전자서명</h2>
+
+    <div class="main-content-area">
 
         <div class="agreement-section">
             <div class="agreement-item">
@@ -700,25 +701,19 @@
             </div>
         </div>
     </div>
-
     <div class="footer-wrap">
         <div class="footer-content">
-            <div class="footer-confirmation">
-                <div class="checkbox">
-                    <input type="checkbox" id="final-agreement-check" class="sr-only" />
-                    <label for="final-agreement-check" class="checkbox-label"></label>
+            <div class="footer-text-container">
+                <p class="footer-message">상세약정서를 최종 확인하였으며, 내용에 이상 없음을 확인했습니다.</p>
+                <div class="footer-disclaimer-container">
+                    <p class="footer-disclaimer-prefix">※</p>
+                    <p class="footer-disclaimer-text">상세약정서를 모두 확인한 경우, [전자서명 및 제출] 버튼을 통해 전자서명을 진행하실 수 있습니다.</p>
                 </div>
-                <p class="confirmation-text">
-                    <span class="confirmation-text-bold">상세약정서를 최종 확인</span>하였으며, 내용에 이상 없음을 확인했습니다.
-                </p>
             </div>
-            <div class="footer-disclaimer-container">
-                <p class="footer-disclaimer-prefix">※</p>
-                <p class="footer-disclaimer-text">상세약정서를 모두 확인한 경우, [전자서명 및 제출] 버튼을 통해 전자서명을 진행하실 수 있습니다.</p>
-            </div>
-            <button type="button" class="btn-primary btn-footer-submit is-disabled">전자서명 및 제출</button>
+            <button type="button" class="btn-primary btn-footer-next">전자서명 및 제출</button>
         </div>
     </div>
+
     <script src="../assets/js/lib/jquery-4.0.0.js"></script>
     <script src="../assets/js/page/summary_detail.js"></script>
 </body>

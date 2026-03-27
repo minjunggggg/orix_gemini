@@ -26,37 +26,13 @@
     --line-height-1-5: 1.5;
 }
 
-/* --- Page Layout --- */
-.container-wrap {
-    width: 1200px;
-    /* Figma main content width */
-    margin: 122px auto 136px;
-    /* Spacing below header, above footer */
-    position: relative;
-    padding-bottom: 20px;
-    /* Space for the fixed footer */
-}
-
-.page-main-title {
-    font-family: var(--font-pretendard-bold);
-    font-weight: 700;
-    font-size: 2.375rem;
-    /* 38px */
-    color: var(--color-gray-22);
-    text-align: center;
-    margin-bottom: 42px;
-    /* Spacing from main content */
-    margin-top: 100px;
-    /* Spacing from header */
-}
-
 /* --- Agreement Section --- */
 .agreement-section {
     display: flex;
     flex-direction: column;
     gap: 28px;
     /* gap-[28px] */
-    width: 100%;
+    width: 1200px;
 }
 
 .agreement-item {
@@ -98,7 +74,7 @@
     /* px-[24px] py-[8px] */
     font-family: var(--font-pretendard-medium);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.6rem;
     /* 16px */
     color: var(--color-gray-66);
     line-height: normal;
@@ -109,7 +85,7 @@
 .agreement-title {
     font-family: var(--font-pretendard-medium);
     font-weight: 500;
-    font-size: 1.375rem;
+    font-size: 2.2rem;
     /* 22px */
     color: var(--color-gray-22);
     line-height: normal;
@@ -164,8 +140,8 @@
 
 /* --- Info Box --- */
 .info-box-container {
-    margin-top: 40px;
-    /* margin-top-[40px] */
+    margin-top: 56px;
+    width: 1200px;
 }
 
 .info-box {
@@ -181,7 +157,6 @@
     /* gap-[8px] */
     align-items: flex-start;
     /* items-start */
-    width: 100%;
 }
 
 .info-icon {
@@ -218,7 +193,7 @@
 .info-text-bold {
     font-family: var(--font-pretendard-semibold);
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 1.8rem;
     /* 18px */
     color: var(--color-info-box-text-blue);
     /* text-[#3182ee] */
@@ -228,7 +203,7 @@
 .info-text-regular {
     font-family: var(--font-pretendard-regular);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.6rem;
     /* 16px */
     color: var(--color-gray-66);
     /* text-[#666] */
@@ -236,97 +211,6 @@
     /* leading-[1.5] */
 }
 
-
-/* --- Footer --- */
-.footer-confirmation {
-    display: flex;
-    /* flex */
-    gap: 8px;
-    /* gap-[8px] */
-    align-items: center;
-    /* items-center */
-    width: 100%;
-}
-
-.footer-confirmation .checkbox {
-    width: 28px;
-    /* size-[28px] */
-    height: 28px;
-    flex-shrink: 0;
-}
-
-.footer-confirmation .checkbox-label {
-    border-radius: 4px;
-    /* rounded-[4px] */
-    border: 1px solid var(--color-gray-ddd);
-    /* Default border */
-    background-color: var(--color-white);
-    /* White background */
-    mask-image: url('../assets/images/check.svg');
-    -webkit-mask-image: url('../assets/images/check.svg');
-    mask-size: 0%;
-    /* Hidden by default */
-    -webkit-mask-size: 0%;
-    transition: background-color 0.2s, mask-size 0.2s;
-}
-
-.footer-confirmation .checkbox input[type="checkbox"]:checked+.checkbox-label {
-    background-color: var(--color-primary-blue);
-    /* Blue when checked */
-    border-color: var(--color-primary-blue);
-    mask-size: 100%;
-    /* Checkmark visible */
-    -webkit-mask-size: 100%;
-}
-
-.confirmation-text {
-    font-family: var(--font-pretendard-regular);
-    font-weight: 400;
-    font-size: 1.125rem;
-    /* 18px */
-    line-height: 1.4;
-    /* leading-[1.4] */
-    color: var(--color-gray-66);
-    /* text-[#666] */
-}
-
-.confirmation-text-bold {
-    font-family: var(--font-pretendard-semibold);
-    font-weight: 600;
-    color: var(--color-gray-22);
-    /* text-[#222] */
-}
-
-.footer-disclaimer-container {
-    display: flex;
-    /* flex */
-    gap: 4px;
-    /* gap-[4px] */
-    align-items: flex-start;
-    /* items-start */
-    line-height: 1.4;
-    /* leading-[1.4] */
-    font-size: 1rem;
-    /* 16px */
-    color: var(--color-gray-66);
-    width: 100%;
-    /* w-full */
-}
-
-.btn-footer-submit {
-    font-size: 1.25rem;
-    /* 20px */
-    /* Inherits other styles from btn-primary */
-}
-
-.btn-footer-submit.is-disabled {
-    background-color: var(--color-btn-inactive-bg);
-    /* Use inactive background */
-    color: var(--color-btn-inactive-text);
-    /* Use inactive text color */
-    box-shadow: none;
-    cursor: not-allowed;
-}
 
 .accordion-panel {
     max-height: 100%;
