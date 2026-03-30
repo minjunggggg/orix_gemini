@@ -35,7 +35,6 @@
     <h2 class="page-title">상세약정서 확인 및 전자서명</h2>
 
     <div class="main-content-area">
-
         <div class="agreement-section">
             <div class="agreement-item">
                 <div class="agreement-header">
@@ -43,22 +42,23 @@
                     <p class="agreement-title">자동차 임대차(렌탈) 계약서</p>
                     <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
                 </div>
-                <div class="accordion-panel is-hidden">
+                <div class="agreement-content accordion-panel is-hidden">
                     <div class="document-container">
                         <div class="contract-paper">
-                            <h1 class="contract-title">자동차임대차(렌탈)계약서</h1>
-                            <div class="contract-header">
-                                <p class="contract-disclaimer">본 계약서는 금융소비자보호에 관한 법률 및 내부통제 기준에 따른 절차를 거쳐 제공됩니다.</p>
-                                <div class="contract-logo">
-                                    <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
-                                </div>
+                            <p class="contract-disclaimer">본 계약서는 금융소비자보호에 관한 법률 및 내부통제 기준에 따른 절차를 거쳐 제공됩니다.</p>
+
+                            <div class="contract-logo">
+                                <img src="../../assets/images/orix_logo.png" alt="ORIX Capital" />
                             </div>
-                            <div class="contract-stamp-info">
-                                <p class="stamp-text">대한민국정부</p>
-                                <p class="stamp-text">인지세</p>
-                                <p class="stamp-text">납부금액</p>
-                                <p class="stamp-text">수납승인</p>
-                                <p class="stamp-text">2026년000호</p>
+                            <div class="contract-title-wrapper">
+                                <div class="contract-stamp-info">
+                                    <p class="stamp-text">대한민국정부</p>
+                                    <p class="stamp-text">인지세</p>
+                                    <p class="stamp-text">납부금액</p>
+                                    <p class="stamp-text">수납승인</p>
+                                    <p class="stamp-text">2026년000호</p>
+                                </div>
+                                <h1 class="contract-title">자동차임대차(렌탈)계약서</h1>
                             </div>
 
                             <!-- Customer Info Section -->
@@ -89,10 +89,58 @@
                                 <div class="section-header dark">
                                     <p class="section-title">• 대여차량정보</p>
                                 </div>
+                                <table class="vehicle-info-details">
+                                    <caption>색상, 옵션, 차량가격, 총차량가격, 옵션/색상 가격, 차량등록번호, 차대번호로 구성된 대여차량정보 표</caption>
+                                    <colgroup>
+                                        <col span="1" style="width: 30%">
+                                        <col span="2" style="width: 30%">
+                                        <col span="2" style="width: 40%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="5" class="td-no-padding">
+                                                <div class="vehicle-image-wrap">
+                                                    <img src="../../assets/images/car.png" alt="Vehicle Image"
+                                                        class="vehicle-image" />
+                                                </div>
+                                                <p class="vehicle-model">현대 2025년형 디 올 뉴 그랜저</p>
+                                                <p class="vehicle-spec">가솔린 터보 1.6 하이브리드 익스클루시브</p>
+                                            </td>
+                                            <th rowspan="2">색상</th>
+                                            <td>외장</td>
+                                            <td>큐레이티드 실버메탈릭</td>
+                                            <th>차량가격</th>
+                                            <td><span>00,000,000</span> 원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>내장</td>
+                                            <td>다크 그레이/<br />라이트 그레이 투톤</td>
+                                            <th>총차량가격</th>
+                                            <td><span>00,000,000</span> 원</td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="3">옵션</th>
+                                            <td rowspan="3" colspan="2">파노라마 선루프 / 현대 스마트 센스 패키지 1 <br />/ JBL 사운드 패키지 /
+                                                컨비니언스
+                                                패키지</td>
+
+                                            <th>옵션/색상 가격</th>
+                                            <td><span>00,000,000</span> 원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>차량등록번호</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>차대번호</th>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 <div class="vehicle-info-details">
                                     <div class="vehicle-image-column">
                                         <div class="vehicle-image-wrap">
-                                            <img src="../../assets/images/orix_mockup.png" alt="Vehicle Image"
+                                            <img src="../../assets/images/car.png" alt="Vehicle Image"
                                                 class="vehicle-image" />
                                         </div>
                                         <p class="vehicle-model">현대 2025년형 디 올 뉴 그랜저</p>
@@ -113,7 +161,7 @@
                                                     <p>메탈릭</p>
                                                 </div>
                                                 <div class="value-item">
-                                                    <p>다크 그레이/</p>
+                                                    <p>다크 그레이/</p><br>
                                                     <p>라이트 그레이 투톤</p>
                                                 </div>
                                             </div>
@@ -438,14 +486,14 @@
                                 <p class="guarantor-disclaimer">● 본 자동차 임대차계약서 작성시 대여이용자 및 연대보증인이 직접 자필 및 날인하였음을
                                     확인함.</p>
                             </div>
-
+                            <p class="signatures-preamble">
+                                대여이용자, 연대보증인은 본 계약의 주요내용인 기본사항 및 대여조건 요약표, 그리고 자동차임대차(렌탈)약관에 대한 충분한 설명을 듣고 잘 이해한
+                                후 본인의 의사에 따라 본 계약을 체결하였으며, 오릭스캐피탈코리아(주)로부터 본 계약서의 사본을 확실히 수령하고 계약 내용을 성실히 이행할 것을
+                                확약합니다.
+                            </p>
                             <!-- Contract Signatures Section -->
                             <div class="contract-signatures-section">
-                                <p class="signatures-preamble">
-                                    대여이용자, 연대보증인은 본 계약의 주요내용인 기본사항 및 대여조건 요약표, 그리고 자동차임대차(렌탈)약관에 대한 충분한 설명을 듣고 잘 이해한
-                                    후 본인의 의사에 따라 본 계약을 체결하였으며, 오릭스캐피탈코리아(주)로부터 본 계약서의 사본을 확실히 수령하고 계약 내용을 성실히 이행할 것을
-                                    확약합니다.
-                                </p>
+
                                 <div class="signatures-details">
                                     <div class="signatures-column">
                                         <div class="signature-row bg-orange-light">
@@ -460,26 +508,38 @@
                                     </div>
                                     <div class="signatures-column company-info">
                                         <p class="company-label">(을)대여회사</p>
-                                        <div class="company-details">
-                                            <p class="company-name">오릭스캐피탈코리아(주)</p>
-                                            <p class="company-address">서울시 강남구 테헤란로 306 13층(역삼동 카이트타워)</p>
-                                        </div>
-                                        <div class="ceo-signature">
-                                            <div class="ceo-info">
-                                                <p class="ceo-title">대표이사</p>
-                                                <p class="ceo-name">정 성 윤</p>
+                                        <div class="company-block">
+                                            <div class="company-details">
+                                                <p class="company-name">오릭스캐피탈코리아(주)</p>
+                                                <p class="company-address">서울시 강남구 테헤란로 306 13층(역삼동 카이트타워)</p>
                                             </div>
-                                            <p class="ceo-mark">(인) / 서명</p>
+                                            <div class="ceo-signature">
+                                                <div class="ceo-info">
+                                                    <p class="ceo-title">대표이사</p>
+                                                    <p class="ceo-name">정 성 윤</p>
+                                                </div>
+                                                <p class="ceo-mark">(인) / 서명</p>
+                                                <!-- Stamp Area -->
+                                                <div class="stamp-area">
+                                                    <img src="../../assets/images/stamp.png" alt="Stamp Example"
+                                                        class="stamp-image" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Stamp Area -->
-                            <div class="stamp-area">
-                                <img src="../../assets/images/stamp.png" alt="Stamp Example" class="stamp-image" />
-                            </div>
+
                         </div>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="btn-secondary btn-icon btn-size-small">
+                            <span class="btn-icon__text">PDF 다운로드 (검토용,워터마크 노출)</span>
+                        </button>
+                        <button type="button" class="btn-primary btn-icon btn-size-small">
+                            <span class="btn-icon__text">상기 계약서 내용을 모두 확인했습니다.</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -568,6 +628,12 @@
                                         <p>동의받은 담당자 명</p>
                                         <p>김 길 동</p>
                                     </div>
+                                </div>
+
+                                <div class="button-container">
+                                    <button type="button" class="btn-primary btn-icon btn-size-small">
+                                        <span class="btn-icon__text">상기 계약서 내용을 모두 확인했습니다.</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>

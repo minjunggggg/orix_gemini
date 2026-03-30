@@ -9,18 +9,22 @@
 
   ## 파일 구조
     - 루트: / (프로젝트 루트)
+    - `.gemini/`
+        - `config.json`
     - 에셋:
-        - CSS: 
-            - assets/css/com/ (컴포넌트 기반 CSS 파일: button.css, tab.css 등)
-            - assets/css/page/ (페이지 기반 CSS 파일: button.css, tab.css 등)
-        - JS:
-            - UI 로직: assets/js/com/ (컴포넌트 로직: tab.js, popup.js 등)
-            - 메인 엔트리: assets/js/ui/ui-util.js
-            - 라이브러리: assets/js/lib/
-            - 페이지별 로직: assets/js/page/
-        - 이미지: assets/images/ (유형별 정리: ico, btn 등)
-    - 뷰: pages/ (퍼블리싱 화면 목록)
-    - 가이드: guide/ (컴포넌트 샘플)
+        - `assets/css/` (모든 CSS 파일 포함)
+            - `assets/css/com/` (컴포넌트 기반 CSS 파일: button.css, header.css, input.css, sub_page.css, toggle.css)
+            - `assets/css/guide/` (가이드 관련 CSS 파일: guide.css)
+            - `assets/css/page/` (페이지 기반 CSS 파일: auto_transfer_application.css, auto_transfer_input.css, complete.css, contract_detail.css, error_n_upcoming.css, form.css, identity_confirm.css, loading.css, main.css, quote_confirm.css, resident_id_consent.css, sign.css, summary_detail.css, summary.css)
+            - `assets/css/common.css`, `assets/css/index.css`, `assets/css/reset.css`, `assets/css/variables.css`
+        - `assets/js/` (모든 JavaScript 파일 포함)
+            - `assets/js/com/` (컴포넌트 로직: button.js, common.js, input.js, toggle.js)
+            - `assets/js/lib/` (라이브러리: jquery-4.0.0.js)
+            - `assets/js/page/` (페이지별 로직: auto_transfer_input.js, contract_detail.js, form.js, summary_detail.js)
+            - `assets/js/ui/ui-util.js` (메인 엔트리)
+        - `assets/images/` (유형별 정리: ico, btn 등, 모든 이미지 파일 포함)
+    - 뷰: `pages/` (퍼블리싱 화면 목록: auto_transfer_input.html, complete.html, error.html, form.html, loading.html, main.html, quote_confirm.html, sign.html, summary.html, summary_detail.html, upcoming.html)
+    - 가이드: `guide/` (컴포넌트 샘플: button.html, header.html, input.html, toggle.html)
 
   ## 코딩 스타일
    - 들여쓰기: 4칸 공백
@@ -159,3 +163,9 @@
             Tabs.init(this);
         });
     });```
+
+  ## 코드 생성 규칙
+    - 이 문서에 명시된 파일 구조, 명명 규칙, 코딩 스타일, 접근성 및 기타 모든 가이드라인을 준수하여 코드를 생성해야 합니다.
+    - 특히, `pages` 폴더의 HTML 파일은 `<style>` 태그 내부에 CSS를 포함하는 대신, `assets/css/page/`에 위치한 해당 페이지의 CSS 파일을 `link` 태그를 사용하여 참조해야 합니다.
+    - `assets/css/com/` 및 `assets/js/com/` 폴더에는 재사용 가능한 컴포넌트 관련 CSS 및 JavaScript를 배치해야 합니다.
+    - `assets/js/lib/` 폴더에는 외부 라이브러리(예: jQuery)를 배치합니다.
