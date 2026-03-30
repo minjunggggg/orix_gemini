@@ -42,7 +42,7 @@
                     <p class="agreement-title">자동차 임대차(렌탈) 계약서</p>
                     <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
                 </div>
-                <div class="agreement-content accordion-panel is-hidden">
+                <div class="agreement-content accordion-panel">
                     <div class="document-container">
                         <div class="contract-paper">
                             <p class="contract-disclaimer">본 계약서는 금융소비자보호에 관한 법률 및 내부통제 기준에 따른 절차를 거쳐 제공됩니다.</p>
@@ -92,9 +92,12 @@
                                 <table class="vehicle-info-details">
                                     <caption>색상, 옵션, 차량가격, 총차량가격, 옵션/색상 가격, 차량등록번호, 차대번호로 구성된 대여차량정보 표</caption>
                                     <colgroup>
-                                        <col span="1" style="width: 30%">
-                                        <col span="2" style="width: 30%">
-                                        <col span="2" style="width: 40%">
+                                        <col style="width: 272px">
+                                        <col style="width: 63px">
+                                        <col style="width: 57px">
+                                        <col style="width: 173px">
+                                        <col style="width: 102px">
+                                        <col style="width: auto">
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -107,14 +110,20 @@
                                                 <p class="vehicle-spec">가솔린 터보 1.6 하이브리드 익스클루시브</p>
                                             </td>
                                             <th rowspan="2">색상</th>
-                                            <td>외장</td>
-                                            <td>큐레이티드 실버메탈릭</td>
+                                            <td class="sub-label-item">외장</td>
+                                            <td>
+                                                <p>큐레이티드 실버</p>
+                                                <p>메탈릭</p>
+                                            </td>
                                             <th>차량가격</th>
                                             <td><span>00,000,000</span> 원</td>
                                         </tr>
                                         <tr>
-                                            <td>내장</td>
-                                            <td>다크 그레이/<br />라이트 그레이 투톤</td>
+                                            <td class="sub-label-item">내장</td>
+                                            <td>
+                                                <p>다크 그레이/</p>
+                                                <p>라이트 그레이 투톤</p>
+                                            </td>
                                             <th>총차량가격</th>
                                             <td><span>00,000,000</span> 원</td>
                                         </tr>
@@ -137,73 +146,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="vehicle-info-details">
-                                    <div class="vehicle-image-column">
-                                        <div class="vehicle-image-wrap">
-                                            <img src="../../assets/images/car.png" alt="Vehicle Image"
-                                                class="vehicle-image" />
-                                        </div>
-                                        <p class="vehicle-model">현대 2025년형 디 올 뉴 그랜저</p>
-                                        <p class="vehicle-spec">가솔린 터보 1.6 하이브리드 익스클루시브</p>
-                                    </div>
-                                    <div class="vehicle-details-table">
-                                        <div class="vehicle-details-row">
-                                            <div class="label-column">
-                                                <div class="label-item">색상</div>
-                                            </div>
-                                            <div class="sub-label-column">
-                                                <div class="sub-label-item">외장</div>
-                                                <div class="sub-label-item">내장</div>
-                                            </div>
-                                            <div class="value-column">
-                                                <div class="value-item">
-                                                    <p>큐레이티드 실버</p>
-                                                    <p>메탈릭</p>
-                                                </div>
-                                                <div class="value-item">
-                                                    <p>다크 그레이/</p><br>
-                                                    <p>라이트 그레이 투톤</p>
-                                                </div>
-                                            </div>
-                                            <div class="label-column">
-                                                <div class="label-item gray">차량가격</div>
-                                                <div class="label-item gray">총차량가격</div>
-                                            </div>
-                                            <div class="value-column align-right">
-                                                <div class="value-item price">
-                                                    <p>00,000,000</p>
-                                                    <p>원</p>
-                                                </div>
-                                                <div class="value-item price highlight">
-                                                    <p>00,000,000</p>
-                                                    <p>원</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="vehicle-details-row">
-                                            <div class="label-column">
-                                                <div class="label-item">옵션</div>
-                                            </div>
-                                            <div class="value-column wide-value">
-                                                <p>파노라마 선루프 /</p>
-                                                <p>현대 스마트 센스 패키지 1 / JBL 사운드 패키지 / 컨비니언스 패키지</p>
-                                            </div>
-                                            <div class="label-column">
-                                                <div class="label-item gray">옵션/색상 가격</div>
-                                                <div class="label-item gray">차량등록번호</div>
-                                                <div class="label-item gray">차대번호</div>
-                                            </div>
-                                            <div class="value-column align-right">
-                                                <div class="value-item price">
-                                                    <p>00,000,000</p>
-                                                    <p>원</p>
-                                                </div>
-                                                <div class="value-item">-</div>
-                                                <div class="value-item">-</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                             <!-- Contract Conditions Section -->
