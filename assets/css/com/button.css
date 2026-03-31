@@ -336,7 +336,7 @@
 .agreement-start-block {
     background-color: var(--color-primary);
     /* bg-[#3182ee] */
-    max-width: 1249px;
+    min-width: 1249px;
     /* w-[1249px] */
     padding: 28px 62px 28px 48px;
     /* pl-[48px] pr-[62px] py-[28px] */

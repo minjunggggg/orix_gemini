@@ -249,7 +249,7 @@ input[type="checkbox"]:checked:not(#terms-all)+.checkbox-label::after {
 
 /* --- Accordion Panel Styles --- */
 .accordion-panel {
-    background-color: var(--color-scrollable-bg);
+    background-color: #fafafa;
     /* bg-[#fafafa] */
     padding: 20px;
     /* p-[20px] */
