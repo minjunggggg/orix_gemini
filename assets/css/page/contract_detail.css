@@ -319,8 +319,8 @@ th {
     text-align: right;
 }
 
-.price-value span {
-    margin-right: 8px;
+.won {
+    margin-left: 8px;
 
 }
 
@@ -351,6 +351,65 @@ th {
 
 .condition-case span+span {
     border-left: 1px solid var(--color-table-border);
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.checkbox-row.distance {
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.checkbox-visual {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    border: 1px solid #999;
+}
+
+.toggle-input:checked+.input-checkbox-label .checkbox-visual {
+    border: 1px solid #000;
+    background-color: #222;
+}
+
+.checkbox-text {
+    width: auto;
+    color: #454545;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+
+}
+
+.distance-text {
+    display: flex;
+    gap: 41px;
+}
+
+.text-extra-bold {
+    font-weight: 600;
+}
+
+.vat-text {
+    margin-left: 8px;
+    margin-right: 0;
+    font-weight: 300;
+}
+
+.input-checkbox-label {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
 /* --- Guarantor Info Section --- */
