@@ -139,11 +139,11 @@
                                             <td class="price-value text-bold"><span>00,000,000</span>원</td>
                                         </tr>
                                         <tr>
-                                            <th>차량등록번호</th>
+                                            <th class="border-left">차량등록번호</th>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <th>차대번호</th>
+                                            <th class="border-left">차대번호</th>
                                             <td>-</td>
                                         </tr>
                                     </tbody>
@@ -340,12 +340,6 @@
                                     <table class="guarantor-form-table">
                                         <caption></caption>
                                         <colgroup>
-                                            <colgroup>
-                                                <col style="width: 140px">
-                                                <col style="width: calc(50% - 140px)">
-                                                <col style="width: 140px">
-                                                <col style="width: calc(50% - 140px)">
-                                            </colgroup>
                                         </colgroup>
                                         <tbody>
                                             <tr>
@@ -364,42 +358,46 @@
                                                 <th class="form-label">전화번호</th>
                                                 <td><input type="number" class="input-field" /></td>
                                             </tr>
+                                            <tr>
+                                                <th class="form-label">직장(사업자)명</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                                <th class="form-label">부서명</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-label">직위</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                                <th class="form-label">재직(사업기간)</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="guarantee-details-table">
+                                        <caption></caption>
+                                        <colgroup>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="form-label">보증내용</th>
+                                                <th class="form-sub-label">보증채무최고액</th>
+                                                <td class="details-row">
+                                                    <div class="details-row"><input type="text" class="input-field" />
+                                                        <p>원</p>
+                                                    </div>
+                                                    <p class="input-info">[참고] 본 약정에 따른 여신취급금액(금융회사가 본 약정의 이행을 위해
+                                                        지급한 금액의 총액)의 130%입니다.</p>
+                                                </td>
+                                                <th class="form-sub-label">보증기간</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                            <tr class="textarea-row">
+                                                <th class="form-label">특약사항</th>
+                                                <td colspan="4"><textarea class="input-field"></textarea></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </form>
-
-                                <div class="guarantee-details-table">
-                                    <div class="details-row">
-                                        <div class="details-label-wrap">
-                                            <div class="details-label main">보증내용</div>
-                                        </div>
-                                        <div class="details-sub-label-wrap">
-                                            <div class="details-label sub">보증채무최고액</div>
-                                            <div class="details-input-wrap">
-                                                <div class="input-text-wrap js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                    <p>원</p>
-                                                </div>
-                                                <p class="input-info">[참고] 본 약정에 따른 여신취급금액(금융회사가 본 약정의 이행을 위해
-                                                    지급한 금액의 총액)의 130%입니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="details-sub-label-wrap">
-                                            <div class="details-label sub">보증기간</div>
-                                            <div class="details-input-wrap js-input-component">
-                                                <input type="text" class="input-field" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="details-row last">
-                                        <div class="details-label-wrap">
-                                            <div class="details-label main">특약사항</div>
-                                        </div>
-                                        <div class="details-input-wrap full-width js-input-component">
-                                            <textarea class="input-field"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <p class="guarantor-disclaimer">● 본 자동차 임대차계약서 작성시 대여이용자 및 연대보증인이 직접 자필 및 날인하였음을
                                     확인함.</p>
