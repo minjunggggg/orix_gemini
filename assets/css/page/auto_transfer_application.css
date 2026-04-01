@@ -2,7 +2,8 @@
 .auto-transfer-document-container {
     background-color: var(--color-page-bg-light);
     position: relative;
-    width: 100%; /* To fit within the parent agreement-content */
+    width: 100%;
+    /* To fit within the parent agreement-content */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -19,25 +20,16 @@
 }
 
 .auto-transfer-title {
-    position: absolute;
-    font-family: var(--font-pretendard-medium);
     font-weight: 500;
     font-size: 2.8rem;
     color: var(--color-black);
     line-height: 1.5;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 46px;
     white-space: nowrap;
     margin: 0;
 }
 
 .auto-transfer-section-block {
     width: 952px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 114px;
     box-sizing: border-box;
 }
 
@@ -144,7 +136,8 @@
 
 .auto-transfer-terms-content ol {
     margin: 0;
-    padding-left: 18px; /* For the list numbers */
+    padding-left: 18px;
+    /* For the list numbers */
     list-style: decimal;
 }
 
@@ -162,14 +155,12 @@
 }
 
 .auto-transfer-terms-content li span {
-    line-height: inherit; /* Ensure span inherits line height */
+    line-height: inherit;
+    /* Ensure span inherits line height */
 }
 
 .auto-transfer-signatures {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
+
     width: 952px;
     box-sizing: border-box;
 }
@@ -177,7 +168,8 @@
 .auto-transfer-signature-row {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Adjusted to align to the right as in Figma */
+    justify-content: flex-end;
+    /* Adjusted to align to the right as in Figma */
     width: 100%;
     padding: 12px 10px 12px 14px;
     box-sizing: border-box;
