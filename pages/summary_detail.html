@@ -42,7 +42,7 @@
                     <p class="agreement-title">자동차 임대차(렌탈) 계약서</p>
                     <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
                 </div>
-                <div class="agreement-content accordion-panel">
+                <div class="agreement-content accordion-panel is-hidden">
                     <div class="document-container">
                         <div class="contract-paper">
                             <p class="contract-disclaimer">본 계약서는 금융소비자보호에 관한 법률 및 내부통제 기준에 따른 절차를 거쳐 제공됩니다.</p>
@@ -376,24 +376,31 @@
                                     <table class="guarantee-details-table">
                                         <caption></caption>
                                         <colgroup>
+                                            <col style="width: 140px">
+                                            <col style="width: 100px">
+                                            <col style="width: 377px">
+                                            <col style="width: 100px">
+                                            <col style="width: auto">
+
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th class="form-label">보증내용</th>
-                                                <th class="form-sub-label">보증채무최고액</th>
+                                                <th class="details-form-label">보증내용</th>
+                                                <th class="details-form-sub-label">보증채무최고액</th>
                                                 <td class="details-row">
-                                                    <div class="details-row"><input type="text" class="input-field" />
+                                                    <div class="details-input-wrapper"><input type="text"
+                                                            class="input-field" />
                                                         <p>원</p>
                                                     </div>
                                                     <p class="input-info">[참고] 본 약정에 따른 여신취급금액(금융회사가 본 약정의 이행을 위해
                                                         지급한 금액의 총액)의 130%입니다.</p>
                                                 </td>
-                                                <th class="form-sub-label">보증기간</th>
+                                                <th class="details-form-sub-label">보증기간</th>
                                                 <td><input type="text" class="input-field" /></td>
                                             </tr>
                                             <tr class="textarea-row">
-                                                <th class="form-label">특약사항</th>
-                                                <td colspan="4"><textarea class="input-field"></textarea></td>
+                                                <th class="details-form-label">특약사항</th>
+                                                <td colspan="4"><textarea class=""></textarea></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -404,7 +411,7 @@
                             </div>
                             <p class="signatures-preamble">
                                 대여이용자, 연대보증인은 본 계약의 주요내용인 기본사항 및 대여조건 요약표, 그리고 자동차임대차(렌탈)약관에 대한 충분한 설명을 듣고 잘 이해한
-                                후 본인의 의사에 따라 본 계약을 체결하였으며, 오릭스캐피탈코리아(주)로부터 본 계약서의 사본을 확실히 수령하고 계약 내용을 성실히 이행할 것을
+                                후 <br />본인의 의사에 따라 본 계약을 체결하였으며, 오릭스캐피탈코리아(주)로부터 본 계약서의 사본을 확실히 수령하고 계약 내용을 성실히 이행할 것을
                                 확약합니다.
                             </p>
                             <!-- Contract Signatures Section -->
@@ -466,95 +473,114 @@
                     <p class="agreement-title">주민등록번호 수집・이용 동의서 (렌터카 법인 계약자용)</p>
                     <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
                 </div>
-                <div class="agreement-content accordion-panel is-hidden">
+                <div class="agreement-content accordion-panel">
                     <div class="resident-id-document-container">
                         <div class="resident-id-document-paper">
-                            <p class="resident-id-preamble">
-                                귀사와의 렌터카 거래 관련하여 귀사가 본인의 개인(신용)정보를 처리하고자 하는 경우에는 「개인정보 보호법」 제15조, 제22조에 따라 본인의 사전
-                                동의를 얻어야 합니다. 이에 본인은 귀사가 본인의 주민등록번호를 아래와 같이 처리하는 것에 동의합니다.
-                            </p>
                             <div class="resident-id-header">
-                                <h1 class="resident-id-title">주민등록번호 수집・이용 동의서</h1>
-                                <p class="resident-id-subtitle">렌터카 법인 계약자용</p>
-                            </div>
-                            <p class="resident-id-to">오릭스캐피탈코리아(주) 귀중</p>
-                            <p class="resident-id-below">- 아래 -</p>
-
-                            <div class="resident-id-section-block">
-                                <div class="resident-id-section-header dark">
-                                    <p class="resident-id-section-title">• 주민등록번호의 수집・이용에 관한 사항</p>
+                                <div class="resident-id-logo">
                                 </div>
-                                <div class="resident-id-section-content">
-                                    <p class="resident-id-text">
-                                        <span class="resident-id-text-bold">주민등록의 수집・이용 목적 : </span>
-                                        <span class="resident-id-text-normal">부가가치세법 제32조 제1항 제2호에 따라 사업자가 아닌 자에게
-                                        </span>
-                                        <span class="resident-id-text-bold">세금계산서 발급</span>
-                                        <span class="resident-id-text-normal">을 위해서만 주민등록번호를 수집・이용 합니다. 오릭스캐피탈(주)와
-                                            사업자로 계약하는 경우에는 동의할 필요가 없습니다.</span>
-                                    </p>
-                                    <p class="resident-id-text">
-                                        <span class="resident-id-text-bold">주민등록 수집・이용 기간 : </span>
-                                        <span class="resident-id-text-normal">거래가 개시되는 경우에만 유효하며, 해당 거래 종료일까지 동의의
-                                            효력이 지속됩니다.</span>
-                                    </p>
-                                    <p class="resident-id-text">
-                                        <span class="resident-id-text-normal">이 항목에 대해 동의하지 않을 경우, 거래관계의 설정 또는 유지가
-                                            불가능 할 수 있습니다.</span>
-                                    </p>
+                                <div class="resident-id-title-wrapper">
+                                    <h1 class="resident-id-title">주민등록번호 수집・이용 동의서</h1>
+                                    <p class="resident-id-subtitle">렌터카 법인 계약자용</p>
                                 </div>
                             </div>
-                            <div class="resident-id-consent-options">
-                                <div class="checkbox-option">
-                                    <input type="checkbox" id="resident-id-agree" class="sr-only" />
-                                    <label for="resident-id-agree"></label>
-                                    <p>동의함</p>
-                                </div>
-                                <div class="checkbox-option">
-                                    <input type="checkbox" id="resident-id-disagree" class="sr-only" />
-                                    <label for="resident-id-disagree"></label>
-                                    <p>동의하지 않음</p>
-                                </div>
-                            </div>
+                            <div class="resident-id-content">
+                                <div class="resident-id-intro">
+                                    <p class="resident-id-to">오릭스캐피탈코리아(주) 귀중</p>
+                                    <p class="resident-id-preamble">
+                                        귀사와의 렌터카 거래 관련하여 귀사가 본인의 개인(신용)정보를 처리하고자 하는 경우에는 「개인정보 보호법」 제15조, 제22조에 따라 본인의
+                                        사전
+                                        동의를 얻어야 합니다. 이에 본인은 귀사가 본인의 주민등록번호를 아래와 같이 처리하는 것에 동의합니다.
+                                    </p>
 
-                            <div class="resident-id-signatures">
-                                <div class="resident-id-signature-row bg-orange-light">
-                                    <p class="signature-label">성명</p>
-                                    <p class="signature-name">(주)홍길동컴퍼니</p>
-                                    <p class="signature-mark">(인) / 서명</p>
-                                </div>
-                                <div class="resident-id-signature-row bg-orange-light">
-                                    <p class="signature-label">주민번호 앞 7자리</p>
-                                    <div class="resident-id-id-number">
-                                        <p>000000</p>
-                                        <p>-</p>
-                                        <p>0•••••••</p>
-                                    </div>
-                                </div>
-                                <div class="resident-id-date-signer">
-                                    <div class="resident-id-date">
-                                        <p>2026</p>
-                                        <p>년</p>
-                                        <p>12</p>
-                                        <p>월</p>
-                                        <p>4</p>
-                                        <p>일</p>
-                                    </div>
-                                    <div class="resident-id-signer">
-                                        <p>동의받은 담당자 명</p>
-                                        <p>김 길 동</p>
-                                    </div>
-                                </div>
+                                    <p class="resident-id-below">- 아래 -</p>
 
-                                <div class="button-container">
-                                    <button type="button" class="btn-primary btn-icon btn-size-small">
-                                        <span class="btn-icon__text">상기 계약서 내용을 모두 확인했습니다.</span>
-                                    </button>
+                                    <div class="resident-id-section-block">
+                                        <div class="resident-id-section-header dark">
+                                            <p class="resident-id-section-title">• 주민등록번호의 수집・이용에 관한 사항</p>
+                                        </div>
+                                        <div class="resident-id-section-content">
+                                            <p class="resident-id-text">
+                                                <span class="resident-id-text-normal">주민등록의 수집・이용 목적 :
+                                                    <span class="resident-id-text-bold">부가가치세법</span> 제32조 제1항 제2호에 따라
+                                                    사업자가
+                                                    아닌
+                                                    자에게
+
+                                                    <span class="resident-id-text-bold">세금계산서 발급</span>
+                                                    을 위해서만 주민등록번호를 수집・이용 합니다.
+                                                    오릭스캐피탈(주)와
+                                                    사업자로 계약하는 경우에는 동의할 필요가 없습니다.
+                                                </span>
+                                            </p>
+                                            <p class="resident-id-text">
+                                                <span class="resident-id-text-bold">주민등록 수집・이용 기간 : 거래가 개시되는 경우에만 유효하며,
+                                                    해당 거래 종료일까지
+                                                    동의의
+                                                    효력이 지속됩니다.</span>
+                                            </p>
+                                            <p class="resident-id-text">
+                                                <span class="resident-id-text-normal">이 항목에 대해 동의하지 않을 경우, 거래관계의 설정 또는
+                                                    유지가
+                                                    불가능 할 수 있습니다.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="resident-id-consent-options">
+                                        <input type="radio" class="toggle-input" id="checkbox14" name="radio5" checked>
+                                        <label for="checkbox14" class="input-checkbox-label" name="radio5">
+                                            <span class="checkbox-visual" role="checkbox"></span><span
+                                                class="checkbox-text">동의함</span>
+                                        </label>
+                                        <input type="radio" class="toggle-input" id="checkbox15" name="radio5">
+                                        <label for="checkbox15" class="input-checkbox-label" name="radio5">
+                                            <span class="checkbox-visual" role="checkbox"></span><span
+                                                class="checkbox-text">동의하지 않음</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="resident-id-signatures">
+                                    <div class="resident-id-signature-column">
+                                        <div class="resident-id-signature-row bg-orange-light">
+                                            <p class="signature-label">성명</p>
+                                            <p class="signature-name">(주)홍길동컴퍼니</p>
+                                            <p class="signature-mark">(인) / 서명</p>
+                                        </div>
+                                        <div class="resident-id-signature-row bg-orange-light">
+                                            <p class="signature-label">주민번호 앞 7자리</p>
+                                            <div class="resident-id-id-number">
+                                                <p>000000</p>
+                                                <p>-</p>
+                                                <p>0•••••••</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="resident-id-date-signer">
+                                        <div class="resident-id-date">
+                                            <p>2026</p>
+                                            <p>년</p>
+                                            <p>12</p>
+                                            <p>월</p>
+                                            <p>4</p>
+                                            <p>일</p>
+                                        </div>
+                                        <div class="resident-id-signer">
+                                            <p>동의받은 담당자 명</p>
+                                            <p>김 길 동</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="button-container">
+
+                        <button type="button" class="btn-primary btn-icon btn-size-small">
+                            <span class="btn-icon__text">상기 동의서 내용을 모두 확인했습니다.</span>
+                        </button>
+                    </div>
                 </div>
+
             </div>
 
             <div class="agreement-item">

@@ -4,47 +4,74 @@
     position: relative;
     width: 100%;
     /* To fit within the parent agreement-content */
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 50px 0;
-    box-sizing: border-box; /* Added to include padding in width */
+    box-sizing: border-box;
+    /* Added to include padding in width */
 }
 
 .resident-id-document-paper {
-    background-color: var(--p-white);
     width: 1000px;
+    height: 1415px;
+    background-color: var(--p-white);
     position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .resident-id-preamble {
-    position: absolute;
     font-family: var(--font-pretendard-regular);
     font-weight: 400;
     font-size: 1.4rem;
     color: var(--color-text-dark-gray);
     line-height: 1.5;
-    left: 50px;
-    top: 299px;
     width: 900px;
 }
 
 .resident-id-header {
     position: absolute;
-    background-color: var(--color-contract-header-bg);
-    height: 202px;
-    left: 0;
     top: 0;
-    width: 1000px;
+    left: 0;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
+        url('../../images/bg.png') no-repeat center/cover,
+        var(--color-contract-header-bg);
+    background-blend-mode: multiply;
+    height: 202px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 34px 50px;
     box-sizing: border-box;
-    gap: 8px; /* gap-[24px] between logo and text, but here it's between h1 and p */
+    gap: 8px;
+    /* gap-[24px] between logo and text, but here it's between h1 and p */
+}
+
+.resident-id-logo {
+    background-color: var(--p-white);
+
+    mask-image: url("../../images/orix_logo.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    -webkit-mask-image: url("../../images/orix_logo.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+
+    width: 100px;
+    height: 24px;
+}
+
+.resident-id-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start
 }
 
 .resident-id-header .resident-id-title {
@@ -53,7 +80,8 @@
     font-size: 3.2rem;
     color: var(--color-white);
     line-height: 1.5;
-    text-align: center; /* Figma was center aligned within its container */
+    text-align: center;
+    /* Figma was center aligned within its container */
     margin: 0;
 }
 
@@ -64,42 +92,41 @@
     color: #e0e0e0;
     line-height: 1.5;
     white-space: nowrap;
-    text-align: center; /* Figma was center aligned within its container */
+    text-align: center;
+    /* Figma was center aligned within its container */
     margin: 0;
 }
 
+.resident-id-content {
+    margin: 252px 0 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .resident-id-to {
-    position: absolute;
-    font-family: var(--font-pretendard-bold);
     font-weight: 700;
     font-size: 1.8rem;
     color: var(--color-contract-header-bg);
     line-height: 1.5;
-    left: 50px;
-    top: 252px;
     white-space: nowrap;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 .resident-id-below {
-    position: absolute;
     font-family: var(--font-pretendard-medium);
     font-weight: 500;
     font-size: 1.4rem;
     color: var(--color-gray-99);
     line-height: 1.5;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 391px;
     white-space: nowrap;
-    margin: 0;
+    margin: 50px 0;
+    text-align: center;
 }
 
 .resident-id-section-block {
     width: 900px;
-    position: absolute;
-    left: 50px;
-    top: 462px;
     box-sizing: border-box;
     border-bottom: 1px solid var(--color-table-border);
 }
@@ -134,8 +161,6 @@
     gap: 12px;
     width: 100%;
     box-sizing: border-box;
-    border-left: 1px solid var(--color-table-border);
-    border-right: 1px solid var(--color-table-border);
 }
 
 .resident-id-text {
@@ -160,68 +185,41 @@
 }
 
 .resident-id-consent-options {
-    position: absolute;
     display: flex;
     gap: 20px;
     align-items: center;
-    left: 768px; /* Based on Figma's absolute positioning */
-    top: 655px; /* Based on Figma's absolute positioning */
+    justify-content: flex-end;
+    margin-top: 16px;
 }
 
 /* Reusing existing checkbox-option styles from common.css or form.css */
-.resident-id-consent-options .checkbox-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-pretendard-regular);
-    font-weight: 400;
+.resident-id-consent-options .checkbox-visual {
+    width: 11px;
+    height: 11px;
+}
+
+.resident-id-consent-options .input-checkbox-label {
+    gap: 11px;
+}
+
+.resident-id-consent-options .checkbox-text {
+    color: #454545;
     font-size: 1.4rem;
-    color: var(--color-text-medium-gray);
-    white-space: nowrap;
-}
-
-.resident-id-consent-options .checkbox-option input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.resident-id-consent-options .checkbox-option label {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 1px solid var(--color-table-border);
-    border-radius: 2px;
-    background-color: var(--color-white);
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-.resident-id-consent-options .checkbox-option input[type="checkbox"]:checked + label {
-    background-color: var(--color-blue-text);
-    border-color: var(--color-blue-text);
-}
-
-.resident-id-consent-options .checkbox-option input[type="checkbox"]:checked + label::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    mask: url('../../assets/images/check-all.svg') no-repeat center / contain;
-    -webkit-mask: url('../../assets/images/check-all.svg') no-repeat center / contain;
-    background-color: var(--color-white);
+    font-weight: 400;
 }
 
 .resident-id-signatures {
-    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    left: 50px;
-    top: 1263px;
     width: 900px;
     box-sizing: border-box;
+}
+
+.resident-id-signature-column {
+    display: flex;
+    gap: 12px;
+
 }
 
 .resident-id-signature-row {
@@ -272,13 +270,11 @@
 }
 
 .resident-id-date-signer {
-    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    right: 0;
-    top: 67px; /* Adjusted to be relative to .resident-id-signatures */
     white-space: nowrap;
+    align-items: flex-end;
 }
 
 .resident-id-date {

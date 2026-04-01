@@ -618,18 +618,6 @@ th.border-left {
     /* Align with input field */
 }
 
-.details-input-wrap .input-info {
-    font-family: var(--font-pretendard-regular);
-    font-weight: 400;
-    font-size: 0.9rem;
-    /* 9px */
-    color: var(--color-text-light-gray);
-    white-space: nowrap;
-    width: 197px;
-    /* w-[197px] */
-    margin-left: 10px;
-}
-
 .details-input-wrap textarea.input-field {
     width: 100%;
     min-height: 108px;
@@ -667,26 +655,56 @@ th.border-left {
 .guarantee-details-table {
     border-top: 1px solid #999;
     margin-top: 12px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .details-row {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.details-row input {
+.details-form-label {
+    background-color: var(--color-input-background);
+    border-right: 1px solid var(--color-input-border);
+    padding: 10px 16px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text-dark-gray);
+    white-space: nowrap;
+}
+
+.details-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.details-input-wrapper input {
     max-width: 127px;
 }
 
-.form-sub-label {
+.details-row .input-info {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+}
+
+.details-form-sub-label {
     min-width: 100px;
     font-size: 1.1rem;
 }
 
-.textarea-row {
+.textarea-row td {
     height: 108px;
 }
 
+textarea {
+    display: inline-block;
+    height: 100%;
+}
 
 .guarantee-details-table .details-label.main {
     background-color: var(--color-input-background);
@@ -795,7 +813,6 @@ th.border-left {
     margin-top: 8px;
     /* gap-[8px] from figma*/
     text-align: left;
-    padding-left: 24px;
     box-sizing: border-box;
 }
 
@@ -827,7 +844,7 @@ th.border-left {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 26px;
     /* adjust from preamble to details */
 }
 
