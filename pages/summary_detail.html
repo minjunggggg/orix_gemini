@@ -129,7 +129,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th rowspan="3">옵션</th>
+                                            <th rowspan="3" class="border-left">옵션</th>
                                             <td rowspan="3" colspan="2" class="sub-label-value">
                                                 <p>파노라마 선루프 /</p>
                                                 <p>현대 스마트 센스 패키지 1 / JBL 사운드 패키지 / 컨비니언스 패키지</p>
@@ -139,11 +139,11 @@
                                             <td class="price-value text-bold"><span>00,000,000</span>원</td>
                                         </tr>
                                         <tr>
-                                            <th>차량등록번호</th>
+                                            <th class="border-left">차량등록번호</th>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <th>차대번호</th>
+                                            <th class="border-left">차대번호</th>
                                             <td>-</td>
                                         </tr>
                                     </tbody>
@@ -192,18 +192,19 @@
                                             <td>300,000 원 / 건당</td>
                                             <th>(9)정비서비스</th>
                                             <td class="checkbox-row">
-                                                <input type="checkbox" class="toggle-input" id="checkbox1">
-                                                <label for="checkbox1" class="input-checkbox-label">
+                                                <input type="radio" class="toggle-input" id="checkbox1" name="radio1">
+                                                <label for="checkbox1" class="input-checkbox-label" name="radio1">
                                                     <span class="checkbox-visual" role="checkbox"></span><span
                                                         class="checkbox-text">없음</span>
                                                 </label>
-                                                <input type="checkbox" class="toggle-input" id="checkbox2">
-                                                <label for="checkbox2" class="input-checkbox-label">
+                                                <input type="radio" class="toggle-input" id="checkbox2" name="radio1">
+                                                <label for="checkbox2" class="input-checkbox-label" name="radio1">
                                                     <span class="checkbox-visual"
                                                         role="checkbox"></span><span>Slim</span>
                                                 </label>
-                                                <input type="checkbox" class="toggle-input" id="checkbox3" checked>
-                                                <label for="checkbox3" class="input-checkbox-label">
+                                                <input type="radio" class="toggle-input" id="checkbox3" name="radio1"
+                                                    checked>
+                                                <label for="checkbox3" class="input-checkbox-label" name="radio1">
                                                     <span class="checkbox-visual"
                                                         role="checkbox"></span><span>Premium</span>
                                                 </label>
@@ -212,13 +213,14 @@
                                         <tr>
                                             <th>(10)계약운행거리</th>
                                             <td class="checkbox-row distance">
-                                                <input type="checkbox" class="toggle-input" id="checkbox1">
-                                                <label for="checkbox1" class="input-checkbox-label">
+                                                <input type="radio" class="toggle-input" id="checkbox4" name="radio2">
+                                                <label for="checkbox4" class="input-checkbox-label" name="radio2">
                                                     <span class="checkbox-visual" role="checkbox"></span>
                                                     <span class="checkbox-text">무제한</span>
                                                 </label>
-                                                <input type="checkbox" class="toggle-input" id="checkbox2" checked>
-                                                <label for="checkbox2" class="input-checkbox-label">
+                                                <input type="radio" class="toggle-input" id="checkbox5" name="radio2"
+                                                    checked>
+                                                <label for="checkbox5" class="input-checkbox-label" name="radio2">
                                                     <span class="checkbox-visual" role="checkbox"></span>
                                                     <div class="distance-text">
                                                         <span>(</span><span>2만</span><span>)</span>
@@ -252,180 +254,151 @@
                                 <div class="guarantor-details">
                                     <div class="guarantor-condition">
                                         <div class="condition-label-wrap">
-                                            <p class="condition-prefix">※</p>
-                                            <p class="condition-text">연대보증인의 입보가 가능한 경우</p>
+                                            <p class="condition-label-wrap">※</p>
+                                            <p class="condition-text">연대보증인의<br />입보가 가능한 경우</p>
                                         </div>
                                         <div class="condition-options">
                                             <div class="option-group">
                                                 <p class="option-label">차주가 개인일 때</p>
-                                                <div class="checkbox-option">
-                                                    <input type="checkbox" id="guarantor-individual-1"
-                                                        class="sr-only" />
-                                                    <label for="guarantor-individual-1"></label>
-                                                    <p>개인사업자의 사업자등록증상 공동사업자</p>
-                                                </div>
+                                                <input type="checkbox" class="toggle-input" id="checkbox6">
+                                                <label for="checkbox6" class="input-checkbox-label">
+                                                    <span class="checkbox-visual" role="checkbox"></span><span
+                                                        class="checkbox-text small">개인사업자의 사업자등록증상 공동사업자</span>
+                                                </label>
                                             </div>
                                             <div class="option-group">
                                                 <p class="option-label">차주가 법인일 때</p>
                                                 <div class="option-sub-group">
-                                                    <div class="checkbox-option">
-                                                        <input type="checkbox" id="guarantor-corporate-1"
-                                                            class="sr-only" />
-                                                        <label for="guarantor-corporate-1"></label>
-                                                        <p>대표이사</p>
-                                                    </div>
-                                                    <div class="checkbox-option">
-                                                        <input type="checkbox" id="guarantor-corporate-2"
-                                                            class="sr-only" />
-                                                        <label for="guarantor-corporate-2"></label>
-                                                        <p>무한책임사원</p>
-                                                    </div>
-                                                    <div class="checkbox-option">
-                                                        <input type="checkbox" id="guarantor-corporate-3"
-                                                            class="sr-only" />
-                                                        <label for="guarantor-corporate-3"></label>
-                                                        <p>상법에 따른 최대주주</p>
-                                                    </div>
-                                                    <div class="checkbox-option">
-                                                        <input type="checkbox" id="guarantor-corporate-4"
-                                                            class="sr-only" />
-                                                        <label for="guarantor-corporate-4"></label>
-                                                        <p>의결권 있는 발행주식 총수의 30%초과 보유주주(특수관계인 포함)</p>
-                                                    </div>
+                                                    <input type="radio" class="toggle-input" id="checkbox7"
+                                                        name="radio3">
+                                                    <label for="checkbox7" class="input-checkbox-label" name="radio3">
+                                                        <span class="checkbox-visual" role="checkbox"></span><span
+                                                            class="checkbox-text small">대표이사</span>
+                                                    </label>
+                                                    <input type="radio" class="toggle-input" id="checkbox8"
+                                                        name="radio3">
+                                                    <label for="checkbox8" class="input-checkbox-label" name="radio3">
+                                                        <span class="checkbox-visual" role="checkbox"></span><span
+                                                            class="checkbox-text small">무한책임사원</span>
+                                                    </label>
+                                                    <input type="radio" class="toggle-input" id="checkbox9"
+                                                        name="radio3">
+                                                    <label for="checkbox9" class="input-checkbox-label" name="radio3">
+                                                        <span class="checkbox-visual" role="checkbox"></span><span
+                                                            class="checkbox-text small">상법에 따른 최대주주</span>
+                                                    </label>
+                                                    <input type="radio" class="toggle-input" id="checkbox10"
+                                                        name="radio3">
+                                                    <label for="checkbox10" class="input-checkbox-label" name="radio3">
+                                                        <span class="checkbox-visual" role="checkbox"></span><span
+                                                            class="checkbox-text small">의결권 있는 발행주식 총수의 30%초과 보유주주(특수관계인
+                                                            포함)</span>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="option-group">
-                                                <p class="option-label">기타</p>
-                                                <div class="checkbox-option">
-                                                    <input type="checkbox" id="guarantor-other-1" class="sr-only" />
-                                                    <label for="guarantor-other-1"></label>
-                                                    <p>상기 외 여신거래기본약관 제7조에 해당하는 자</p>
-                                                </div>
+                                                <p class="option-label etc"><span>기</span><span>타</span></p>
+                                                <input type="checkbox" class="toggle-input" id="checkbox11">
+                                                <label for="checkbox11" class="input-checkbox-label">
+                                                    <span class="checkbox-visual" role="checkbox"></span><span
+                                                        class="checkbox-text small">상기 외 여신거래기본약관 제7조에 해당하는 자</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="guarantee-type">
-                                        <div class="type-label-wrap">
-                                            <p class="type-prefix">※</p>
-                                            <p class="type-text">보증종류</p>
-                                        </div>
-                                        <div class="type-options">
-                                            <div class="checkbox-option">
-                                                <input type="checkbox" id="guarantee-type-1" class="sr-only" />
-                                                <label for="guarantee-type-1"></label>
-                                                <p>특정근보증</p>
-                                                <p class="type-sub-text">(당해채무(기한연장・증액포함))</p>
+                                    <div class="guarantee-condition">
+                                        <div class="guarantor-condition">
+                                            <div class="condition-label-wrap">
+                                                <p class="condition-label-wrap">※</p>
+                                                <p class="condition-text">보증종류</p>
                                             </div>
-                                            <div class="checkbox-option">
-                                                <input type="checkbox" id="guarantee-type-2" class="sr-only" />
-                                                <label for="guarantee-type-2"></label>
-                                                <p>한정근보증</p>
-                                                <p class="type-sub-text">(특정+동일종류신규대출)</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            <div class="condition-options">
+                                                <div class="option-group"><input type="radio" class="toggle-input"
+                                                        id="checkbox12" name="radio4">
+                                                    <label for="checkbox12" class="input-checkbox-label" name="radio4">
+                                                        <span class="checkbox-visual" role="checkbox"></span><span
+                                                            class="checkbox-text small">특정근보증
+                                                            <span>(당해채무(기한연장・증액포함))</span></span>
+                                                    </label>
+                                                    <input type="radio" class="toggle-input" id="checkbox13"
+                                                        name="radio4">
+                                                    <label for="checkbox13" class="input-checkbox-label" name="radio4">
+                                                        <label for="checkbox13" class="input-checkbox-label">
+                                                            <span class="checkbox-visual" role="checkbox"></span><span
+                                                                class="checkbox-text small">한정근보증
+                                                                <span>(특정+동일종류신규대출)</span></span>
+                                                        </label>
+                                                </div>
 
-                                    <div class="guarantor-form-table">
-                                        <div class="form-row">
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">성명</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">주민등록번호</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-item-wrap full-width">
-                                                <div class="form-label">주소</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">신청인과의 관계</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">전화번호</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">직장(사업자)명</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">부서명</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-row last">
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">직위</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                            <div class="form-item-wrap">
-                                                <div class="form-label">재직(사업기간)</div>
-                                                <div class="form-input js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="guarantee-details-table">
-                                        <div class="details-row">
-                                            <div class="details-label-wrap">
-                                                <div class="details-label main">보증내용</div>
-                                            </div>
-                                            <div class="details-sub-label-wrap">
-                                                <div class="details-label sub">보증채무최고액</div>
-                                                <div class="details-input-wrap">
-                                                    <div class="input-text-wrap js-input-component">
-                                                        <input type="text" class="input-field" />
+                                    </div>
+                                </div>
+                                <form>
+                                    <table class="guarantor-form-table">
+                                        <caption></caption>
+                                        <colgroup>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="form-label">성명</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                                <th class="form-label">주민등록번호</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-label">주소</th>
+                                                <td colspan="3"><input type="text" class="input-field" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-label">신청인과의 관계</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                                <th class="form-label">전화번호</th>
+                                                <td><input type="number" class="input-field" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-label">직장(사업자)명</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                                <th class="form-label">부서명</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-label">직위</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                                <th class="form-label">재직(사업기간)</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="guarantee-details-table">
+                                        <caption></caption>
+                                        <colgroup>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="form-label">보증내용</th>
+                                                <th class="form-sub-label">보증채무최고액</th>
+                                                <td class="details-row">
+                                                    <div class="details-row"><input type="text" class="input-field" />
                                                         <p>원</p>
                                                     </div>
                                                     <p class="input-info">[참고] 본 약정에 따른 여신취급금액(금융회사가 본 약정의 이행을 위해
                                                         지급한 금액의 총액)의 130%입니다.</p>
-                                                </div>
-                                            </div>
-                                            <div class="details-sub-label-wrap">
-                                                <div class="details-label sub">보증기간</div>
-                                                <div class="details-input-wrap js-input-component">
-                                                    <input type="text" class="input-field" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="details-row last">
-                                            <div class="details-label-wrap">
-                                                <div class="details-label main">특약사항</div>
-                                            </div>
-                                            <div class="details-input-wrap full-width js-input-component">
-                                                <textarea class="input-field"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                                </td>
+                                                <th class="form-sub-label">보증기간</th>
+                                                <td><input type="text" class="input-field" /></td>
+                                            </tr>
+                                            <tr class="textarea-row">
+                                                <th class="form-label">특약사항</th>
+                                                <td colspan="4"><textarea class="input-field"></textarea></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+
                                 <p class="guarantor-disclaimer">● 본 자동차 임대차계약서 작성시 대여이용자 및 연대보증인이 직접 자필 및 날인하였음을
                                     확인함.</p>
                             </div>

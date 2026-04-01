@@ -120,3 +120,21 @@ caption {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
 }
+
+textarea {
+    all: unset;
+    box-sizing: border-box;
+
+    width: 100%;
+    resize: none;
+
+    color: inherit;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    appearance: none;
+
+    text-align: left;
+}
