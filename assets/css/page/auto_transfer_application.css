@@ -15,8 +15,23 @@
 .auto-transfer-document-paper {
     background-color: var(--color-white);
     width: 1000px;
+    height: 1415px;
     position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.auto-transfer-document-logo {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    height: auto;
+}
+
+.auto-transfer-document-logo img {
+    width: 112px;
 }
 
 .auto-transfer-title {
@@ -25,7 +40,8 @@
     color: var(--color-black);
     line-height: 1.5;
     white-space: nowrap;
-    margin: 0;
+    text-align: center;
+    margin: 22px 0 26px 0;
 }
 
 .auto-transfer-section-block {
@@ -61,8 +77,7 @@
     font-size: 1.4rem;
     color: var(--color-text-dark-gray);
     line-height: 1.5;
-    margin: 10px 0 0 0;
-    padding: 0 16px;
+    margin: 20px 0 8px 0;
     box-sizing: border-box;
 }
 
@@ -71,26 +86,15 @@
     border-bottom: 1px solid var(--color-table-border);
     width: 100%;
     background-color: var(--color-white);
+    margin-bottom: 48px;
 }
 
-.auto-transfer-form-table .form-row {
-    display: flex;
-    border-bottom: 1px solid var(--color-table-border);
+.auto-transfer-form-table th {
+    background-color: #E8ECF0;
 }
 
-.auto-transfer-form-table .form-row.last {
-    border-bottom: none;
-}
-
-.auto-transfer-form-table .form-item-wrap {
-    flex: 1;
-    display: flex;
-    height: 34px;
-}
-
-.auto-transfer-form-table .form-item-wrap.full-width {
-    flex: none;
-    width: 100%;
+.auto-transfer-form-table td {
+    text-align: left;
 }
 
 .auto-transfer-form-table .form-label {
@@ -119,16 +123,9 @@
     border-right: 1px solid var(--color-table-border);
 }
 
-.auto-transfer-form-table .form-input:last-child {
-    border-right: none;
-}
-
-.auto-transfer-form-table .form-input p {
-    margin: 0;
-}
-
 .auto-transfer-terms-content {
-    background-color: var(--color-light-gray);
+    margin-top: 20px;
+    background-color: #FAFAFA;
     padding: 30px;
     width: 100%;
     box-sizing: border-box;

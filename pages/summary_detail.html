@@ -589,105 +589,95 @@
                     <p class="agreement-title">자동이체 신청서</p>
                     <button type="button" class="btn-arrow-down js-accordion-trigger"></button>
                 </div>
-                <div class="agreement-content accordion-panel">
+                <div class="agreement-content accordion-panel is-hidden">
                     <div class="auto-transfer-document-container">
-                        <div class="contract-paper">
-                            <div class="contract-logo">
-                                <img src="../assets/images/orix_logo.png" alt="ORIX Capital">
-                            </div>
-                            <h1 class="auto-transfer-title">자동이체 신청서</h1>
+                        <div class="auto-transfer-document-paper">
+                            <div>
+                                <div class="auto-transfer-document-logo">
+                                    <img src="../assets/images/orix_logo.png" alt="ORIX Capital">
+                                </div>
+                                <h1 class="auto-transfer-title">자동이체 신청서</h1>
 
-                            <div class="auto-transfer-section-block">
-                                <div class="auto-transfer-section-header dark">
-                                    <p class="auto-transfer-section-title">• 자동이체 신청</p>
+                                <div class="auto-transfer-section-block">
+                                    <div class="auto-transfer-section-header dark">
+                                        <p class="auto-transfer-section-title">• 자동이체 신청</p>
+                                    </div>
+                                    <p class="auto-transfer-disclaimer">
+                                        ● 본인은 자동이체 약관에 대한 설명을 듣고 이해하였으며, 귀사와 본인이 개설한 결제계좌를 통해 자동이체 즉, 즉시 출금 처리하는 것을
+                                        동의합니다.
+                                    </p>
+                                    <table class="auto-transfer-form-table">
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width: 25%">
+                                            <col style="width: 25%">
+                                            <col style="width: 25%">
+                                            <col style="width: 25%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>예금주</th>
+                                                <td>(주) 홍길동컴퍼니</td>
+                                                <th>생년월일</th>
+                                                <td>000000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>결제은행</th>
+                                                <td>신한은행</td>
+                                                <th>자동이체 결제일</th>
+                                                <td>매 15 일</td>
+                                            </tr>
+                                            <tr>
+                                                <th>계좌번호</th>
+                                                <td colspan="3">110-000-00000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <p class="auto-transfer-disclaimer">
-                                    ● 본인은 자동이체 약관에 대한 설명을 듣고 이해하였으며, 귀사와 본인이 개설한 결제계좌를 통해 자동이체 즉, 즉시 출금 처리하는 것을
-                                    동의합니다.
-                                </p>
-                                <div class="auto-transfer-form-table">
-                                    <div class="form-row">
-                                        <div class="form-item-wrap">
-                                            <div class="form-label">예금주</div>
-                                            <div class="form-input">
-                                                <p>(주) 홍길동컴퍼니</p>
-                                            </div>
-                                        </div>
-                                        <div class="form-item-wrap">
-                                            <div class="form-label">생년월일</div>
-                                            <div class="form-input">
-                                                <p>000000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-item-wrap">
-                                            <div class="form-label">결제은행</div>
-                                            <div class="form-input">
-                                                <p>신한은행</p>
-                                            </div>
-                                        </div>
-                                        <div class="form-item-wrap">
-                                            <div class="form-label">자동이체 결제일</div>
-                                            <div class="form-input">
-                                                <p>매 15 일</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row last">
-                                        <div class="form-item-wrap full-width">
-                                            <div class="form-label">계좌번호</div>
-                                            <div class="form-input">
-                                                <p>110-000-00000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="auto-transfer-section-block">
-                                <div class="auto-transfer-section-header dark">
-                                    <p class="auto-transfer-section-title">• 자동계좌 이체 약관</p>
-                                </div>
-                                <div class="auto-transfer-terms-content">
-                                    <ol>
-                                        <li>
-                                            <span>신청인 및 예금주(이하 ‘고객’이라 합니다)는 약정된 납부일을 기준으로 오릭스캐피탈코리아주식회사(이하 ‘회사’라
-                                                합니다)가 지정하는 계좌이체일(휴일인 경우 익영업일)에 회사가 청구하는 금액을 자동이체 계좌로 선정한 은행 및 자고보유
-                                                금융기관(이하 ‘금융기관’이라 합니다)계좌(이하 ‘지정계좌’라 합니다)에서 출금하여 납부합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>자동납부를 위하여 지정계좌의 예금을 출금하는 경우에는 예금약관이나 약정서의 규정에도 불구하고 예금청구서나 수표 없이
-                                                자동계좌이체 처리절차에 의하여 출금처리 되며, 금융기관의 출금마감시간 내에 입금된 금액에 한하여 출금처리
-                                                됩니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>지정계좌의 예금잔액(자동대출 약정이 있는 경우 대출한도 포함)이 이체일 현재 회사의 청구금액보다 부족하거나 예금의
-                                                지급제한, 약정대출의 억제 등으로 대체납부가 불가능한 경우의 손해에 대해서는 고객이 책임을 부담합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>이체일에 동일한 수종의 자동이체 청구가 있는 경우의 출금우선순위는 금융기관에 어미약관에 따라 고객과 약정한 바에
-                                                따르기로 합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>자동이체 일자는 회사의 사정에 따라 변경될 수 있으나 이런 경우 사전에 고객에게 통지하며, 자동이체일 변경으로 인해
-                                                고객이 불리하지 않도록 하겠습니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>납부자의 사정으로 예금계좌를 변경하거나 자동납부신청을 해지하고자 하는 경우에는 금융기관 소정의 양식에 의한
-                                                자동납부해지신청서와 통장사본을 제출할 것이며 이의 불이행으로 발생하는 손해는 고객의 책임으로 합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>자동납부 신청에 의한 지정계좌에서의 출금은 회사의 청구대로 출금하되 청구금액에 이의가 있을 때에는 고객과 회사가
-                                                협의하여 조정합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span>이 약관에서 정하지 아니한 사항은 금융기관의 자동이체납부약관에서 정하는 바에 따릅니다.</span>
-                                        </li>
-                                    </ol>
+                                <div class="auto-transfer-section-block">
+                                    <div class="auto-transfer-section-header dark">
+                                        <p class="auto-transfer-section-title">• 자동계좌 이체 약관</p>
+                                    </div>
+                                    <div class="auto-transfer-terms-content">
+                                        <ol>
+                                            <li>
+                                                <span>신청인 및 예금주(이하 ‘고객’이라 합니다)는 약정된 납부일을 기준으로 오릭스캐피탈코리아주식회사(이하 ‘회사’라
+                                                    합니다)가 지정하는 계좌이체일(휴일인 경우 익영업일)에 회사가 청구하는 금액을 자동이체 계좌로 선정한 은행 및 자고보유
+                                                    금융기관(이하 ‘금융기관’이라 합니다)계좌(이하 ‘지정계좌’라 합니다)에서 출금하여 납부합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>자동납부를 위하여 지정계좌의 예금을 출금하는 경우에는 예금약관이나 약정서의 규정에도 불구하고 예금청구서나 수표 없이
+                                                    자동계좌이체 처리절차에 의하여 출금처리 되며, 금융기관의 출금마감시간 내에 입금된 금액에 한하여 출금처리
+                                                    됩니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>지정계좌의 예금잔액(자동대출 약정이 있는 경우 대출한도 포함)이 이체일 현재 회사의 청구금액보다 부족하거나 예금의
+                                                    지급제한, 약정대출의 억제 등으로 대체납부가 불가능한 경우의 손해에 대해서는 고객이 책임을 부담합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>이체일에 동일한 수종의 자동이체 청구가 있는 경우의 출금우선순위는 금융기관에 어미약관에 따라 고객과 약정한 바에
+                                                    따르기로 합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>자동이체 일자는 회사의 사정에 따라 변경될 수 있으나 이런 경우 사전에 고객에게 통지하며, 자동이체일 변경으로 인해
+                                                    고객이 불리하지 않도록 하겠습니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>납부자의 사정으로 예금계좌를 변경하거나 자동납부신청을 해지하고자 하는 경우에는 금융기관 소정의 양식에 의한
+                                                    자동납부해지신청서와 통장사본을 제출할 것이며 이의 불이행으로 발생하는 손해는 고객의 책임으로 합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>자동납부 신청에 의한 지정계좌에서의 출금은 회사의 청구대로 출금하되 청구금액에 이의가 있을 때에는 고객과 회사가
+                                                    협의하여 조정합니다.</span>
+                                            </li>
+                                            <li>
+                                                <span>이 약관에서 정하지 아니한 사항은 금융기관의 자동이체납부약관에서 정하는 바에 따릅니다.</span>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="auto-transfer-signatures">
                                 <div class="auto-transfer-signature-row bg-orange-light">
                                     <p class="signature-label">신청인(본인)</p>
