@@ -65,9 +65,7 @@
     /* justify-between */
     align-items: center;
     /* items-center */
-    padding-bottom: 20px;
     /* Space from tabs */
-    border-bottom: 1px solid var(--color-gray-ddd);
     /* Separator */
 }
 
@@ -78,6 +76,7 @@
     color: var(--color-gray-22);
     line-height: normal;
     white-space: nowrap;
+    text-align: center;
 }
 
 .btn-modal-close {
@@ -96,13 +95,14 @@
     -webkit-mask-size: contain;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .modal-tabs {
     display: flex;
     /* flex */
-    border-bottom: 1px solid var(--color-gray-ddd);
-    /* Default bottom border */
 }
 
 .modal-tab-item {
@@ -164,17 +164,16 @@
     /* text-[rgba(34,34,34,0.1)] */
     white-space: nowrap;
     position: absolute;
-    top: 50%;
+    top: 302px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .btn-reset-signature {
     position: absolute;
-    top: 19px;
-    /* top-[19px] */
-    right: 19px;
-    /* right-[19px] */
+    top: 199px;
+    right: 60px;
     /* Reusing btn-edit-action styles */
     background-color: var(--p-white);
     border: 1px solid var(--color-gray-ddd);
@@ -281,6 +280,10 @@
     width: 100%;
     padding-top: 20px;
     /* Space from legal text */
+}
+
+.modal-action-buttons button {
+    width: 150px;
 }
 
 .btn-modal-cancel,
