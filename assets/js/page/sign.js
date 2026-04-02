@@ -8,7 +8,7 @@ var SignPage = (function () {
     var $fileSizeDisplay;
 
     // Signature Pad Variables
-    var canvas, ctx, $signaturePlaceholder, $resetSignatureBtn;
+    var canvas, ctx, $signaturePlaceholder, $resetSignatureBtn, $downloadSignatureBtn; // Added $downloadSignatureBtn
     var isDrawing = false;
     var lastX = 0;
     var lastY = 0;
@@ -66,6 +66,23 @@ var SignPage = (function () {
         $signaturePlaceholder.show();
     };
 
+    // --- Download Signature Function ---
+    var downloadSignature = function() {
+        if (!canvas.toDataURL) {
+            alert('Your browser does not support canvas toDataURL. Please use a modern browser.');
+            return;
+        }
+
+        var dataURL = canvas.toDataURL('image/png');
+        var a = document.createElement('a');
+        a.href = dataURL;
+        a.download = 'signature.png'; // Filename for the downloaded image
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+
+
     var init = function () {
         var $modalTabs = $('.modal-tab-item');
         var $modalContents = $('.modal-content');
@@ -80,6 +97,8 @@ var SignPage = (function () {
         ctx = canvas.getContext('2d');
         $signaturePlaceholder = $('#signature-placeholder');
         $resetSignatureBtn = $('.btn-reset-signature');
+        $downloadSignatureBtn = $('.btn-download-signature'); // Initialize new button
+
 
         // Set canvas dimensions to match CSS for correct drawing
         var $signatureBox = $('.signature-box');
@@ -134,6 +153,9 @@ var SignPage = (function () {
 
         // Reset Signature Button Event Listener
         $resetSignatureBtn.on('click', clearCanvas);
+
+        // Download Signature Button Event Listener
+        $downloadSignatureBtn.on('click', downloadSignature); // Added event listener
     };
 
     return {
