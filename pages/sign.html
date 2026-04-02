@@ -16,13 +16,13 @@
             <button type="button" class="btn-modal-close"></button>
 
             <div class="modal-tabs">
-                <div class="modal-tab-item is-active">서명하기</div>
-                <div class="modal-tab-item">인감도장 업로드</div>
+                <div class="modal-tab-item is-active" data-tab-id="signature-tab">서명하기</div>
+                <div class="modal-tab-item" data-tab-id="upload-stamp-tab">인감도장 업로드</div>
             </div>
 
-            <div class="modal-content">
-                <canvas class="signature-box"></canvas>
-                <p class="signature-placeholder">반드시 서명 바랍니다.</p>
+            <div class="modal-content" id="signature-tab-content">
+                <canvas class="signature-box" id="signature-canvas"></canvas>
+                <p class="signature-placeholder" id="signature-placeholder">반드시 서명 바랍니다.</p>
                 <button type="button" class="btn-reset-signature">
                     <span class="ico-refresh"></span>
                     초기화
@@ -30,8 +30,8 @@
                 <div class="legal-text-container">
                     <div class="legal-text-item">
                         <span class="ico-info-light"></span>
-                        <p class="legal-text">
-                            <span class="legal-text-bold">본 서명(인감)은 '자동차임대차(렌탈)계약서, 주민등록번호 수집・이용 동의서(렌터카 법인 계약자용),
+                        <p class="legal-text">본 서명(인감)은
+                            <span class="legal-text-bold">'자동차임대차(렌탈)계약서, 주민등록번호 수집・이용 동의서(렌터카 법인 계약자용),
                                 자동이체
                                 신청서'에 일괄 적용됩니다.</span>
                         </p>
@@ -47,12 +47,73 @@
                 </div>
             </div>
 
+            <div class="modal-content" id="upload-stamp-tab-content" style="display: none;">
+                <div id="file-upload-section">
+                    <div class="upload-container">
+                        <div class="upload-box">
+                            <div class="upload-instructions">
+                                <p class="upload-title">첨부할 파일을 여기로 드래그하여 업로드 하세요.</p>
+                                <div class="upload-description">
+                                    <p>최대 300KB미만의 PNG, JPG 이미지를 한 장 업로드 할 수 있습니다.</p>
+                                    <p>* 반드시 도장 테두리가 잘리지 않은 선명한 이미지의 법인인감을 사용해주세요.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="file-select-button">
+                                <p>파일 선택</p>
+                            </button>
+                            <input type="file" id="actual-file-input" style="display: none;" accept="image/*" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="uploaded-file-display" style="display: none;">
+                    <div class="signature-box-inner">
+                        <div class="file-row">
+                            <div class="file-info-container">
+                                <div class="ico-file-folder"></div>
+                                <div class="file-info">
+                                    <p class="file-name">(주)홍길동컴퍼니_법인_인감도장.png</p>
+                                    <p class="file-size">230kb</p>
+                                </div>
+                            </div>
+                            <button type="button" class="edit-actions">
+                                <span class="ico-trash"></span>
+                                <p>파일삭제</p>
+                            </button>
+                        </div>
+                        <div class="uploaded-file-message">
+                            <p>최대 300KB미만의 PNG, JPG 이미지를 한 장 업로드 할 수 있습니다.</p>
+                            <p>* 반드시 도장 테두리가 잘리지 않은 선명한 이미지의 법인인감을 사용해주세요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="legal-text-container">
+                    <div class="legal-text-item">
+                        <span class="ico-info-light"></span>
+                        <p class="legal-text">본 서명(인감)은
+                            <span class="legal-text-bold">'자동차임대차(렌탈)계약서, 주민등록번호 수집・이용 동의서(렌터카 법인 계약자용), 자동이체
+                                신청서'에 일괄 적용됩니다.</span>
+                        </p>
+                    </div>
+                    <div class="legal-text-item">
+                        <span class="ico-info-light"></span>
+                        <p class="legal-text">
+                            본 서명(인감)정보는 비대면 전자약정 프로세스에 따라, 이어지는 법인공동인증서 인증과 결합하여 법적 효력 및 계약의 성립을 확정하며, 이는 법적으로 직접 자필 및
+                            날인한 것과 동일한 효력을 가집니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal-action-buttons">
                 <button type="button" class="btn-secondary btn-size-popup btn-popup-sub">취소</button>
                 <button type="button" class="btn-primary btn-size-popup">제출하기</button>
             </div>
         </div>
     </div>
+    <script src="../assets/js/lib/jquery-4.0.0.js"></script>
+    <script src="../assets/js/page/sign.js"></script>
 </body>
 
 </html>

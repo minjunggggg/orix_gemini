@@ -8,6 +8,14 @@
     --color-signature-box-bg: #f8f8f8;
     --color-signature-box-border: #eee;
     --color-signature-placeholder-text: rgba(34, 34, 34, 0.1);
+    /* New variables from Figma analysis */
+    --color-upload-container-bg: #fcfcfc;
+    --color-upload-container-border: #3182ee;
+    --color-upload-text-dark: #222;
+    --color-upload-text-light: #757575;
+    --color-file-select-btn-bg: #f5f5f5;
+    --color-file-select-btn-border: #ddd;
+    --color-file-select-btn-text: #454545;
 }
 
 /* === Modal Styles === */
@@ -233,14 +241,13 @@
     /* items-start */
 }
 
+/* Modified: Updated ico-info-light mask-image URL */
 .ico-info-light {
     width: 20px;
-    /* size-[20px] */
     height: 20px;
     background-color: var(--color-gray-75);
-    /* text-[#757575] */
-    mask-image: url('../../images/info-icon-light.svg');
-    -webkit-mask-image: url('../../images/info-icon-light.svg');
+    mask-image: url('https://www.figma.com/api/mcp/asset/08c04a76-f24c-4fae-9ae4-a7e3b03980ae');
+    -webkit-mask-image: url('https://www.figma.com/api/mcp/asset/08c04a76-f24c-4fae-9ae4-a7e3b03980ae');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -249,7 +256,6 @@
     -webkit-mask-size: contain;
     flex-shrink: 0;
     margin-top: 3px;
-    /* Align with text baseline */
 }
 
 .legal-text {
@@ -264,7 +270,7 @@
 
 .legal-text-bold {
     font-weight: 600;
-    color: var(--color-primary-blue);
+    color: #3182ee;
     /* text-[#3182ee] */
 }
 
@@ -316,4 +322,256 @@
     font-family: var(--font-pretendard-semibold);
     font-weight: 600;
     color: var(--p-white);
+}
+
+/* === Upload Area Styles (New from Figma) === */
+.upload-container {
+    background-color: var(--color-upload-container-bg);
+    /* #fcfcfc */
+    border: 2px dashed var(--color-upload-container-border);
+    /* #3182ee */
+    border-radius: 8px;
+    /* 8px */
+    height: 300px;
+    /* 300px */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    /* 28px */
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 491px;
+}
+
+.upload-instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* 16px */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.upload-title {
+    font-weight: 500;
+    /* Pretendard:Medium */
+    font-size: 2rem;
+    /* 20px */
+    color: var(--color-upload-text-dark);
+    /* #222 */
+    line-height: normal;
+}
+
+.upload-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0;
+    color: var(--color-upload-text-light);
+    /* #757575 */
+    font-size: 1.6rem;
+    /* 16px */
+    width: 100%;
+}
+
+.upload-description p {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.file-select-button {
+    background-color: var(--color-file-select-btn-bg);
+    /* #f5f5f5 */
+    border: 1px solid var(--color-file-select-btn-border);
+    /* #ddd */
+    border-radius: 100px;
+    /* 100px */
+    padding: 14px 32px;
+    /* 14px 32px */
+    color: var(--color-file-select-btn-text);
+    /* #454545 */
+    font-weight: 500;
+    /* Pretendard:Medium */
+    font-size: 1.8rem;
+    /* 18px */
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 70px;
+}
+
+.file-select-button p {
+    margin: 0;
+    /* Remove default paragraph margin */
+}
+
+/* === Uploaded File Display Styles (New from Figma) === */
+.signature-box-inner {
+    background-color: var(--color-signature-box-bg);
+    /* #f8f8f8 */
+    border: 1px solid var(--color-signature-box-border);
+    /* #eee */
+    border-radius: 8px;
+    /* 8px */
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    /* 32px */
+    align-items: center;
+    padding: 50px;
+    /* 50px */
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.file-row {
+    background-color: var(--p-white);
+    /* White */
+    border: 1px solid var(--color-file-select-btn-border);
+    /* #ddd */
+    border-radius: 8px;
+    /* 8px */
+    display: flex;
+    height: 96px;
+    /* 96px */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    /* 20px 24px */
+    width: 100%;
+}
+
+.file-info-container {
+    display: flex;
+    gap: 20px;
+    /* 20px */
+    align-items: center;
+}
+
+.ico-file-folder {
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-primary);
+    /* Assuming a blue color for the folder icon */
+    mask-image: url('../../images/file.svg');
+    -webkit-mask-image: url('../../images/file.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    flex-shrink: 0;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* 5px */
+    align-items: flex-start;
+}
+
+.file-name {
+    font-weight: 500;
+    /* Pretendard:Medium */
+    font-size: 1.8rem;
+    /* 18px */
+    color: var(--color-upload-text-dark);
+    /* #222 */
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.file-size {
+    font-weight: 300;
+    /* Pretendard:Light */
+    font-size: 1.6rem;
+    /* 16px */
+    color: var(--color-upload-text-light);
+    /* #757575 */
+    line-height: 1.5;
+}
+
+.edit-actions {
+    background-color: var(--p-white);
+    /* White */
+    border: 1px solid var(--color-file-select-btn-border);
+    /* #ddd */
+    border-radius: 4px;
+    /* 4px */
+    display: flex;
+    align-items: center;
+    padding: 10px 16px 10px 10px;
+    /* 10px 16px 10px 10px */
+    width: 116px;
+    /* 116px */
+    cursor: pointer;
+    gap: 10px;
+    /* Adjust gap to align icon and text */
+    justify-content: center;
+    /* Center content vertically */
+    height: 44px;
+    /* Explicit height */
+}
+
+.edit-actions .ico-trash {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-gray-66);
+    /* Adjust color as needed */
+    mask-image: url('https://www.figma.com/api/mcp/asset/e11bf37b-665a-48a7-91a1-8727f0f21596');
+    -webkit-mask-image: url('https://www.figma.com/api/mcp/asset/e11bf37b-665a-48a7-91a1-8727f0f21596');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    flex-shrink: 0;
+}
+
+.edit-actions p {
+    font-weight: 400;
+    /* Pretendard:Regular */
+    font-size: 1.6rem;
+    /* 16px */
+    color: var(--color-gray-66);
+    /* #666 */
+    line-height: normal;
+    white-space: nowrap;
+    margin: 0;
+    /* Remove default paragraph margin */
+}
+
+.uploaded-file-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0;
+    color: var(--color-upload-text-light);
+    /* #757575 */
+    font-size: 1.6rem;
+    /* 16px */
+    text-align: center;
+    width: 100%;
+}
+
+.uploaded-file-message p {
+    line-height: 1.5;
+    margin-bottom: 0;
 }
